@@ -1,9 +1,15 @@
 /* FONTS */
 
-@include font-face("PFSquareSansPro-Bold", "../fonts/PFSquareSansPro-Bold", $file-formats: ttf eot svg);
-@include font-face("PFSquareSansPro-Light", "../fonts/PFSquareSansPro-Light", $file-formats: ttf eot svg);
-@include font-face("PFSquareSansPro-MedItalic", "../fonts/PFSquareSansPro-MedItalic", $file-formats: ttf eot svg);
-@include font-face("PFSquareSansPro-Medium", "../fonts/PFSquareSansPro-Medium", $file-formats: ttf eot svg);
-@include font-face("PFSquareSansPro-Regular", "../fonts/PFSquareSansPro-Regular", $file-formats: ttf eot svg);
-@include font-face("PFSquareSansPro-XBlack", "../fonts/PFSquareSansPro-XBlack", $file-formats: ttf eot svg);
+@include font-face("Proxima Nova", "../fonts/Proxima Nova Regular", $file-formats: ttf);
+@include font-face("Proxima Nova", "../fonts/Proxima Nova Regular Italic", normal, italic, $file-formats: ttf);
+@include font-face("Proxima Nova", "../fonts/Proxima Nova Black", 900, normal, $file-formats: ttf);
+@include font-face("Proxima Nova", "../fonts/Proxima Nova Black Italic", 900, italic, $file-formats: ttf);
+@include font-face("Proxima Nova", "../fonts/Proxima Nova Bold", 700, normal, $file-formats: ttf);
+@include font-face("Proxima Nova", "../fonts/Proxima Nova Extrabold", 800, normal, $file-formats: ttf);
+@include font-face("Proxima Nova", "../fonts/Proxima Nova Extrabold Italic", 800, italic, $file-formats: ttf);
+@include font-face("Proxima Nova", "../fonts/Proxima Nova Light", 300, normal, $file-formats: ttf);
+@include font-face("Proxima Nova", "../fonts/Proxima Nova Light Italic", 300, italic, $file-formats: ttf);
 @include font-face("Rubl", "../fonts/ALSRubl", $file-formats: ttf eot woff);
+@include font-face("Lato Black", "../fonts/Lato-Black", $file-formats: ttf);
+
+/* end fonts */

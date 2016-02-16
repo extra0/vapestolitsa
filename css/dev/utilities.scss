@@ -1,6 +1,6 @@
 // ---------------------  Variables
 
-$main_font: '', sans-serif;
+$main_font: 'Proxima Nova', sans-serif;
 $main_color: #000;
 
 // FONTS
@@ -15,11 +15,12 @@ body {
     font-weight: normal;
     height: 100%;
     color: $main_color;
+    background: #e8e3dc;
 }
 
 .container-fluid {
-    min-width: 1000px;
-    max-width: 1200px;
+    min-width: 1020px;
+    max-width: 1360px;
     position: relative;
     font-size: 14px;
     @include box-sizing(border-box);
