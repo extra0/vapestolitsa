@@ -1,0 +1,9 @@
+/* FONTS */
+
+@include font-face("PFSquareSansPro-Bold", "../fonts/PFSquareSansPro-Bold", $file-formats: ttf eot svg);
+@include font-face("PFSquareSansPro-Light", "../fonts/PFSquareSansPro-Light", $file-formats: ttf eot svg);
+@include font-face("PFSquareSansPro-MedItalic", "../fonts/PFSquareSansPro-MedItalic", $file-formats: ttf eot svg);
+@include font-face("PFSquareSansPro-Medium", "../fonts/PFSquareSansPro-Medium", $file-formats: ttf eot svg);
+@include font-face("PFSquareSansPro-Regular", "../fonts/PFSquareSansPro-Regular", $file-formats: ttf eot svg);
+@include font-face("PFSquareSansPro-XBlack", "../fonts/PFSquareSansPro-XBlack", $file-formats: ttf eot svg);
+@include font-face("Rubl", "../fonts/ALSRubl", $file-formats: ttf eot woff);
