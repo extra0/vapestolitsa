@@ -15,9 +15,101 @@
   <body>
     <div class="main-wrapper">
       <header class="header">
-        <div class="container-fluid"><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a></div>
+        <!-- header верхний блок-->
+        <div class="header-top-block">
+          <div class="container-fluid">
+            <!-- лого-->
+            <div class="header__logo-block"><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a></div>
+            <!-- конец лого-->
+            <div class="header__block-inner">
+              <!-- меню хедера-->
+              <ul class="header-top-block__menu-list">
+                <li class="header-top-block__menu-item"><a href="#!" class="header-top-block__menu-link">Как купить?</a></li>
+                <li class="header-top-block__menu-item"><a href="#!" class="header-top-block__menu-link">Оплата</a></li>
+                <li class="header-top-block__menu-item"><a href="#!" class="header-top-block__menu-link">Доставка</a></li>
+                <li class="header-top-block__menu-item"><a href="#!" class="header-top-block__menu-link">Вопросы-ответы</a></li>
+                <li class="header-top-block__menu-item"><a href="#!" class="header-top-block__menu-link">Контакты</a></li>
+              </ul>
+              <!-- конец меню хедера-->
+              <p class="header-top-block__phone">8 (495) 544 57 00</p>
+              <!-- email-->
+              <div class="header-top-block__email-block pull-right"><a href="mailto:info@vapstolitsa.ru" class="header-top-block__email">info@vapstolitsa.ru</a></div>
+              <!-- конец email-->
+              <!-- график работы-->
+              <p class="header-top-block__work-text pull-right">Принимаем звонки<br>с 9:00 по 22:00</p>
+              <!-- конец графика работы-->
+            </div>
+          </div>
+        </div>
+        <!-- конец header верхний блок-->
+        <!-- средний блок header-->
+        <div class="header-middle-block">
+          <div class="container-fluid">
+            <div class="header__block-inner">
+              <!-- форма поиска-->
+              <div class="search-form">
+                <form action="#">
+                  <input type="text" required placeholder="Введите название или артикул товара" class="form-input search-form__input">
+                  <button type="submit" class="form-btn search-form__btn">Найти</button>
+                </form>
+              </div>
+              <!-- конец формы поиска-->
+              <!-- блок с пользовательскими возможностями-->
+              <div class="user__block"><a href="#!" class="user__link enter">Вход</a><a href="#!" class="user__link registration">Регистрация</a></div>
+              <!-- конец блока с пользовательскими возможностями-->
+              <!-- корзина-->
+              <div class="basket pull-right">
+                <div class="basket__img-block"><span class="basket__quantity">22</span></div><a href="#!" class="basket__link"><span class="basket__link-quantity">2</span> товара</a><span> на </span><span class="basket__price">23 500</span><span class="rubl">a</span>
+              </div>
+              <!-- конец корзины-->
+            </div>
+          </div>
+        </div>
+        <!-- конец среднего блока-->
+        <!-- нижний блок header-->
+        <div class="header-bottom-block">
+          <div class="container-fluid">
+            <div class="header__block-inner">
+              <!-- блок с категориями-->
+              <div class="category">
+                <!-- категория--><a href="#" class="category__link"><img src="img/c1.png" alt="Category img" class="category__img">
+                  <div class="category__description">
+                    <p class="category__title">готовые наборы</p><br>
+                    <p class="category__quantity">32<span> продукта</span></p>
+                  </div></a>
+                <!-- конец категории--><a href="#" class="category__link"><img src="img/c2.png" alt="Category img" class="category__img">
+                  <div class="category__description">
+                    <p class="category__title">жидкости</p><br>
+                    <p class="category__quantity">3<span> продукта</span></p>
+                  </div></a><a href="#" class="category__link"><img src="img/c3.png" alt="Category img" class="category__img">
+                  <div class="category__description">
+                    <p class="category__title">девайсы</p><br>
+                    <p class="category__quantity">322<span> продукта</span></p>
+                  </div></a><a href="#" class="category__link"><img src="img/c4.png" alt="Category img" class="category__img">
+                  <div class="category__description">
+                    <p class="category__title">атомайзеры</p><br>
+                    <p class="category__quantity">32<span> продукта</span></p>
+                  </div></a><a href="#" class="category__link"><img src="img/c5.png" alt="Category img" class="category__img">
+                  <div class="category__description">
+                    <p class="category__title">аксессуары</p><br>
+                    <p class="category__quantity">32<span> продукта</span></p>
+                  </div></a>
+              </div>
+              <!-- конец блока с категориями-->
+            </div>
+          </div>
+        </div>
+        <!--конец нижнего блока header-->
       </header>
-      <p>.</p>
+      <!-- блок с видео-->
+      <div class="video__block">
+        <video loop autoplay muted class="video__player">
+          <source src="video/video.mp4" type="video/mp4">
+          <source src="video/video.webm" type="video/webm">
+          <source src="video/video.ogg" type="video/ogg">
+        </video>
+      </div>
+      <!-- конец блока с видео-->
       <div class="buffer"></div>
     </div>
     <footer class="footer">

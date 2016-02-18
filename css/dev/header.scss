@@ -1,1 +1,305 @@
 /* HEADER */
+.header {
+	position: relative;
+	z-index: 2;
+	&__logo {
+		float: left;
+		display: inline-block;
+		margin: -6px 0 -99px -15px;
+		z-index: 2;
+		position: relative;
+	}
+	&__block-inner {
+		margin-left: 155px;
+	}
+	&-top-block {
+		padding-top: 19px;
+		background: #fff;
+		border-bottom: 1px solid #cfcfce;
+		&__menu-list {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			display: inline-block;
+		}
+		&__menu-item {
+			display: inline-block;
+			padding: 0px 14px 0 20px;
+			border-left: 1px solid #aaaaaa;
+			line-height: 14px;
+			&:last-child {
+				border-right: 1px solid #aaaaaa;
+				padding: 0 17px 0 20px;
+			}
+		}
+		&__menu-link {
+			text-transform: uppercase;
+			font-weight:  700;
+			color: #000;
+			font-size: 13px;
+			position: relative;
+			&:before {
+				content: '';
+				@include position(absolute, null null -2px 0);
+				width: 0%;
+				height: 2px;
+				background: #d59f4f;
+				@include transition(all 0.4s ease-in-out);
+			}
+			&.active,
+			&:hover {
+				text-decoration: none;
+				color: #000;
+				&:before {
+					width: 100%;
+				}
+			}
+		}
+		&__phone {
+			font-size: 17px;
+			font-weight: 800;
+			color: #3d3835;
+			margin: 0 0 0 5.7%;
+			display: inline-block;
+			position: relative;
+			&:before {
+				content: '';
+				@include position(absolute, 0 null null -28%);
+				background: url(../img/header-sprite.png) -5px -5px no-repeat;
+				width: 23px;
+				height: 25px;
+			}
+		}
+		&__work-text {
+			color: #898685;
+			line-height: normal;
+			font-size: 12px;
+			margin: -1px 2% 0 0px;
+			display: inline-block;
+		}
+		&__email {
+			color: #d59f4f;
+			font-family: "Lato Black";
+			font-size: 15px;
+			display: inline-block;
+			line-height: 17px;
+			border-bottom: 1px solid;
+			position: relative;
+			&:focus,
+			&:hover {
+				text-decoration: none;
+				color: #d59f4f;
+				border-bottom: 1px solid transparent;
+			}
+			&:before {
+				content: '';
+				@include position(absolute, 1px null null -39px);
+				background: url(../img/header-sprite.png) -66px -55px no-repeat;
+				width: 21px;
+				height: 17px;
+			}
+		}
+		&__email-block {
+			width: 197px;
+			text-align: right;
+			position: relative;
+			&:before {
+				content: '';
+				@include position(absolute, 4px null null 0);
+				width: 1px;
+				height: 15px;
+				background: #aaa;
+			}
+		}
+	}
+	&-middle-block {
+		background: #e8e3dc;
+		padding: 22px 0;
+	}
+	&-bottom-block {
+		background: rgba(0,0,0,0.7);
+		height: 98px;
+		border-bottom: 1px solid #6d6248;
+	}
+}
+.search-form {
+	width: 50%;
+	position: relative;
+	display: inline-block;
+	margin-right: 15px;
+	&__input {
+		border: 1px solid #d1c6b8;
+		@include transition(all 0.4s ease-in-out);
+		&:focus{
+			box-shadow: 0 0 4px #d59f4f;
+		}
+	}
+	&__btn {
+		top: 3px;
+		right: 3px;
+		padding: 0 26px 0 50px;
+		&:before {
+			content: '';
+			@include position(absolute, 9px null null 21px);
+			background: url(../img/header-sprite.png) -133px -5px;
+			width: 15px;
+			height: 15px;
+		}
+	}
+}
+.user {
+	&__block {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0;
+	}
+
+	&__link {
+		border-bottom: 1px dotted;
+		color: #000;
+		display: inline-block;
+		font-weight: 700;
+		font-size: 13px;
+		line-height: 16px;
+		position: relative;
+		margin: 10px 63px 0 70px;
+		&:hover {
+			color: #000;
+			text-decoration: none;
+			border-bottom: 1px solid transparent;
+		}
+		&:before {
+			content: '';
+			@include position(absolute, -10px null null -48px);
+			background: url(../img/header-sprite.png) no-repeat;
+			width: 41px;
+			height: 40px;
+		}
+		&:after {
+			content: '';
+			@include position(absolute, 0 null null -71px);
+			width: 1px;
+			height: 15px;
+			background: #aaa;
+		}
+		&.enter{
+			&:before {
+				background-position: -82px -5px;
+			}
+		}
+		&.registration {
+			&:before {
+				top: -11px;
+				left: -55px;
+				background-position: -5px -47px;
+			}
+		}
+	}
+}
+.basket {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	font-size: 13px;
+	color: #7f7a76;
+	margin: 7px 0 0 -20px;
+	@extend .header-top-block__email-block;
+	&__price {
+		display: inline-block;
+	}
+	&__link {
+		font-size: 13px;
+		font-weight: bold;
+		color: #7f7a76;
+		display: inline-block;
+		border-bottom: 1px dotted;
+		line-height: 15px;
+		&:hover {
+			color: #7f7a76;
+			text-decoration: none;
+			border-bottom: 1px dotted transparent;
+		}
+	}
+	&__img-block {
+		background: url(../img/header-sprite.png) -38px -5px;
+		width: 34px;
+		height: 32px;
+		@include position(absolute, -5px null null 19px);
+	}
+	&__quantity {
+		text-align: center;
+		@include position(absolute, null 0 -2px null);
+		border-radius: 50%;
+		background: #e8d06d;
+		color: #000;
+		width: 20px;
+		line-height: 20px;
+		height: 20px;
+		font-weight: bold;
+		font-size: 13px;
+		display: inline-block;
+	}
+}
+.category {
+	margin-left: -38px;
+	&__link {
+		padding: 29px 38px 0 38px;
+		height: 98px;
+		overflow: hidden;
+		text-decoration: none;
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		@include transition(all 0.4s ease-in-out);
+		&.active,
+		&:hover {
+			background: rgba(0,0,0, 0.5);
+			.category__title {
+				border-bottom: 1px dotted transparent;
+			}
+		}
+		&:not(:last-child):before {
+			content: '';
+			@include position(absolute, 17px 0 null null);
+			background: url(../img/header-sprite.png) -133px -45px no-repeat;
+			width: 1px;
+			height: 65px;
+		}
+		&:first-child {
+			margin-right: -4px;
+		}
+	}
+	&__img {
+		float: left;
+		margin-right: 15px;
+	}
+	&__title {
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 13px;
+		display: inline-block;
+		margin: 8px 0 0px 0;
+		font-weight: bold;
+		line-height: 13px;
+		border-bottom: 1px dotted #fdce6b;
+		@include transition(all 0.4s ease-in-out);
+	}
+	&__description {
+		display: inline-block;
+	}
+	&__quantity {
+		color: #a59b87;
+		font-size: 12px;
+		margin: 0;
+		position: relative;
+		display: inline-block;
+		padding-right: 20px;
+		&:before {
+			content: '';
+			@include position(absolute, 6px -8px null null);
+			background: url(../img/header-sprite.png) -133px -30px no-repeat;
+			width: 14px;
+			height: 5px;
+		}
+	}
+}

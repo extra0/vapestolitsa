@@ -1,4 +1,100 @@
 header.header
-	.container-fluid
-		a.header__logo(href="/")
-			img(src="img/logo.png" alt="Site Logo")
+	// header верхний блок
+	.header-top-block
+		.container-fluid
+			// лого
+			.header__logo-block
+				a.header__logo(href="/")
+					img(src="img/logo.png" alt="Site Logo")
+			// конец лого
+			.header__block-inner
+				// меню хедера
+				ul.header-top-block__menu-list
+					each item in menu
+						li.header-top-block__menu-item
+							a.header-top-block__menu-link(href="#!") #{item}
+				// конец меню хедера
+				p.header-top-block__phone #{phone}
+				// email
+				.header-top-block__email-block.pull-right
+					a.header-top-block__email(href="mailto:#{email}") #{email}
+				// конец email
+				// график работы
+				p.header-top-block__work-text.pull-right Принимаем звонки<br>с 9:00 по 22:00
+				// конец графика работы
+	// конец header верхний блок
+	// средний блок header
+	.header-middle-block
+		.container-fluid
+			.header__block-inner
+				// форма поиска
+				.search-form
+					form(action="#")
+						input.form-input.search-form__input(type="text" required placeholder="Введите название или артикул товара")
+						button.form-btn.search-form__btn(type="submit") Найти
+				// конец формы поиска
+				// блок с пользовательскими возможностями
+				.user__block
+					a.user__link.enter(href="#!") Вход
+					a.user__link.registration(href="#!") Регистрация
+				// конец блока с пользовательскими возможностями
+				// корзина
+				.basket.pull-right
+					.basket__img-block
+						span.basket__quantity 22
+					a.basket__link(href="#!") <span class="basket__link-quantity">2</span> товара
+					span  на 
+					span.basket__price 23 500
+					span.rubl a
+				// конец корзины
+	// конец среднего блока
+	// нижний блок header
+	.header-bottom-block
+		.container-fluid
+			.header__block-inner
+				// блок с категориями
+				.category
+					// категория
+					a.category__link(href="#")
+						img.category__img(src="img/c1.png", alt="Category img")
+						.category__description
+							p.category__title готовые наборы
+							br
+							p.category__quantity
+								| 32
+								span  продукта
+					// конец категории
+					a.category__link(href="#")
+						img.category__img(src="img/c2.png", alt="Category img")
+						.category__description
+							p.category__title жидкости
+							br
+							p.category__quantity
+								| 3
+								span  продукта
+					a.category__link(href="#")
+						img.category__img(src="img/c3.png", alt="Category img")
+						.category__description
+							p.category__title девайсы
+							br
+							p.category__quantity
+								| 322
+								span  продукта
+					a.category__link(href="#")
+						img.category__img(src="img/c4.png", alt="Category img")
+						.category__description
+							p.category__title атомайзеры
+							br
+							p.category__quantity
+								| 32
+								span  продукта
+					a.category__link(href="#")
+						img.category__img(src="img/c5.png", alt="Category img")
+						.category__description
+							p.category__title аксессуары
+							br
+							p.category__quantity
+								| 32
+								span  продукта
+				// конец блока с категориями
+	//конец нижнего блока header

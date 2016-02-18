@@ -4,7 +4,12 @@ $main_font: 'Proxima Nova', sans-serif;
 $main_color: #000;
 
 // FONTS
-
+.rubl {
+    font-family: 'Rubl';
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 5px;
+}
 
 // COLORS
 
@@ -16,6 +21,7 @@ body {
     height: 100%;
     color: $main_color;
     background: #e8e3dc;
+    height: 20000px;
 }
 
 .container-fluid {
@@ -25,10 +31,43 @@ body {
     font-size: 14px;
     @include box-sizing(border-box);
 }
+.main-wrapper { min-height: 100%;}
+
+.buffer {
+    height: px;
+}
 
 label { font-weight: normal;}
 img {max-width: 100%;}
 a img {border: none;}
+a:focus {text-decoration: none; color: inherit;}
 button, input, textarea {outline: none;}
 
 // Helpers Classes
+
+
+// Components
+.form-input {
+    background: #fff;
+    width: 100%;
+    border: none;
+    line-height: 38px;
+    border-radius: 20px;
+    padding: 0 10px 0 29px;
+    font-size: 12px;
+}
+.form-btn {
+    border: none;
+    height: 34px;
+    line-height: 34px;
+    background: #e8d06d;
+    @include position(absolute, null null null null);
+    @include transition(all 0.4s ease-in-out);
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0 25px;
+    &:hover {
+        background: lighten(#e8d06d, 7%);
+    }
+}
