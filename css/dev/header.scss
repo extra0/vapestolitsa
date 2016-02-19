@@ -15,6 +15,7 @@
 	&-top-block {
 		padding-top: 19px;
 		background: #fff;
+		margin-bottom: -5px;
 		border-bottom: 1px solid #cfcfce;
 		&__menu-list {
 			margin: 0;
@@ -129,6 +130,7 @@
 	margin-right: 15px;
 	&__input {
 		border: 1px solid #d1c6b8;
+		padding-right: 120px;
 		@include transition(all 0.4s ease-in-out);
 		&:focus{
 			box-shadow: 0 0 4px #d59f4f;
@@ -162,7 +164,7 @@
 		font-size: 13px;
 		line-height: 16px;
 		position: relative;
-		margin: 10px 63px 0 70px;
+		margin: 13px 63px 0 70px;
 		&:hover {
 			color: #000;
 			text-decoration: none;
@@ -202,8 +204,10 @@
 	position: relative;
 	font-size: 13px;
 	color: #7f7a76;
-	margin: 7px 0 0 -20px;
+	margin: 11px 0 0 -20px;
 	@extend .header-top-block__email-block;
+	text-align: left;
+	padding-left: 63px;
 	&__price {
 		display: inline-block;
 	}
@@ -224,13 +228,13 @@
 		background: url(../img/header-sprite.png) -38px -5px;
 		width: 34px;
 		height: 32px;
-		@include position(absolute, -5px null null 19px);
+		@include position(absolute, -7px null null 19px);
 	}
 	&__quantity {
 		text-align: center;
 		@include position(absolute, null 0 -2px null);
 		border-radius: 50%;
-		background: #e8d06d;
+		background: $orange;
 		color: #000;
 		width: 20px;
 		line-height: 20px;
@@ -244,7 +248,7 @@
 	margin-left: -38px;
 	&__link {
 		padding: 29px 38px 0 38px;
-		height: 98px;
+		height: 97px;
 		overflow: hidden;
 		text-decoration: none;
 		display: inline-block;
@@ -303,3 +307,4 @@
 		}
 	}
 }
+/* end HEADER*/

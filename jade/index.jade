@@ -1,9 +1,88 @@
 extends _layout
 block content
 	// блок с видео
-	.video__block
-		video.video__player(loop autoplay muted)
-			source(src="video/video.mp4" type="video/mp4")
-			source(src="video/video.webm" type="video/webm")
-			source(src="video/video.ogg" type="video/ogg")
+	.video__wrapper.index-height
+		.video__block
+			//- video.video__player(loop autoplay muted)
+			//- 	source(src="video/video.mp4" type="video/mp4")
+			//- 	source(src="video/video.webm" type="video/webm")
+			//- 	source(src="video/video.ogg" type="video/ogg")
 	// конец блока с видео
+	.main-content
+		.container-fluid
+			// sidebar
+			.sidebar.clearfix
+				include includes/_banner
+				// форма подписки
+				.subscribe__block
+					p.subscribe__title подписка на акции
+					p.subscribe__text Получите специальные предложение и акций первыми!
+					form.subscribe__form(action="#")
+						input.form-input.subscribe__input(type="email" required placeholder="Введите e-mail")
+						button.form-btn.subscribe__btn(type="submit") Подписаться
+				// конец формы подписки
+			// конец sidebar
+			// контент
+			.content
+				// секция с товарамми
+				.goods__section
+					.goods-header
+						h3.goods-header__title.popular Популярные товары
+					.goods-body
+						// блок одного товара
+						.goods-body__item
+							.goods-body__wrapper
+								img.goods-body__img(src="img/content/g2.jpg", alt="")
+								.goods-body__price-block
+									span.goods-body__price 45 000
+									span.rubl a
+							.goods-body__description
+								p.goods-body__name TRUEBERRY SUGAR & KNIFE
+								p.goods-body__category Жидкость
+								a.btn.goods-body__cart-btn(href="#!") в корзину
+								a.btn.goods-body__detail-btn(href="#!") детали
+						// конец блока одного товара
+						- for (var i = 0; i < 7; ++i) {
+							.goods-body__item
+								.goods-body__wrapper
+									img.goods-body__img(src="img/content/g1.jpg", alt="")
+									.goods-body__price-block
+										span.goods-body__price 900
+										span.rubl a
+								.goods-body__description
+									p.goods-body__name TRUEBERRY
+									p.goods-body__category Жидкость
+									a.btn.goods-body__cart-btn(href="#!") в корзину
+									a.btn.goods-body__detail-btn(href="#!") детали
+						-	}
+				.goods__section
+					.goods-header
+						a.btn.goods-header__btn(href="#!") Просмотреть все новинки
+						h3.goods-header__title.new новые поступления
+					.goods-body
+						- for (var i = 0; i < 4; ++i) {
+							.goods-body__item
+								.goods-body__wrapper
+									img.goods-body__img(src="img/content/g"+(i+1)+".jpg", alt="")
+									.goods-body__price-block
+										span.goods-body__price 2 900
+										span.rubl a
+								.goods-body__description
+									p.goods-body__name TRUEBERRY SUGAR & KNIFE
+									p.goods-body__category Жидкость
+									a.btn.goods-body__cart-btn(href="#!") в корзину
+									a.btn.goods-body__detail-btn(href="#!") детали
+						-	}
+				// конец секции с товарами
+			// конец контента
+	include includes/_slider
+	.about__section
+		.container-fluid
+			.about__img-wrapper
+				img.about__img.pull-left(src="img/about.jpg", alt="")
+			.about-description__block
+				h1.about-description__title о компании
+				h2.about-description__subtitle ЧТО ТАКОЕ “VAPE STOLITSA” ?
+				p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.
+				span При создании генератора мы использовали небезызвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
+				span По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых клиентов недоумение при попытках прочитать рыбу текст.

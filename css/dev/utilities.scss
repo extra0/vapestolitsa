@@ -12,6 +12,7 @@ $main_color: #000;
 }
 
 // COLORS
+$orange: #e8d06d;
 
 
 html { height: 100%;}
@@ -21,15 +22,23 @@ body {
     height: 100%;
     color: $main_color;
     background: #e8e3dc;
-    height: 20000px;
 }
+
+* { @include box-sizing(border-box);}
 
 .container-fluid {
     min-width: 1020px;
     max-width: 1360px;
     position: relative;
     font-size: 14px;
-    @include box-sizing(border-box);
+    padding: 0 15px;
+    margin: 0 auto;
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
 }
 .main-wrapper { min-height: 100%;}
 
@@ -40,13 +49,37 @@ body {
 label { font-weight: normal;}
 img {max-width: 100%;}
 a img {border: none;}
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
 a:focus {text-decoration: none; color: inherit;}
 button, input, textarea {outline: none;}
 
 // Helpers Classes
+.pull-right {float: right;}
+.pull-left  {float: left;}
 
+.text-center {text-align: center;}
+.text-rigtht {text-align: right;}
 
-// Components
+.clearfix {
+    &:after,
+    &:before {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.no-margin { margin: 0 !important;}
+.no-padding { padding: 0 !important;}
+
+// COMPONENTS
+
+// Form
 .form-input {
     background: #fff;
     width: 100%;
@@ -66,8 +99,22 @@ button, input, textarea {outline: none;}
     border-radius: 20px;
     font-size: 13px;
     font-weight: bold;
-    padding: 0 25px;
+    padding: 0 18px;
     &:hover {
         background: lighten(#e8d06d, 7%);
+    }
+}
+
+// button
+.btn {
+    border-radius: 20px;
+    border: 2px solid;
+    padding: 0 17px;
+    line-height: 33px;
+    text-decoration: none;
+    display: inline-block;
+    @include transition(all 0.4s ease-in-out);
+    &:hover {
+        text-decoration: none;
     }
 }
