@@ -162,11 +162,16 @@
 	position: relative;
 	display: inline-block;
 	margin-right: 15px;
+	@include transition(all 0.4s ease-in-out);
 	&__input {
 		border: 1px solid #d1c6b8;
 		padding-right: 120px;
 		&:focus{
 			box-shadow: 0 0 4px #d59f4f;
+		}
+		&.smart-open {
+			background: #f3efe9;
+			border-radius: 15px 15px 0 0;
 		}
 	}
 	&__btn {
@@ -341,4 +346,63 @@
 		}
 	}
 }
+// результаты умного поиска
+.smart-result {
+	&__block {
+		@include position(absolute, 38px null null 0);
+		border: 1px solid #d1c6b8;
+		border-radius: 0 0 15px 15px;
+		z-index: 3;
+		background: #fff;
+		width: 100%;
+		display: none;
+		padding: 10px;
+	}
+	&__item {
+		padding: 10px 0 15px 0;
+		margin: 0 10px 4px 10px;
+		border-bottom: 1px solid #d9d9d9;
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		&:last-child {
+			margin-bottom: -3px;
+			border-bottom: none;
+		}
+	}
+	&__img {
+		float: left;
+		max-width: 45px;
+		max-height: 50px;
+	}
+	&__description {
+		margin: 7px 0 0 53px;
+	}
+	&__title {
+		color: #000;
+		display: block;
+		margin-bottom: 7px;
+		font-size: 13px;
+		text-transform: uppercase;
+		@include transition(all 0.4s ease-in-out);
+		&:hover {
+			text-decoration: none;
+			color: $orange;
+		}
+	}
+	&__category {
+		color: #aa4507;
+		font-size: 13px;
+		display: inline-block;
+		border-bottom: 1px solid #efe0dc;
+		line-height: 13px;
+		&:hover {
+			text-decoration: none;
+			border-bottom: 1px solid transparent;
+		}
+	}
+}
+
 /* end HEADER*/

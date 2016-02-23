@@ -36,6 +36,23 @@ header.header
 					form(action="#")
 						input.form-input.search-form__input(type="text" required placeholder="Введите название или артикул товара")
 						button.form-btn.search-form__btn(type="submit") Найти
+					// умный поиск
+					.smart-result__block
+						// результат поиска
+						.smart-result__item
+							a(href="#!")
+								img.smart-result__img(src="img/content/g2.jpg", alt="")
+							.smart-result__description
+								a.smart-result__title(href="#!") SOUR VAPE WICKED WATERMELON 30 МЛ 
+								a.smart-result__category(href="#!") Жидкости
+						// конец результата поиска
+						.smart-result__item
+							a(href="#!")
+								img.smart-result__img(src="img/content/g2.jpg", alt="")
+							.smart-result__description
+								a.smart-result__title(href="#!") SOUR VAPE WICKED WATERMELON 30 МЛ 
+								a.smart-result__category(href="#!") Жидкости
+					// конец умный поиск
 				// конец формы поиска
 				// блок пользователя
 				.user__block
