@@ -127,7 +127,7 @@
 	&-body {
 		@include display(flex);
 		@include flex-wrap(wrap);
-		@include align-items(flex-start);
+		@include align-items(stretch);
 		margin-left: -2%;
 		&__one-row-four-items {
 			.goods-body__item {
@@ -183,7 +183,7 @@
 		&__img {
 			display: block;
 			margin: auto;
-			max-height: 145px;
+			max-height: 140px;
 		}
 		&__price-block {
 			background: $orange;

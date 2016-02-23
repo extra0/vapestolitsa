@@ -5,6 +5,18 @@
 			padding: 29px 20px 0 20px;
 		}
 	}
+	.footer {
+		&-top {
+			&__phone {
+				&:before {
+					display: none;
+				}
+			}
+			&__work-text {
+				display: none;
+			}
+		}
+	}
 }
 @media (max-width: 1270px) {
 	.basket {
