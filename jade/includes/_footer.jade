@@ -3,9 +3,13 @@ footer.footer
 		.footer-top.clearfix
 			// меню футера
 			ul.menu__list.menu-footer
-				each item in menu
+				each item, index in menu
 					li.menu__item
-						a.menu__link(href="#!") #{item}
+						- if (index == 2) {
+							a.menu__link.active(href="#!") #{item}
+						- } else {
+							a.menu__link(href="#!") #{item}
+						- }
 			// конец меню футера
 			// email
 			.footer-top__email-block.pull-right

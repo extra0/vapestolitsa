@@ -94,13 +94,17 @@ button, input, textarea {outline: none;}
     border-radius: 20px;
     padding: 0 10px 0 29px;
     font-size: 12px;
+    border: 1px solid #ccc7c1;
+    @include transition(all 0.4s ease-in-out);
+    &.error {
+        border: 2px solid #f20;
+    }
 }
 .form-btn {
     border: none;
     height: 34px;
     line-height: 34px;
     background: #e8d06d;
-    @include position(absolute, null null null null);
     @include transition(all 0.4s ease-in-out);
     border-radius: 20px;
     font-size: 13px;

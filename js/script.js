@@ -2,12 +2,21 @@ $(function(){
 
 	// вызов фенсибокса
 	$('.fancybox').fancybox({
-		"showCloseButton": false
+		'showCloseButton': false
+	});
+
+	// закрываем модальное
+	$('.modal__close').click(function(){
+		$.fancybox.close();
 	});
 
 	// слайдер
 	$('.slider__block').bxSlider({
-		controls: false
+		mode: 'fade',
+		controls: false,
+		auto: true
 	});
+
+
 
 });

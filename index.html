@@ -13,6 +13,69 @@
     <title></title>
   </head>
   <body>
+    <!-- окно входа на сайт-->
+    <div id="enter" class="modal"><span class="modal__close"></span>
+      <p class="modal__title">Вход на сайт</p>
+      <!-- форма входа-->
+      <form action="#">
+        <div class="modal__form-control"><span class="modal__icon modal__icon-email"></span>
+          <input type="email" required placeholder="E-mail" class="form-input modal__input">
+        </div>
+        <div class="modal__form-control"><span class="modal__icon modal__icon-shield"></span>
+          <input type="password" placeholder="Пароль" class="form-input modal__input">
+        </div>
+        <div class="modal__form-control">
+          <button type="submit" class="form-btn modal__btn">Войти</button>
+        </div>
+      </form>
+      <!-- конец форма входа--><a href="#restore" class="modal__link fancybox">Забыли пароль?</a>
+    </div>
+    <!-- конец входа на сайт-->
+    <!-- окно восстановления пароля-->
+    <div id="restore" class="modal"><span class="modal__close"></span>
+      <p class="modal__title">Востановление<br>пароля</p>
+      <!-- форма входа-->
+      <form action="#">
+        <div class="modal__form-control"><span class="modal__icon modal__icon-email"></span>
+          <input type="email" required placeholder="E-mail" class="form-input modal__input">
+        </div>
+        <div class="modal__form-control">
+          <button type="submit" class="form-btn modal__btn">Выслать письмо с инструкцией</button>
+        </div>
+      </form>
+      <!-- конец форма входа--><a href="#enter" class="modal__link fancybox">Я вспомнил пароль!</a>
+    </div>
+    <!-- конец окна восстановления пароля-->
+    <!-- окно регистрации-->
+    <div id="registration" class="modal"><span class="modal__close"></span>
+      <p class="modal__title modal__title-registration">Регистрация на сайте</p>
+      <form action="#">
+        <div class="modal__half-block">
+          <div class="modal__form-control"><span class="modal__icon modal__icon-user"></span>
+            <label class="modal__label">Имя</label>
+            <input type="email" required class="form-input modal__input">
+          </div>
+          <div class="modal__form-control"><span class="modal__icon modal__icon-shield"></span>
+            <label class="modal__label">Пароль</label>
+            <input type="password" required class="form-input modal__input">
+          </div>
+        </div>
+        <div class="modal__half-block pull-right">
+          <div class="modal__form-control"><span class="modal__icon modal__icon-email"></span>
+            <label class="modal__label">E-mail</label>
+            <input type="email" required class="form-input modal__input">
+          </div>
+          <div class="modal__form-control"><span class="modal__icon modal__icon-shield"></span>
+            <label class="modal__label">Подтвердите пароль</label>
+            <input type="password" required class="form-input modal__input">
+          </div>
+        </div>
+        <div class="modal__form-control">
+          <button type="submit" class="form-btn modal__btn modal__btn-registration">Создать аккаунт</button>
+        </div>
+      </form>
+    </div>
+    <!-- конец окна регистрации-->
     <div class="main-wrapper">
       <header class="header">
         <!-- header верхний блок-->
@@ -24,11 +87,16 @@
             <nav class="header__block-inner">
               <!-- меню хедера-->
               <ul class="menu__list menu-header">
-                <li class="menu__item"><a href="#!" class="menu__link">Как купить?</a></li>
-                <li class="menu__item"><a href="#!" class="menu__link">Оплата</a></li>
-                <li class="menu__item"><a href="#!" class="menu__link">Доставка</a></li>
-                <li class="menu__item"><a href="#!" class="menu__link">Вопросы-ответы</a></li>
-                <li class="menu__item"><a href="#!" class="menu__link">Контакты</a></li>
+                <li class="menu__item"><a href="#!" class="menu__link">Как купить?</a>
+                </li>
+                <li class="menu__item"><a href="#!" class="menu__link">Оплата</a>
+                </li>
+                <li class="menu__item"><a href="#!" class="menu__link active">Доставка</a>
+                </li>
+                <li class="menu__item"><a href="#!" class="menu__link">Вопросы-ответы</a>
+                </li>
+                <li class="menu__item"><a href="#!" class="menu__link">Контакты</a>
+                </li>
               </ul>
               <!-- конец меню хедера-->
               <!-- email-->
@@ -55,7 +123,7 @@
               </div>
               <!-- конец формы поиска-->
               <!-- блок пользователя-->
-              <div class="user__block"><a href="#!" class="user__link enter">Вход</a><a href="#!" class="user__link registration">Регистрация</a></div>
+              <div class="user__block"><a href="#enter" class="user__link enter fancybox">Вход</a><a href="#registration" class="user__link registration fancybox">Регистрация</a></div>
               <!-- конец блока пользователя-->
               <!-- корзина-->
               <div class="basket pull-right"><a href="#!">
@@ -82,7 +150,7 @@
                   <div class="category__description">
                     <p class="category__title">жидкости</p><br>
                     <p class="category__quantity">3<span> продукта</span></p>
-                  </div></a><a href="#" class="category__link"><img src="img/c3.png" alt="Category img" class="category__img">
+                  </div></a><a href="#" class="category__link active"><img src="img/c3.png" alt="Category img" class="category__img">
                   <div class="category__description">
                     <p class="category__title">девайсы</p><br>
                     <p class="category__quantity">322<span> продукта</span></p>
@@ -307,11 +375,16 @@
         <div class="footer-top clearfix">
           <!-- меню футера-->
           <ul class="menu__list menu-footer">
-            <li class="menu__item"><a href="#!" class="menu__link">Как купить?</a></li>
-            <li class="menu__item"><a href="#!" class="menu__link">Оплата</a></li>
-            <li class="menu__item"><a href="#!" class="menu__link">Доставка</a></li>
-            <li class="menu__item"><a href="#!" class="menu__link">Вопросы-ответы</a></li>
-            <li class="menu__item"><a href="#!" class="menu__link">Контакты</a></li>
+            <li class="menu__item"><a href="#!" class="menu__link">Как купить?</a>
+            </li>
+            <li class="menu__item"><a href="#!" class="menu__link">Оплата</a>
+            </li>
+            <li class="menu__item"><a href="#!" class="menu__link active">Доставка</a>
+            </li>
+            <li class="menu__item"><a href="#!" class="menu__link">Вопросы-ответы</a>
+            </li>
+            <li class="menu__item"><a href="#!" class="menu__link">Контакты</a>
+            </li>
           </ul>
           <!-- конец меню футера-->
           <!-- email-->

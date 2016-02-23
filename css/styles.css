@@ -198,6 +198,13 @@ button, input, textarea {
   border-radius: 20px;
   padding: 0 10px 0 29px;
   font-size: 12px;
+  border: 1px solid #ccc7c1;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.form-input.error {
+  border: 2px solid #f20;
 }
 
 .form-btn {
@@ -205,7 +212,6 @@ button, input, textarea {
   height: 34px;
   line-height: 34px;
   background: #e8d06d;
-  position: absolute;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -340,16 +346,7 @@ button, input, textarea {
   height: 36px;
   cursor: pointer;
   z-index: 8040;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.fancybox-close:hover {
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  transform: rotate(360deg);
+  display: none;
 }
 
 .fancybox-nav {
@@ -961,14 +958,12 @@ button, input, textarea {
 .search-form__input, .subscribe__input {
   border: 1px solid #d1c6b8;
   padding-right: 120px;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
 }
 .search-form__input:focus, .subscribe__input:focus {
   box-shadow: 0 0 4px #d59f4f;
 }
 .search-form__btn {
+  position: absolute;
   top: 3px;
   right: 3px;
   padding: 0 26px 0 50px;
@@ -1163,10 +1158,151 @@ button, input, textarea {
   margin-left: 330px;
 }
 
+#enter,
+#restore {
+  width: 320px;
+}
+
+#registration {
+  width: 610px;
+}
+
+.modal {
+  display: none;
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px 27px;
+}
+.modal__title {
+  margin: 0 11px 26px 11px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.modal__title-registration {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 33px;
+  margin: 0 11px 36px 11px;
+}
+.modal__close {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 23px;
+  right: 31px;
+}
+.modal__close:after, .modal__close:before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #a3a3a3;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.modal__close:before {
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.modal__close:after {
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.modal__close:hover:after {
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.modal__close:hover:before {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.modal__form-control {
+  position: relative;
+  margin-bottom: 15px;
+}
+.modal__input {
+  border: 1px solid #d1c7b8;
+  padding: 0 10px 0 53px;
+}
+.modal__input:focus {
+  box-shadow: 0 0 4px #d59f4f;
+}
+.modal__link {
+  font-size: 13px;
+  color: #aa4507;
+  display: inline-block;
+  border-bottom: 1px solid #efe0dc;
+  line-height: 13px;
+  margin-left: 11px;
+}
+.modal__link:hover {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.modal__icon {
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  bottom: 14px;
+  left: 25px;
+}
+.modal__icon-shield {
+  bottom: 13px;
+  background: url(../img/ico-shield.png) 0 0 no-repeat;
+}
+.modal__icon-email {
+  background: url(../img/ico-email.png) 0 0 no-repeat;
+}
+.modal__icon-user {
+  background: url(../img/ico-user.png) 0 0 no-repeat;
+}
+.modal__btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 38px;
+}
+.modal__btn-registration {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 auto;
+  max-width: 260px;
+  height: 40px;
+}
+.modal__label {
+  font-size: 12px;
+  color: #898685;
+  margin: 0 0 11px 11px;
+  display: block;
+}
+.modal__half-block {
+  width: 48%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 27px;
+}
+
 .video__wrapper {
   margin-top: -98px;
   position: relative;
-  height: 350px;
+  height: 280px;
 }
 .video__wrapper.index-height {
   height: 587px;

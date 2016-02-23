@@ -10,9 +10,13 @@ header.header
 			nav.header__block-inner
 				// меню хедера
 				ul.menu__list.menu-header
-					each item in menu
+					each item, index in menu
 						li.menu__item
-							a.menu__link(href="#!") #{item}
+							- if (index == 2) {
+								a.menu__link.active(href="#!") #{item}
+							- } else {
+								a.menu__link(href="#!") #{item}
+							- }
 				// конец меню хедера
 				// email
 				.header-top-block__email-block.pull-right
@@ -35,8 +39,8 @@ header.header
 				// конец формы поиска
 				// блок пользователя
 				.user__block
-					a.user__link.enter(href="#!") Вход
-					a.user__link.registration(href="#!") Регистрация
+					a.user__link.enter.fancybox(href="#enter") Вход
+					a.user__link.registration.fancybox(href="#registration") Регистрация
 				// конец блока пользователя
 				// корзина
 				.basket.pull-right
@@ -74,7 +78,7 @@ header.header
 							p.category__quantity
 								| 3
 								span  продукта
-					a.category__link(href="#")
+					a.category__link.active(href="#")
 						img.category__img(src="img/c3.png", alt="Category img")
 						.category__description
 							p.category__title девайсы

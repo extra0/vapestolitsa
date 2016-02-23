@@ -1,0 +1,57 @@
+// окно входа на сайт
+.modal#enter
+	span.modal__close
+	p.modal__title Вход на сайт
+	// форма входа
+	form(action="#")
+		.modal__form-control
+			span.modal__icon.modal__icon-email
+			input.form-input.modal__input(type="email" required placeholder="E-mail")
+		.modal__form-control
+			span.modal__icon.modal__icon-shield
+			input.form-input.modal__input(type="password" placeholder="Пароль")
+		.modal__form-control
+			button.form-btn.modal__btn(type="submit") Войти
+	// конец форма входа
+	a.modal__link.fancybox(href="#restore") Забыли пароль?
+// конец входа на сайт
+// окно восстановления пароля
+.modal#restore
+	span.modal__close
+	p.modal__title Востановление<br>пароля
+	// форма входа
+	form(action="#")
+		.modal__form-control
+			span.modal__icon.modal__icon-email
+			input.form-input.modal__input(type="email" required placeholder="E-mail")
+		.modal__form-control
+			button.form-btn.modal__btn(type="submit") Выслать письмо с инструкцией
+	// конец форма входа
+	a.modal__link.fancybox(href="#enter") Я вспомнил пароль!
+// конец окна восстановления пароля
+// окно регистрации
+.modal#registration
+	span.modal__close
+	p.modal__title.modal__title-registration Регистрация на сайте
+	form(action="#")
+		.modal__half-block
+			.modal__form-control
+				span.modal__icon.modal__icon-user
+				label.modal__label Имя
+				input.form-input.modal__input(type="email" required)
+			.modal__form-control
+				span.modal__icon.modal__icon-shield
+				label.modal__label Пароль
+				input.form-input.modal__input(type="password" required)
+		.modal__half-block.pull-right
+			.modal__form-control
+				span.modal__icon.modal__icon-email
+				label.modal__label E-mail
+				input.form-input.modal__input(type="email" required)
+			.modal__form-control
+				span.modal__icon.modal__icon-shield
+				label.modal__label Подтвердите пароль
+				input.form-input.modal__input(type="password" required)
+		.modal__form-control
+			button.form-btn.modal__btn.modal__btn-registration(type="submit") Создать аккаунт
+// конец окна регистрации
