@@ -1,7 +1,9 @@
 $(function(){
 
 	// вызов фенсибокса
-	$('.fancybox').fancybox();
+	$('.fancybox').fancybox({
+		"showCloseButton": false
+	});
 
 	// слайдер
 	$('.slider__block').bxSlider({

@@ -150,9 +150,11 @@
 				box-shadow: 0 0 4px $orange;
 				.goods-body__detail-btn {
 					right: 0;
+					opacity: 1;
 				}
 				.goods-body__cart-btn {
 					left: 0;
+					opacity: 1;
 				}
 				.goods-body__price-block,
 				.goods-body__category,
@@ -219,6 +221,7 @@
 			font-size: 10px;
 			text-transform: uppercase;
 			font-weight: bold;
+			opacity: 0;
 			// width: 103px;
 			text-align: center;
 			@include position(absolute, 0 null null -100%);
@@ -229,6 +232,7 @@
 			}
 		}
 		&__detail-btn {
+			opacity: 0;
 			@include position(absolute, 0 -100% null null);
 			font-size: 10px;
 			// width: 88px;
@@ -293,13 +297,13 @@
 		border-bottom: 3px solid #e8e3dc;
 	}
 	&__img-wrapper {
-		// width: 40%;
+		width: 40%;
 	}
 	&-description {
 		&__block {
 			vertical-align: top;
-			// margin-left: 44.6%;
-			max-width: 90%;
+			margin-left: 44.6%;
+			max-width: 44%;
 			padding: 88px 0 0;
 			& *:not([class]) {
 				display: block;
@@ -333,6 +337,64 @@
 				background: #7f7f7f;
 			}
 		}
+	}
+}
+// отзывы в слайдере
+.feedback {
+	&__block {
+		position: relative;
+		border-left: 8px solid rgba(255, 255, 255, 0.35);
+		padding: 45px;
+		width: 50%;
+		margin-left: 41.5%;
+		margin-top: 7.3%;
+		&:before,
+		&:after {
+			content: '';
+			background: rgba(255, 255, 255, 0.35);
+			height: 8px;
+			width: 200px;
+			@include position(absolute, 0 null null 0);
+		}
+		&:after {
+			@include position(absolute, auto null 0 0);
+		}
+	}
+	&__title {
+		font-size: 13px;
+		margin: 0 0 11px;
+		font-weight: bold;
+		text-transform: uppercase;
+		border-bottom: 1px solid;
+		padding-bottom: 4px;
+		color: $orange;
+		display: inline-block;
+	}
+	&__author {
+		text-transform: uppercase;
+		color: #fff;
+		font-size: 38px;
+		margin: 0 0 23px 0;
+		position: relative;
+		font-weight: bold;
+		padding-bottom: 9px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+		&:before {
+			content: '';
+			@include position(absolute, null null -1px 0);
+			width: 50px;
+			height: 1px;
+			background: #969493;
+		}
+	}
+	&__text {
+		color: #e3d4be;
+		font-size: 16px;
+		font-weight: 300;
+		margin: 0;
+		line-height: 21px;
+		max-height: 85px;
+		overflow: hidden;
 	}
 }
 
