@@ -1,4 +1,4 @@
-@import url(normalize.css);
+@import url(grid.css);
 /* FONTS */
 @font-face {
   font-family: "Proxima Nova";
@@ -111,7 +111,7 @@ body {
 }
 
 .buffer {
-  height: px;
+  height: 155px;
 }
 
 label {
@@ -154,7 +154,7 @@ button, input, textarea {
   text-align: center;
 }
 
-.text-rigtht {
+.text-right {
   text-align: right;
 }
 
@@ -197,7 +197,11 @@ button, input, textarea {
   padding: 0 18px;
 }
 .form-btn:hover {
-  background: #edda8c;
+  background: #c7b25d;
+}
+.form-btn.disabled, .form-btn[disabled] {
+  color: #bfbcb0;
+  cursor: default;
 }
 
 .btn {
@@ -745,7 +749,7 @@ button, input, textarea {
   margin-bottom: -5px;
   border-bottom: 1px solid #cfcfce;
 }
-.header-top-block__phone {
+.header-top-block__phone, .footer-top__phone {
   font-size: 17px;
   font-weight: 800;
   color: #3d3835;
@@ -754,7 +758,7 @@ button, input, textarea {
   position: relative;
   float: right;
 }
-.header-top-block__phone:before {
+.header-top-block__phone:before, .footer-top__phone:before {
   content: '';
   position: absolute;
   top: 0;
@@ -763,14 +767,14 @@ button, input, textarea {
   width: 23px;
   height: 25px;
 }
-.header-top-block__work-text {
+.header-top-block__work-text, .footer-top__work-text {
   color: #898685;
   line-height: normal;
   font-size: 12px;
   margin: -1px 2% 0 0px;
   display: inline-block;
 }
-.header-top-block__email {
+.header-top-block__email, .footer-top__email {
   color: #d59f4f;
   font-family: "Lato Black";
   font-size: 15px;
@@ -779,12 +783,12 @@ button, input, textarea {
   border-bottom: 1px solid;
   position: relative;
 }
-.header-top-block__email:focus, .header-top-block__email:hover {
+.header-top-block__email:focus, .footer-top__email:focus, .header-top-block__email:hover, .footer-top__email:hover {
   text-decoration: none;
   color: #d59f4f;
   border-bottom: 1px solid transparent;
 }
-.header-top-block__email:before {
+.header-top-block__email:before, .footer-top__email:before {
   content: '';
   position: absolute;
   top: 1px;
@@ -793,12 +797,12 @@ button, input, textarea {
   width: 21px;
   height: 17px;
 }
-.header-top-block__email-block, .basket {
+.header-top-block__email-block, .basket, .footer-top__email-block {
   width: 197px;
   text-align: right;
   position: relative;
 }
-.header-top-block__email-block:before, .basket:before {
+.header-top-block__email-block:before, .basket:before, .footer-top__email-block:before {
   content: '';
   position: absolute;
   top: 4px;
@@ -861,11 +865,14 @@ button, input, textarea {
   line-height: 16px;
   position: relative;
   margin: 13px 63px 0 70px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .user__link:hover {
-  color: #000;
+  color: #543500;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px dotted;
 }
 .user__link:before {
   content: '';
@@ -1341,13 +1348,9 @@ button, input, textarea {
   padding-bottom: 18px;
   border-bottom: 3px solid #e8e3dc;
 }
-.about__img-wrapper {
-  width: 40%;
-}
 .about-description__block {
   vertical-align: top;
-  margin-left: 44.6%;
-  max-width: 44%;
+  max-width: 90%;
   padding: 88px 0 0;
 }
 .about-description__block *:not([class]) {
@@ -1387,10 +1390,24 @@ button, input, textarea {
 /*end CONTENT*/
 /* FOOTER */
 .footer {
-  height: px;
-  margin-top: -px;
+  height: 155px;
+  margin-top: -155px;
   background: url(../img/footer-bg.png);
   padding: 34px 0 50px;
+}
+.footer-top {
+  padding-bottom: 10px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.footer-top__email-block:before {
+  display: none;
+}
+.footer-top__phone {
+  color: #fff;
+}
+.footer-top__phone:before {
+  background: url(../img/footer-phone.png) 0 0 no-repeat;
 }
 .footer-bottom__img {
   float: left;
@@ -1399,11 +1416,13 @@ button, input, textarea {
   color: #beb8b4;
   font-size: 13px;
   margin: 10px 0 0 64px;
+  line-height: 16px;
 }
 .footer__development {
   width: 88px;
   height: 35px;
   background: url(/img/dev_logo_pas.jpg) 0 0 no-repeat;
+  margin-top: 7px;
   position: relative;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;

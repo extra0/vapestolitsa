@@ -43,7 +43,7 @@ body {
 .main-wrapper { min-height: 100%;}
 
 .buffer {
-    height: px;
+    height: 155px;
 }
 
 label { font-weight: normal;}
@@ -63,7 +63,7 @@ button, input, textarea {outline: none;}
 .pull-left  {float: left;}
 
 .text-center {text-align: center;}
-.text-rigtht {text-align: right;}
+.text-right {text-align: right;}
 
 .clearfix {
     &:after,
@@ -101,7 +101,12 @@ button, input, textarea {outline: none;}
     font-weight: bold;
     padding: 0 18px;
     &:hover {
-        background: lighten(#e8d06d, 7%);
+        background: #c7b25d;
+    }
+    &.disabled,
+    &[disabled] {
+        color: #bfbcb0;
+        cursor: default;
     }
 }
 

@@ -1,10 +1,34 @@
 /* FOOTER */
 .footer {
-    height: px;
-    margin-top: -px;
+    height: 155px;
+    margin-top: -155px;
     background: url(../img/footer-bg.png);
     padding: 34px 0 50px;
-    &-top {}
+    &-top {
+    	padding-bottom: 10px;
+    	margin-bottom: 4px;
+    	border-bottom: 1px solid rgba(255,255,255, 0.3);
+    	&__email-block {
+    		@extend .header-top-block__email-block;
+    		&:before {
+    			display: none;
+    		}
+    	}
+    	&__email {
+    		@extend .header-top-block__email;
+
+    	}
+    	&__work-text {
+    		@extend .header-top-block__work-text;
+    	}
+    	&__phone {
+    		@extend .header-top-block__phone;
+    		color: #fff;
+    		&:before {
+    			background: url(../img/footer-phone.png) 0 0 no-repeat;
+    		}
+    	}
+    }
     &-bottom {
     	&__img {
     		float: left;
@@ -13,13 +37,14 @@
 			color: #beb8b4;
 			font-size: 13px;
 			margin: 10px 0 0 64px;
+			line-height: 16px;
     	}
     }
     &__development {
     	width: 88px;
     	height: 35px;
     	background: url(/img/dev_logo_pas.jpg) 0 0 no-repeat;
-    	// margin: 19px 0 11px 51px;
+    	margin-top: 7px;
     	position: relative;
     	@include transition(all 0.4s ease-in-out);
     	overflow: hidden;
