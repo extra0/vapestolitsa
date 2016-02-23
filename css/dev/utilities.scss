@@ -40,7 +40,7 @@ body {
         clear: both;
     }
 }
-.main-wrapper { min-height: 100%;}
+.main-wrapper { min-height: 100%; overflow: hidden;}
 
 .buffer {
     height: 155px;

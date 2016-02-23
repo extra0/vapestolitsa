@@ -108,6 +108,7 @@ body {
 
 .main-wrapper {
   min-height: 100%;
+  overflow: hidden;
 }
 
 .buffer {
@@ -660,6 +661,120 @@ button, input, textarea {
   padding: 10px;
 }
 
+/*
+ * Core styles for PriorityNav.js
+ * These styles are not optional and should always be included
+ *
+ * Free to use under the MIT License.
+ * http://twitter.com/GijsRoge
+ */
+.priority-nav {
+  white-space: nowrap;
+  /*
+    * Makes sure the menu's are inline-block so they don't take up
+    * the entire width of its parent. This will break the plugin.
+    */
+}
+.priority-nav > ul {
+  display: inline-block;
+}
+.priority-nav > ul > li {
+  display: inline-block;
+}
+.priority-nav-has-dropdown .priority-nav__dropdown-toggle {
+  border: none;
+  background: none;
+  margin-left: 15px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  position: relative;
+}
+.priority-nav-has-dropdown .priority-nav__dropdown-toggle:after, .priority-nav-has-dropdown .priority-nav__dropdown-toggle:before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  right: -6px;
+  background: #d01515;
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg);
+  width: 6px;
+  height: 1px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.priority-nav-has-dropdown .priority-nav__dropdown-toggle:after {
+  position: absolute;
+  top: 9px;
+  right: -11px;
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+.priority-nav-has-dropdown .priority-nav__dropdown-toggle.is-open:after {
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.priority-nav-has-dropdown .priority-nav__dropdown-toggle.is-open:before {
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+.priority-nav__wrapper {
+  position: relative;
+}
+.priority-nav__dropdown {
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+  border-radius: 4px;
+  margin: 0;
+  padding: 0 14px;
+  top: 26px;
+  right: -20px;
+  z-index: 10;
+  text-align: right;
+  border: 1px solid #ccc;
+  background: #e8d06d;
+}
+.priority-nav__dropdown .menu__link {
+  color: #000;
+  margin: 0;
+}
+.priority-nav__dropdown .menu__link.active:before, .priority-nav__dropdown .menu__link:hover:before {
+  background: #000;
+}
+.priority-nav__dropdown .menu__item {
+  margin: 10px 0;
+  display: block;
+  padding: 5px 0 !important;
+}
+.priority-nav__dropdown.show {
+  visibility: visible;
+}
+.priority-nav__dropdown-toggle {
+  visibility: hidden;
+  position: absolute;
+}
+.priority-nav-is-visible {
+  visibility: visible;
+}
+.priority-nav-is-hidden {
+  visibility: hidden;
+}
+
 /* HEADER */
 .menu__list {
   margin: 0;
@@ -894,6 +1009,9 @@ button, input, textarea {
 }
 .user__link.enter:before {
   background-position: -82px -5px;
+}
+.user__link.registration {
+  margin-right: 0;
 }
 .user__link.registration:before {
   top: -11px;
@@ -1163,15 +1281,6 @@ button, input, textarea {
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -moz-box-pack: start;
-  box-pack: start;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  -ms-justify-content: flex-start;
-  -o-justify-content: flex-start;
-  justify-content: flex-start;
-  -ms-flex-pack: start;
   -webkit-box-align: start;
   -moz-box-align: start;
   box-align: start;
@@ -1181,13 +1290,13 @@ button, input, textarea {
   -o-align-items: flex-start;
   align-items: flex-start;
   -ms-flex-align: start;
-  margin-left: -20px;
+  margin-left: -2%;
 }
 .goods-body__item {
   background: #fff;
   border: 2px solid #fff;
   width: 23%;
-  margin: 0 0 20px 20px;
+  margin: 0 0 20px 2%;
   position: relative;
   padding: 13px 13px 9px;
   -webkit-transition: all 0.4s ease-in-out;
@@ -1277,7 +1386,6 @@ button, input, textarea {
   font-size: 10px;
   text-transform: uppercase;
   font-weight: bold;
-  width: 103px;
   text-align: center;
   position: absolute;
   top: 0;
@@ -1293,7 +1401,6 @@ button, input, textarea {
   top: 0;
   right: -100%;
   font-size: 10px;
-  width: 88px;
   text-align: center;
   text-transform: uppercase;
   color: #a6a6a6;
@@ -1341,6 +1448,9 @@ button, input, textarea {
   box-shadow: inset 0px 16px 15px 0px rgba(0, 0, 0, 0.5);
   height: 30px;
   z-index: 2;
+}
+.slider__item {
+  height: 500px;
 }
 
 .about__section {
@@ -1464,5 +1574,18 @@ button, input, textarea {
 
 /* end FOOTER*/
 /* MEDIA */
+@media (max-width: 1200px) {
+  .category__link {
+    padding: 29px 20px 0 20px;
+  }
+}
+@media (max-width: 1270px) {
+  .basket {
+    width: auto;
+  }
+  .basket__line {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

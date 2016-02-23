@@ -408,3 +408,110 @@
 	font-size: .85em;
 	padding: 10px;
 }
+
+/*
+ * Core styles for PriorityNav.js
+ * These styles are not optional and should always be included
+ *
+ * Free to use under the MIT License.
+ * http://twitter.com/GijsRoge
+ */
+
+.priority-nav{
+
+  white-space: nowrap; // prevent flash of unstyled content
+
+  /*
+    * Makes sure the menu's are inline-block so they don't take up
+    * the entire width of its parent. This will break the plugin.
+    */
+  > ul{
+    display: inline-block;
+    > li{
+      display: inline-block;
+    }
+  }
+  &-has-dropdown{
+    .priority-nav{
+      &__dropdown{
+        &-toggle{
+          border: none;
+          background: none;
+          margin-left: 15px;
+          color: #000;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 13px;
+          position: relative;
+          &:after,
+          &:before {
+            content: '';
+            @include position(absolute, 9px -6px null null);
+            background: #d01515;
+            @include transform(rotate(30deg));
+            width: 6px;
+            height: 1px;
+            @include transition(all 0.4s ease-in-out);
+          }
+          &:after {
+            @include position(absolute, 9px -11px null null);
+            @include transform(rotate(-30deg));
+          }
+          &.is-open {
+            &:after {
+              @include transform(rotate(30deg));
+            }
+            &:before {
+              @include transform(rotate(-30deg));
+            }
+          }
+        }
+      }
+    }
+  }
+  &__wrapper{
+    position: relative;
+  }
+  &__dropdown{
+    position: absolute;
+    visibility: hidden;
+    z-index: 2;
+    border-radius: 4px;
+    margin: 0;
+    padding: 0 14px;
+    top: 26px;
+    right: -20px;
+    z-index: 10;
+    text-align: right;
+    border: 1px solid #ccc;
+    background: $orange;
+    .menu__link {
+      color: #000;
+      margin: 0;
+      &.active,
+      &:hover {
+        &:before {
+          background: #000;
+        }
+      }
+    }
+    .menu__item {
+      margin: 10px 0;
+      display: block;
+      padding: 5px 0!important;
+    }
+    &.show{
+      visibility: visible;
+    }
+    &-toggle{
+      visibility: hidden;
+      position: absolute;
+    }
+  }
+  &-is-visible{
+    visibility: visible;
+  }
+  &-is-hidden{
+    visibility: hidden;
+  }
+}
