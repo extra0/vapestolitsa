@@ -19,7 +19,7 @@
       <!-- форма входа-->
       <form action="#">
         <div class="modal__form-control"><span class="modal__icon modal__icon-email"></span>
-          <input type="email" required placeholder="E-mail" class="form-input modal__input">
+          <input type="email" required placeholder="E-mail" class="form-input modal__input error">
         </div>
         <div class="modal__form-control"><span class="modal__icon modal__icon-shield"></span>
           <input type="password" placeholder="Пароль" class="form-input modal__input">
@@ -91,7 +91,7 @@
                 </li>
                 <li class="menu__item"><a href="#!" class="menu__link">Оплата</a>
                 </li>
-                <li class="menu__item"><a href="#!" class="menu__link active">Доставка</a>
+                <li class="menu__item"><span class="menu__link active">Доставка</span>
                 </li>
                 <li class="menu__item"><a href="#!" class="menu__link">Вопросы-ответы</a>
                 </li>
@@ -137,7 +137,10 @@
               </div>
               <!-- конец формы поиска-->
               <!-- блок пользователя-->
-              <div class="user__block"><a href="#enter" class="user__link enter fancybox">Вход</a><a href="#registration" class="user__link registration fancybox">Регистрация</a></div>
+              <div class="user__block">
+                <!-- если пользователь залогинен--><img src="img/content/link-ava.jpg" alt="" class="user__img"><a href="#!" class="user__link user__link-login">HelloKing</a>
+                <!-- конец залогиненного блока пользователя--><a href="#registration" class="user__link user__link-registration fancybox">Регистрация</a>
+              </div>
               <!-- конец блока пользователя-->
               <!-- корзина-->
               <div class="basket pull-right"><a href="#!">
@@ -393,7 +396,7 @@
             </li>
             <li class="menu__item"><a href="#!" class="menu__link">Оплата</a>
             </li>
-            <li class="menu__item"><a href="#!" class="menu__link active">Доставка</a>
+            <li class="menu__item"><span class="menu__link active">Доставка</span>
             </li>
             <li class="menu__item"><a href="#!" class="menu__link">Вопросы-ответы</a>
             </li>

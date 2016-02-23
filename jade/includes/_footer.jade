@@ -6,7 +6,7 @@ footer.footer
 				each item, index in menu
 					li.menu__item
 						- if (index == 2) {
-							a.menu__link.active(href="#!") #{item}
+							span.menu__link.active #{item}
 						- } else {
 							a.menu__link(href="#!") #{item}
 						- }

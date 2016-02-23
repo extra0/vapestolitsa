@@ -171,7 +171,7 @@
 		}
 		&.smart-open {
 			background: #f3efe9;
-			border-radius: 15px 15px 0 0;
+			border-radius: 20px 20px 0 0;
 		}
 	}
 	&__btn {
@@ -191,8 +191,8 @@
 		display: inline-block;
 		vertical-align: top;
 		margin: 0;
+		position: relative;
 	}
-
 	&__link {
 		border-bottom: 1px dotted;
 		color: #000;
@@ -200,6 +200,7 @@
 		font-weight: 700;
 		font-size: 13px;
 		line-height: 16px;
+		vertical-align: top;
 		position: relative;
 		margin: 13px 63px 0 70px;
 		@include transition(all 0.4s ease-in-out);
@@ -211,7 +212,6 @@
 		&:before {
 			content: '';
 			@include position(absolute, -10px null null -48px);
-			background: url(../img/header-sprite.png) no-repeat;
 			width: 41px;
 			height: 40px;
 		}
@@ -222,19 +222,44 @@
 			height: 15px;
 			background: #aaa;
 		}
-		&.enter{
+		&-enter{
 			&:before {
-				background-position: -82px -5px;
+				background: url(../img/enter-static.png) 0 0 no-repeat;
+				@include transition(all 0.4s ease-in-out);
+			}
+			&:hover {
+				&:before {
+					background: url(../img/enter-hover.png)  0 0 no-repeat;	
+				}
 			}
 		}
-		&.registration {
+		&-registration {
 			margin-right: 0;
 			&:before {
+				background: url(../img/header-sprite.png) no-repeat;
 				top: -11px;
 				left: -55px;
 				background-position: -5px -47px;
 			}
 		}
+		&-login {
+			margin: 13px 30px 0 70px;
+			@include ellipsis(57px);
+			color: #543500;
+			&:before {
+			  content:  '';
+			  @include position(absolute, 7px -20px null auto);
+			  background: url(../img/red-arrow.png) 0 0 no-repeat;
+			  width: 11px;
+			  height: 4px;
+			  @include transition(all 0.4s ease-in-out);
+			}
+		}
+	}
+	&__img {
+		border-radius: 50%;
+		border: 5px solid #e8e3dc;
+		@include position(absolute, 0 null null 20px);
 	}
 }
 .basket {

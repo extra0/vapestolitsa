@@ -13,7 +13,7 @@ header.header
 					each item, index in menu
 						li.menu__item
 							- if (index == 2) {
-								a.menu__link.active(href="#!") #{item}
+								span.menu__link.active #{item}
 							- } else {
 								a.menu__link(href="#!") #{item}
 							- }
@@ -59,8 +59,12 @@ header.header
 				// конец формы поиска
 				// блок пользователя
 				.user__block
-					a.user__link.enter.fancybox(href="#enter") Вход
-					a.user__link.registration.fancybox(href="#registration") Регистрация
+					// если пользователь залогинен
+					img.user__img(src="img/content/link-ava.jpg", alt="")
+					a.user__link.user__link-login(href="#!") HelloKing
+					// конец залогиненного блока пользователя
+					//- a.user__link.user__link-enter.fancybox(href="#enter") Вход
+					a.user__link.user__link-registration.fancybox(href="#registration") Регистрация
 				// конец блока пользователя
 				// корзина
 				.basket.pull-right

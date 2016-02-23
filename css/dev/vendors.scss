@@ -440,26 +440,17 @@
           font-weight: 700;
           font-size: 13px;
           position: relative;
-          &:after,
-          &:before {
-            content: '';
-            @include position(absolute, 9px -6px null null);
-            background: #d01515;
-            @include transform(rotate(30deg));
-            width: 6px;
-            height: 1px;
-            @include transition(all 0.4s ease-in-out);
-          }
           &:after {
-            @include position(absolute, 9px -11px null null);
-            @include transform(rotate(-30deg));
+            content:  '';
+            @include position(absolute, 7px -13px null null);
+            background: url(../img/red-arrow.png) 0 0 no-repeat;
+            width: 11px;
+            height: 4px;
+            @include transition(all 0.4s ease-in-out);
           }
           &.is-open {
             &:after {
-              @include transform(rotate(30deg));
-            }
-            &:before {
-              @include transform(rotate(-30deg));
+              @include transform(rotate(180deg));
             }
           }
         }
