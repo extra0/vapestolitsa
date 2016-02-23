@@ -93,7 +93,7 @@ body {
 }
 
 .container-fluid {
-  min-width: 1020px;
+  min-width: 1000px;
   max-width: 1360px;
   position: relative;
   font-size: 14px;
