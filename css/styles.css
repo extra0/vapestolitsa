@@ -1166,7 +1166,6 @@ button, input, textarea {
 .video__wrapper {
   margin-top: -98px;
   position: relative;
-  background: #ddd;
   height: 350px;
 }
 .video__wrapper.index-height {
