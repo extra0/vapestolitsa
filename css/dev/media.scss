@@ -13,4 +13,18 @@
 			display: none;
 		}
 	}
+	.goods {
+		&-body {
+			&__one-row-four-items {
+				.goods-body__item {
+					width: 31.3%;
+				}
+			}
+			&__last-four-none {
+				.goods-body__item:nth-child(4) {
+					display: none;
+				}
+			}
+		}
+	}
 }

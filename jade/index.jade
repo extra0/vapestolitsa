@@ -28,7 +28,7 @@ block content
 				.goods__section
 					.goods-header
 						h3.goods-header__title.popular Популярные товары
-					.goods-body
+					.goods-body.goods-body__one-row-four-items
 						// блок одного товара
 						.goods-body__item
 							.goods-body__wrapper
@@ -55,11 +55,11 @@ block content
 									a.btn.goods-body__cart-btn(href="#!") в корзину
 									a.btn.goods-body__detail-btn(href="#!") детали
 						-	}
-				.goods__section
+				.goods__section.margin-bottom-40
 					.goods-header
 						a.btn.goods-header__btn(href="#!") Просмотреть все новинки
 						h3.goods-header__title.new новые поступления
-					.goods-body
+					.goods-body.goods-body__one-row-four-items.goods-body__last-four-none
 						- for (var i = 0; i < 4; ++i) {
 							.goods-body__item
 								.goods-body__wrapper

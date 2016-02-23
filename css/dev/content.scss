@@ -80,9 +80,6 @@
 }
 // секция с товарами
 .goods {
-	&__section {
-		margin-bottom: -13px;
-	}
 	&-header {
 		border-bottom: 1px solid #c5c1bb;
 		min-height: 42px;
@@ -132,10 +129,15 @@
 		@include flex-wrap(wrap);
 		@include align-items(flex-start);
 		margin-left: -2%;
+		&__one-row-four-items {
+			.goods-body__item {
+				width: 23%;
+			}
+		}
 		&__item {
 			background: #fff;
 			border: 2px solid #fff;
-			width: 23%;
+			// width: 23%;
 			margin: 0 0 20px 2%;
 			position: relative;
 			padding: 13px 13px 9px;
