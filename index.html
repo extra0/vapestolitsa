@@ -23,21 +23,21 @@
             <!-- конец лого-->
             <div class="header__block-inner">
               <!-- меню хедера-->
-              <ul class="header-top-block__menu-list">
-                <li class="header-top-block__menu-item"><a href="#!" class="header-top-block__menu-link">Как купить?</a></li>
-                <li class="header-top-block__menu-item"><a href="#!" class="header-top-block__menu-link">Оплата</a></li>
-                <li class="header-top-block__menu-item"><a href="#!" class="header-top-block__menu-link">Доставка</a></li>
-                <li class="header-top-block__menu-item"><a href="#!" class="header-top-block__menu-link">Вопросы-ответы</a></li>
-                <li class="header-top-block__menu-item"><a href="#!" class="header-top-block__menu-link">Контакты</a></li>
+              <ul class="menu__list menu-header">
+                <li class="menu__item"><a href="#!" class="menu__link">Как купить?</a></li>
+                <li class="menu__item"><a href="#!" class="menu__link">Оплата</a></li>
+                <li class="menu__item"><a href="#!" class="menu__link">Доставка</a></li>
+                <li class="menu__item"><a href="#!" class="menu__link">Вопросы-ответы</a></li>
+                <li class="menu__item"><a href="#!" class="menu__link">Контакты</a></li>
               </ul>
               <!-- конец меню хедера-->
-              <p class="header-top-block__phone">8 (495) 544 57 00</p>
               <!-- email-->
               <div class="header-top-block__email-block pull-right"><a href="mailto:info@vapstolitsa.ru" class="header-top-block__email">info@vapstolitsa.ru</a></div>
               <!-- конец email-->
               <!-- график работы-->
               <p class="header-top-block__work-text pull-right">Принимаем звонки<br>с 9:00 по 22:00</p>
               <!-- конец графика работы-->
+              <p class="header-top-block__phone">8 (495) 544 57 00</p>
             </div>
           </div>
         </div>
@@ -58,8 +58,8 @@
               <div class="user__block"><a href="#!" class="user__link enter">Вход</a><a href="#!" class="user__link registration">Регистрация</a></div>
               <!-- конец блока с пользовательскими возможностями-->
               <!-- корзина-->
-              <div class="basket pull-right">
-                <div class="basket__img-block"><span class="basket__quantity">15</span></div>
+              <div class="basket pull-right"><a href="#!">
+                  <div class="basket__img-block"><span class="basket__quantity">15</span></div></a>
                 <div class="basket__line"><a href="#!" class="basket__link"><span class="basket__link-quantity">2</span> товара</a><span> на </span><span class="basket__price">23 500</span><span class="rubl">a</span></div>
               </div>
               <!-- конец корзины-->
@@ -271,6 +271,7 @@
         </ul>
       </div>
       <!-- конец слайдер-->
+      <!-- о компании-->
       <div class="about__section">
         <div class="container-fluid">
           <div class="about__img-wrapper"><img src="img/about.jpg" alt="" class="about__img pull-left"></div>
@@ -281,16 +282,38 @@
           </div>
         </div>
       </div>
+      <!-- конец о компании-->
       <div class="buffer"></div>
     </div>
     <footer class="footer">
       <div class="container-fluid">
-        <div class="footer-top"></div>
-        <div class="footer-bottom">
+        <div class="footer-top">
+          <!-- меню футера-->
+          <ul class="menu__list menu-footer">
+            <li class="menu__item"><a href="#!" class="menu__link">Как купить?</a></li>
+            <li class="menu__item"><a href="#!" class="menu__link">Оплата</a></li>
+            <li class="menu__item"><a href="#!" class="menu__link">Доставка</a></li>
+            <li class="menu__item"><a href="#!" class="menu__link">Вопросы-ответы</a></li>
+            <li class="menu__item"><a href="#!" class="menu__link">Контакты</a></li>
+          </ul>
+          <!-- конец меню футера-->
+          <!-- email-->
+          <div class="header-top-block__email-block pull-right"><a href="mailto:info@vapstolitsa.ru" class="header-top-block__email">info@vapstolitsa.ru</a></div>
+          <!-- конец email-->
+          <!-- график работы-->
+          <p class="header-top-block__work-text pull-right">Принимаем звонки<br>с 9:00 по 22:00</p>
+          <!-- конец графика работы-->
+          <p class="header-top-block__phone">8 (495) 544 57 00</p>
+        </div>
+        <div class="footer-bottom clearfix">
+          <!-- копирайт-->
           <div class="pull-left"><img src="img/footer_logo.png" alt="" class="footer-bottom__img">
             <p class="footer-bottom__copyright">Все права защищенны<br>“VapeStolitsa” 2016</p>
           </div>
+          <!-- конец копирайт-->
+          <!-- разработчик-->
           <div class="pull-right"><a href="http://www.studio-maximus.com/" class="footer__development"></a></div>
+          <!--конец разрботчик-->
         </div>
       </div>
     </footer>

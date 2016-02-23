@@ -4,55 +4,55 @@
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Proxima Nova Regular.ttf") format("truetype");
+  src: url("../fonts/Proxima Nova Regular.otf") format("truetype");
 }
 @font-face {
   font-family: "Proxima Nova";
   font-style: italic;
   font-weight: normal;
-  src: url("../fonts/Proxima Nova Regular Italic.ttf") format("truetype");
+  src: url("../fonts/Proxima Nova Regular Italic.otf") format("truetype");
 }
 @font-face {
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 900;
-  src: url("../fonts/Proxima Nova Black.ttf") format("truetype");
+  src: url("../fonts/Proxima Nova Black.otf") format("truetype");
 }
 @font-face {
   font-family: "Proxima Nova";
   font-style: italic;
   font-weight: 900;
-  src: url("../fonts/Proxima Nova Black Italic.ttf") format("truetype");
+  src: url("../fonts/Proxima Nova Black Italic.otf") format("truetype");
 }
 @font-face {
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/Proxima Nova Bold.ttf") format("truetype");
+  src: url("../fonts/Proxima Nova Bold.otf") format("truetype");
 }
 @font-face {
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 800;
-  src: url("../fonts/Proxima Nova Extrabold.ttf") format("truetype");
+  src: url("../fonts/Proxima Nova Extrabold.otf") format("truetype");
 }
 @font-face {
   font-family: "Proxima Nova";
   font-style: italic;
   font-weight: 800;
-  src: url("../fonts/Proxima Nova Extrabold Italic.ttf") format("truetype");
+  src: url("../fonts/Proxima Nova Extrabold Italic.otf") format("truetype");
 }
 @font-face {
   font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/Proxima Nova Light.ttf") format("truetype");
+  src: url("../fonts/Proxima Nova Light.otf") format("truetype");
 }
 @font-face {
   font-family: "Proxima Nova";
   font-style: italic;
   font-weight: 300;
-  src: url("../fonts/Proxima Nova Light Italic.ttf") format("truetype");
+  src: url("../fonts/Proxima Nova Light Italic.otf") format("truetype");
 }
 @font-face {
   font-family: "Rubl";
@@ -83,7 +83,7 @@ body {
   font-weight: normal;
   height: 100%;
   color: #000;
-  background: #e8e3dc;
+  background: #e8e3dc url(../img/bg.png);
 }
 
 * {
@@ -657,6 +657,74 @@ button, input, textarea {
 }
 
 /* HEADER */
+.menu__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: inline-block;
+}
+.menu__item {
+  display: inline-block;
+  padding: 0px 14px 0 20px;
+  line-height: 14px;
+}
+.menu__item:last-child {
+  padding: 0 17px 0 20px;
+}
+.menu__link {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  position: relative;
+}
+.menu__link:before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.menu__link.active, .menu__link:hover {
+  text-decoration: none;
+}
+.menu__link.active:before, .menu__link:hover:before {
+  width: 100%;
+}
+.menu-header .menu__item {
+  border-left: 1px solid #aaaaaa;
+}
+.menu-header .menu__item:last-child {
+  border-right: 1px solid #aaa;
+}
+.menu-header .menu__link {
+  color: #000;
+}
+.menu-header .menu__link:before {
+  background: #d59f4f;
+}
+.menu-header .menu__link:hover, .menu-header .menu__link.active {
+  color: #000;
+}
+.menu-footer .menu__item {
+  border-left: 1px solid #555;
+}
+.menu-footer .menu__item:last-child {
+  border-right: 1px solid #555;
+}
+.menu-footer .menu__link {
+  color: #fff;
+}
+.menu-footer .menu__link:before {
+  background: #fff;
+}
+.menu-footer .menu__link:hover, .menu-footer .menu__link.active {
+  color: #fff;
+}
+
 .header {
   position: relative;
   z-index: 2;
@@ -677,55 +745,14 @@ button, input, textarea {
   margin-bottom: -5px;
   border-bottom: 1px solid #cfcfce;
 }
-.header-top-block__menu-list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  display: inline-block;
-}
-.header-top-block__menu-item {
-  display: inline-block;
-  padding: 0px 14px 0 20px;
-  border-left: 1px solid #aaaaaa;
-  line-height: 14px;
-}
-.header-top-block__menu-item:last-child {
-  border-right: 1px solid #aaaaaa;
-  padding: 0 17px 0 20px;
-}
-.header-top-block__menu-link {
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #000;
-  font-size: 13px;
-  position: relative;
-}
-.header-top-block__menu-link:before {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: #d59f4f;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.header-top-block__menu-link.active, .header-top-block__menu-link:hover {
-  text-decoration: none;
-  color: #000;
-}
-.header-top-block__menu-link.active:before, .header-top-block__menu-link:hover:before {
-  width: 100%;
-}
 .header-top-block__phone {
   font-size: 17px;
   font-weight: 800;
   color: #3d3835;
-  margin: 0 0 0 5.7%;
+  margin: 0 2% 0 0;
   display: inline-block;
   position: relative;
+  float: right;
 }
 .header-top-block__phone:before {
   content: '';
@@ -781,7 +808,6 @@ button, input, textarea {
   background: #aaa;
 }
 .header-middle-block {
-  background: #e8e3dc;
   padding: 22px 0;
 }
 .header-bottom-block {
@@ -1152,11 +1178,11 @@ button, input, textarea {
 }
 .goods-body__item {
   background: #fff;
-  overflow: hidden;
+  border: 2px solid #fff;
   width: 23%;
   margin: 0 0 20px 20px;
   position: relative;
-  padding: 15px 15px 11px;
+  padding: 13px 13px 9px;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -1167,7 +1193,8 @@ button, input, textarea {
   transition: all 0.4s ease-in-out;
 }
 .goods-body__item:hover {
-  background: #39332c;
+  border: 2px solid #e8d06d;
+  box-shadow: 0 0 4px #e8d06d;
 }
 .goods-body__item:hover .goods-body__detail-btn {
   right: 0;
@@ -1236,6 +1263,7 @@ button, input, textarea {
 }
 .goods-body__description {
   position: relative;
+  overflow: hidden;
 }
 .goods-body__cart-btn {
   color: #e8d06d;
@@ -1362,7 +1390,7 @@ button, input, textarea {
   height: px;
   margin-top: -px;
   background: url(../img/footer-bg.png);
-  padding: 20px 0 50px;
+  padding: 34px 0 50px;
 }
 .footer-bottom__img {
   float: left;

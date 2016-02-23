@@ -1,14 +1,59 @@
 /* FONTS */
 
-@include font-face("Proxima Nova", "../fonts/Proxima Nova Regular", $file-formats: ttf);
-@include font-face("Proxima Nova", "../fonts/Proxima Nova Regular Italic", normal, italic, $file-formats: ttf);
-@include font-face("Proxima Nova", "../fonts/Proxima Nova Black", 900, normal, $file-formats: ttf);
-@include font-face("Proxima Nova", "../fonts/Proxima Nova Black Italic", 900, italic, $file-formats: ttf);
-@include font-face("Proxima Nova", "../fonts/Proxima Nova Bold", 700, normal, $file-formats: ttf);
-@include font-face("Proxima Nova", "../fonts/Proxima Nova Extrabold", 800, normal, $file-formats: ttf);
-@include font-face("Proxima Nova", "../fonts/Proxima Nova Extrabold Italic", 800, italic, $file-formats: ttf);
-@include font-face("Proxima Nova", "../fonts/Proxima Nova Light", 300, normal, $file-formats: ttf);
-@include font-face("Proxima Nova", "../fonts/Proxima Nova Light Italic", 300, italic, $file-formats: ttf);
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Proxima Nova Regular.otf") format("truetype");
+}
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: italic;
+  font-weight: normal;
+  src: url("../fonts/Proxima Nova Regular Italic.otf") format("truetype");
+}
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Proxima Nova Black.otf") format("truetype");
+}
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: italic;
+  font-weight: 900;
+  src: url("../fonts/Proxima Nova Black Italic.otf") format("truetype");
+}
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Proxima Nova Bold.otf") format("truetype");
+}
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/Proxima Nova Extrabold.otf") format("truetype");
+}
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: italic;
+  font-weight: 800;
+  src: url("../fonts/Proxima Nova Extrabold Italic.otf") format("truetype");
+}
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Proxima Nova Light.otf") format("truetype");
+}
+@font-face {
+  font-family: "Proxima Nova";
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/Proxima Nova Light Italic.otf") format("truetype");
+}
 @include font-face("Rubl", "../fonts/ALSRubl", $file-formats: ttf eot woff);
 @include font-face("Lato Black", "../fonts/Lato-Black", $file-formats: ttf);
 

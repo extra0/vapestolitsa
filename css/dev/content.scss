@@ -135,17 +135,18 @@
 		margin-left: -20px;
 		&__item {
 			background: #fff;
-			overflow: hidden;
+			border: 2px solid #fff;
 			width: 23%;
 			margin: 0 0 20px 20px;
 			position: relative;
-			padding: 15px 15px 11px;
+			padding: 13px 13px 9px;
 			@include transition(all 0.4s ease-in-out);
 			& * {
 				@include transition(all 0.4s ease-in-out);
 			}
 			&:hover {
-				background: #39332c;
+				border: 2px solid $orange;
+				box-shadow: 0 0 4px $orange;
 				.goods-body__detail-btn {
 					right: 0;
 				}
@@ -210,6 +211,7 @@
 		}
 		&__description {
 			position: relative;
+			overflow: hidden;
 		}
 		&__cart-btn {
 			color: $orange;

@@ -1,10 +1,28 @@
 footer.footer
 	.container-fluid
 		.footer-top
-		.footer-bottom
+			// меню футера
+			ul.menu__list.menu-footer
+				each item in menu
+					li.menu__item
+						a.menu__link(href="#!") #{item}
+			// конец меню футера
+			// email
+			.header-top-block__email-block.pull-right
+				a.header-top-block__email(href="mailto:#{email}") #{email}
+			// конец email
+			// график работы
+			p.header-top-block__work-text.pull-right Принимаем звонки<br>с 9:00 по 22:00
+			// конец графика работы
+			p.header-top-block__phone #{phone}
+		.footer-bottom.clearfix
+			// копирайт
 			.pull-left
 				img.footer-bottom__img(src="img/footer_logo.png", alt="")
 				p.footer-bottom__copyright Все права защищенны<br>“VapeStolitsa” 2016
+			// конец копирайт
+			// разработчик
 			.pull-right
 				a.footer__development(href="http://www.studio-maximus.com/")
+			//конец разрботчик
 include _script

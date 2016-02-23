@@ -9,12 +9,11 @@ header.header
 			// конец лого
 			.header__block-inner
 				// меню хедера
-				ul.header-top-block__menu-list
+				ul.menu__list.menu-header
 					each item in menu
-						li.header-top-block__menu-item
-							a.header-top-block__menu-link(href="#!") #{item}
+						li.menu__item
+							a.menu__link(href="#!") #{item}
 				// конец меню хедера
-				p.header-top-block__phone #{phone}
 				// email
 				.header-top-block__email-block.pull-right
 					a.header-top-block__email(href="mailto:#{email}") #{email}
@@ -22,6 +21,7 @@ header.header
 				// график работы
 				p.header-top-block__work-text.pull-right Принимаем звонки<br>с 9:00 по 22:00
 				// конец графика работы
+				p.header-top-block__phone #{phone}
 	// конец header верхний блок
 	// средний блок header
 	.header-middle-block
@@ -40,8 +40,9 @@ header.header
 				// конец блока с пользовательскими возможностями
 				// корзина
 				.basket.pull-right
-					.basket__img-block
-						span.basket__quantity 15
+					a(href="#!")
+						.basket__img-block
+							span.basket__quantity 15
 					.basket__line
 						a.basket__link(href="#!") <span class="basket__link-quantity">2</span> товара
 						span  на 

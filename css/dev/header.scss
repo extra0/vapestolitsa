@@ -1,4 +1,77 @@
 /* HEADER */
+.menu {
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		display: inline-block;
+	}
+	&__item {
+		display: inline-block;
+		padding: 0px 14px 0 20px;
+		line-height: 14px;
+		&:last-child {
+			padding: 0 17px 0 20px;
+		}
+	}
+	&__link {
+		text-transform: uppercase;
+		font-weight:  700;
+		font-size: 13px;
+		position: relative;
+		&:before {
+			content: '';
+			@include position(absolute, null null -2px 0);
+			width: 0%;
+			height: 2px;
+			@include transition(all 0.4s ease-in-out);
+		}
+		&.active,
+		&:hover {
+			text-decoration: none;
+			&:before {
+				width: 100%;
+			}
+		}
+	}
+	&-header {
+		.menu__item {
+			border-left: 1px solid #aaaaaa;
+			&:last-child {
+				border-right: 1px solid #aaa;
+			}
+		}
+		.menu__link {
+			color: #000;
+			&:before {
+				background: #d59f4f;
+			}
+			&:hover,
+			&.active {
+				color: #000;
+			}
+		}
+	}
+	&-footer {
+		.menu__item {
+			border-left: 1px solid #555;
+			&:last-child {
+				border-right: 1px solid #555;
+			}
+		}
+		.menu__link {
+			color: #fff;
+			&:before {
+				background: #fff;
+			}
+			&:hover,
+			&.active {
+				color: #fff;
+			}
+		}
+	}
+}
+
 .header {
 	position: relative;
 	z-index: 2;
@@ -17,52 +90,14 @@
 		background: #fff;
 		margin-bottom: -5px;
 		border-bottom: 1px solid #cfcfce;
-		&__menu-list {
-			margin: 0;
-			padding: 0;
-			list-style-type: none;
-			display: inline-block;
-		}
-		&__menu-item {
-			display: inline-block;
-			padding: 0px 14px 0 20px;
-			border-left: 1px solid #aaaaaa;
-			line-height: 14px;
-			&:last-child {
-				border-right: 1px solid #aaaaaa;
-				padding: 0 17px 0 20px;
-			}
-		}
-		&__menu-link {
-			text-transform: uppercase;
-			font-weight:  700;
-			color: #000;
-			font-size: 13px;
-			position: relative;
-			&:before {
-				content: '';
-				@include position(absolute, null null -2px 0);
-				width: 0%;
-				height: 2px;
-				background: #d59f4f;
-				@include transition(all 0.4s ease-in-out);
-			}
-			&.active,
-			&:hover {
-				text-decoration: none;
-				color: #000;
-				&:before {
-					width: 100%;
-				}
-			}
-		}
 		&__phone {
 			font-size: 17px;
 			font-weight: 800;
 			color: #3d3835;
-			margin: 0 0 0 5.7%;
+			margin: 0 2% 0 0;
 			display: inline-block;
 			position: relative;
+			float: right;
 			&:before {
 				content: '';
 				@include position(absolute, 0 null null -28%);
@@ -114,7 +149,6 @@
 		}
 	}
 	&-middle-block {
-		background: #e8e3dc;
 		padding: 22px 0;
 	}
 	&-bottom-block {

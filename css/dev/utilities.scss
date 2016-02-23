@@ -21,7 +21,7 @@ body {
     font-weight: normal;
     height: 100%;
     color: $main_color;
-    background: #e8e3dc;
+    background: #e8e3dc url(../img/bg.png);
 }
 
 * { @include box-sizing(border-box);}
