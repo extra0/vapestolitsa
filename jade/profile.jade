@@ -1,0 +1,63 @@
+extends _layout
+block content
+	// блок с видео
+	.video__wrapper
+		.video__block
+			video.video__player(loop autoplay muted)
+				source(src="video/video.mp4" type="video/mp4")
+				source(src="video/video.webm" type="video/webm")
+				source(src="video/video.ogg" type="video/ogg")
+	// конец блока с видео
+	.container-fluid
+		.content
+			.content-top
+				// хлебные крошки
+				.breadcrumbs
+					ul.breadcrumbs__list
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#!") Главная страница
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#!") Профиль
+				// конец хлебные крошки
+				h1.title Профиль
+			.profile
+				// форма профиля
+				.profile__form
+					form(action="")
+						.profile__title-wrapper
+							p.profile__title персональные данные
+						.form-flex.two-column
+							.form-control
+								span.form-icon.form-icon-user
+								label.form-label Имя
+								input.form-input.contacts__input(type="text" required)
+							.form-control
+								span.form-icon.form-icon-email
+								label.form-label E-mail
+								input.form-input.contacts__input(type="email" required)
+						br
+						.profile__title-wrapper
+							p.profile__title смена пароля
+						.form-flex.two-column
+							.form-control
+								span.form-icon.form-icon-shield
+								label.form-label Пароль
+								input.form-input.contacts__input(type="password" required)
+							.form-control
+								span.form-icon.form-icon-shield
+								label.form-label Подтвердить пароль
+								input.form-input.contacts__input(type="password" required)
+						br
+						.form-control
+							button.form-btn.profile__btn(type="submit") Сохранить
+				// конец формы профиля
+				// итория заказов
+				.profile__history
+					.profile__title-wrapper
+						p.profile__title история заказов
+					.order__block
+					.order__block
+					.order__block
+					a.order__link(href="#!") Все заказы
+
+				// конец истории заказов

@@ -194,13 +194,79 @@
         </div>
         <!--конец нижнего блока header-->
       </header>
-      <!-- начало блока с благодарностью-->
-      <div class="thanks__block"><img src="img/ok.png" alt="" class="thanks__img">
-        <p class="thanks__title">Поздравляем!</p>
-        <p class="thanks__text">Вы успешно зарегистрировались на сайте, теперь вы можете зайти<br>в <a href="#!">личный кабинет</a> или <a href="#!">оформить заказ</a>!</p>
-        <p class="thanks__text">... а также можете <a href="#!">вернуться на главную</a></p>
+      <!-- блок с видео-->
+      <div class="video__wrapper">
+        <div class="video__block">
+          <video loop autoplay muted class="video__player">
+            <source src="video/video.mp4" type="video/mp4">
+            <source src="video/video.webm" type="video/webm">
+            <source src="video/video.ogg" type="video/ogg">
+          </video>
+        </div>
       </div>
-      <!-- конец блока с благодарностью-->
+      <!-- конец блока с видео-->
+      <div class="container-fluid">
+        <div class="content">
+          <div class="content-top">
+            <!-- хлебные крошки-->
+            <div class="breadcrumbs">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a href="#!" class="breadcrumbs__link">Главная страница</a></li>
+                <li class="breadcrumbs__item"><a href="#!" class="breadcrumbs__link">Профиль</a></li>
+              </ul>
+            </div>
+            <!-- конец хлебные крошки-->
+            <h1 class="title">Профиль</h1>
+          </div>
+          <div class="profile">
+            <!-- форма профиля-->
+            <div class="profile__form">
+              <form action="">
+                <div class="profile__title-wrapper">
+                  <p class="profile__title">персональные данные</p>
+                </div>
+                <div class="form-flex two-column">
+                  <div class="form-control"><span class="form-icon form-icon-user"></span>
+                    <label class="form-label">Имя</label>
+                    <input type="text" required class="form-input contacts__input">
+                  </div>
+                  <div class="form-control"><span class="form-icon form-icon-email"></span>
+                    <label class="form-label">E-mail</label>
+                    <input type="email" required class="form-input contacts__input">
+                  </div>
+                </div><br>
+                <div class="profile__title-wrapper">
+                  <p class="profile__title">смена пароля</p>
+                </div>
+                <div class="form-flex two-column">
+                  <div class="form-control"><span class="form-icon form-icon-shield"></span>
+                    <label class="form-label">Пароль</label>
+                    <input type="password" required class="form-input contacts__input">
+                  </div>
+                  <div class="form-control"><span class="form-icon form-icon-shield"></span>
+                    <label class="form-label">Подтвердить пароль</label>
+                    <input type="password" required class="form-input contacts__input">
+                  </div>
+                </div><br>
+                <div class="form-control">
+                  <button type="submit" class="form-btn profile__btn">Сохранить</button>
+                </div>
+              </form>
+            </div>
+            <!-- конец формы профиля-->
+            <!-- итория заказов-->
+            <div class="profile__history">
+              <div class="profile__title-wrapper">
+                <p class="profile__title">история заказов</p>
+              </div>
+              <div class="order__block"></div>
+              <div class="order__block"></div>
+              <div class="order__block"></div><a href="#!" class="order__link">Все заказы</a>
+            </div>
+            <!-- конец истории заказов-->
+          </div>
+        </div>
+      </div>
       <div class="buffer"></div>
     </div>
     <footer class="footer">
