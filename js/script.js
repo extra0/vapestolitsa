@@ -28,6 +28,11 @@ $(function(){
 		}
 	});
 
+	// показываем меню залогиненного пользователя
+	$('.user__link-login').click(function(){
+		$(this).next().toggleClass('active');
+		$(this).toggleClass('active');
+	});
 
 
 });
