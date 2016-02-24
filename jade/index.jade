@@ -8,73 +8,72 @@ block content
 				source(src="video/video.webm" type="video/webm")
 				source(src="video/video.ogg" type="video/ogg")
 	// конец блока с видео
-	.main-content
-		.container-fluid
-			// sidebar
-			.sidebar.clearfix
-				include includes/_banner
-				// форма подписки
-				.subscribe__block
-					p.subscribe__title подписка на акции
-					p.subscribe__text Получите специальные предложение и акций первыми!
-					form.subscribe__form(action="#")
-						input.form-input.subscribe__input(type="email" required placeholder="Введите e-mail")
-						button.form-btn.subscribe__btn(type="submit") Подписаться
-				// конец формы подписки
-			// конец sidebar
-			// контент
-			.content
-				// секция с товарамми
-				.goods__section
-					.goods-header
-						h3.goods-header__title.popular Популярные товары
-					.goods-body.goods-body__one-row-four-items
-						// блок одного товара
+	.container-fluid
+		// sidebar
+		.sidebar.clearfix
+			include includes/_banner
+			// форма подписки
+			.subscribe__block
+				p.subscribe__title подписка на акции
+				p.subscribe__text Получите специальные предложение и акций первыми!
+				form.subscribe__form(action="#")
+					input.form-input.subscribe__input(type="email" required placeholder="Введите e-mail")
+					button.form-btn.subscribe__btn(type="submit") Подписаться
+			// конец формы подписки
+		// конец sidebar
+		// контент
+		.content.sidebar-margin
+			// секция с товарамми
+			.goods__section
+				.goods-header
+					h3.goods-header__title.popular Популярные товары
+				.goods-body.goods-body__one-row-four-items
+					// блок одного товара
+					.goods-body__item
+						.goods-body__wrapper
+							img.goods-body__img(src="img/content/g2.jpg", alt="")
+							.goods-body__price-block
+								span.goods-body__price 45 000
+								span.rubl a
+						.goods-body__description
+							p.goods-body__name TRUEBERRY SUGAR & KNIFE
+							p.goods-body__category Жидкость
+							a.btn.goods-body__cart-btn(href="#!") в корзину
+							a.btn.goods-body__detail-btn(href="#!") детали
+					// конец блока одного товара
+					- for (var i = 0; i < 6; ++i) {
 						.goods-body__item
 							.goods-body__wrapper
-								img.goods-body__img(src="img/content/g2.jpg", alt="")
+								img.goods-body__img(src="img/content/g1.jpg", alt="")
 								.goods-body__price-block
-									span.goods-body__price 45 000
+									span.goods-body__price 900
+									span.rubl a
+							.goods-body__description
+								p.goods-body__name TRUEBERRY
+								p.goods-body__category Жидкость
+								a.btn.goods-body__cart-btn(href="#!") в корзину
+								a.btn.goods-body__detail-btn(href="#!") детали
+					-	}
+			.goods__section.margin-bottom-40
+				.goods-header
+					a.btn.goods-header__btn(href="#!") Просмотреть все новинки
+					h3.goods-header__title.new новые поступления
+				.goods-body.goods-body__one-row-four-items.goods-body__last-four-none
+					- for (var i = 0; i < 4; ++i) {
+						.goods-body__item
+							.goods-body__wrapper
+								img.goods-body__img(src="img/content/g"+(i+1)+".jpg", alt="")
+								.goods-body__price-block
+									span.goods-body__price 2 900
 									span.rubl a
 							.goods-body__description
 								p.goods-body__name TRUEBERRY SUGAR & KNIFE
 								p.goods-body__category Жидкость
 								a.btn.goods-body__cart-btn(href="#!") в корзину
 								a.btn.goods-body__detail-btn(href="#!") детали
-						// конец блока одного товара
-						- for (var i = 0; i < 6; ++i) {
-							.goods-body__item
-								.goods-body__wrapper
-									img.goods-body__img(src="img/content/g1.jpg", alt="")
-									.goods-body__price-block
-										span.goods-body__price 900
-										span.rubl a
-								.goods-body__description
-									p.goods-body__name TRUEBERRY
-									p.goods-body__category Жидкость
-									a.btn.goods-body__cart-btn(href="#!") в корзину
-									a.btn.goods-body__detail-btn(href="#!") детали
-						-	}
-				.goods__section.margin-bottom-40
-					.goods-header
-						a.btn.goods-header__btn(href="#!") Просмотреть все новинки
-						h3.goods-header__title.new новые поступления
-					.goods-body.goods-body__one-row-four-items.goods-body__last-four-none
-						- for (var i = 0; i < 4; ++i) {
-							.goods-body__item
-								.goods-body__wrapper
-									img.goods-body__img(src="img/content/g"+(i+1)+".jpg", alt="")
-									.goods-body__price-block
-										span.goods-body__price 2 900
-										span.rubl a
-								.goods-body__description
-									p.goods-body__name TRUEBERRY SUGAR & KNIFE
-									p.goods-body__category Жидкость
-									a.btn.goods-body__cart-btn(href="#!") в корзину
-									a.btn.goods-body__detail-btn(href="#!") детали
-						-	}
-				// конец секции с товарами
-			// конец контента
+					-	}
+			// конец секции с товарами
+		// конец контента
 	include includes/_slider
 	// о компании
 	.about__section

@@ -450,7 +450,7 @@
           }
           &.is-open {
             &:after {
-              @include transform(rotate(180deg));
+              background: url(../img/gray-arrow.png) 0 0 no-repeat;
             }
           }
         }

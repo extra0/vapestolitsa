@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(normalize.css);
 /* FONTS */
 @font-face {
@@ -145,7 +146,7 @@ button, input, textarea {
 }
 
 a:not([class]) {
-  color: #e8d06d;
+  color: #c4ac48;
   text-decoration: underline;
 }
 a:not([class]):hover {
@@ -726,11 +727,7 @@ a:not([class]):hover {
   transition: all 0.4s ease-in-out;
 }
 .priority-nav-has-dropdown .priority-nav__dropdown-toggle.is-open:after {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
+  background: url(../img/gray-arrow.png) 0 0 no-repeat;
 }
 .priority-nav__wrapper {
   position: relative;
@@ -1049,11 +1046,7 @@ a:not([class]):hover {
   transition: all 0.4s ease-in-out;
 }
 .user__link-login.active:before {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
+  background: url(../img/gray-arrow.png) 0 0 no-repeat;
 }
 .user__img {
   border-radius: 50%;
@@ -1310,8 +1303,14 @@ a:not([class]):hover {
 
 /* end HEADER*/
 /* CONTENT */
-.content {
+.content.sidebar-margin {
   margin-left: 330px;
+}
+.content-top {
+  margin-top: -110px;
+  height: 110px;
+  overflow: hidden;
+  /* под вопросом*/
 }
 
 #enter,
@@ -1899,7 +1898,128 @@ a:not([class]):hover {
   line-height: 20px;
 }
 
-/*end CONTENT*/
+.breadcrumbs {
+  margin-bottom: 9px;
+}
+.breadcrumbs__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.breadcrumbs__item {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  padding-right: 35px;
+}
+.breadcrumbs__item:not(:last-child):before {
+  content: '';
+  background: url(../img/arrow.png) 0 0 no-repeat;
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  width: 14px;
+  height: 5px;
+  opacity: 0.7;
+}
+.breadcrumbs__link {
+  display: inline-block;
+  border-bottom: 1px solid;
+  color: #ecdfab;
+  font-size: 13px;
+  line-height: 13px;
+  opacity: 0.7;
+}
+.breadcrumbs__link:focus, .breadcrumbs__link:active, .breadcrumbs__link:hover {
+  color: #ecdfab;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.title {
+  color: #fff;
+  font-size: 34px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.faq__section {
+  margin: 36px 0;
+}
+.faq__block {
+  padding: 21px 10px 10px 10px;
+  background: #fff;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+.faq__border {
+  border-bottom: 1px dotted #b1aead;
+}
+.faq__question {
+  color: #000;
+  display: inline-block;
+  margin: 0 30px 10px 40px;
+}
+.faq__question.active, .faq__question:hover {
+  text-decoration: none;
+}
+.faq__question.active .faq__border, .faq__question:hover .faq__border {
+  border-bottom: 1px dotted transparent;
+}
+.faq__question:before {
+  content: '';
+  position: absolute;
+  top: 26px;
+  left: 23px;
+  background: url(../img/gray-menu.png) 0 0 no-repeat;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  width: 11px;
+  height: 10px;
+}
+.faq__question:after {
+  content: '';
+  position: absolute;
+  top: 26px;
+  right: 23px;
+  background: url(../img/red-arrow.png) 0 0 no-repeat;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  width: 11px;
+  height: 4px;
+}
+.faq__question.active {
+  border-bottom: 1px dotted transparent;
+}
+.faq__question.active:after {
+  background: url(../img/gray-arrow.png) 0 0 no-repeat;
+}
+.faq__question.active:before {
+  background: url(../img/red-menu.png) 0 0 no-repeat;
+}
+.faq__answer {
+  background: #e8e3dc;
+  margin-top: 10px;
+  display: none;
+  padding: 16px 30px 40px 30px;
+}
+.faq__answer-title {
+  color: #3d3835;
+  border-bottom: 1px solid #d0ccc6;
+  margin: 0 0 19px;
+  font-size: 15px;
+  padding-bottom: 12px;
+}
+.faq__answer-text {
+  color: #7f7a76;
+  margin: 0;
+}
+
+/* end CONTENT */
 /* FOOTER */
 .footer {
   height: 155px;

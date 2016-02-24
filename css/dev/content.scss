@@ -1,6 +1,13 @@
 /* CONTENT */
 .content {
-	margin-left: 330px;
+	&.sidebar-margin {
+		margin-left: 330px;
+	}
+	&-top {
+		margin-top: -110px;
+		height: 110px;
+		overflow: hidden; /* под вопросом*/
+	}
 }
 #enter,
 #restore {
@@ -539,6 +546,125 @@
 		font-size: 15px;
 		line-height: 20px;
 	}
-
 }
-/*end CONTENT*/
+// хлебные крошки
+.breadcrumbs {
+	margin-bottom: 9px;
+	&__list {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		padding-right: 35px;
+		&:not(:last-child) {
+			&:before {
+				content: '';
+				background: url(../img/arrow.png) 0 0 no-repeat;
+				@include position(absolute, 7px 8px null null);
+				width: 14px;
+				height: 5px;
+				opacity: 0.7;
+			}	
+		}
+	}
+	&__link {
+		display: inline-block;
+		border-bottom: 1px solid;
+		color: #ecdfab;
+		font-size: 13px;
+		line-height: 13px;
+		opacity: 0.7;
+		&:focus,
+		&:active,
+		&:hover {
+			color: #ecdfab;
+			text-decoration: none;
+			border-bottom: 1px solid transparent;
+		}
+	}
+}
+// тайтл 
+.title {
+	color: #fff;
+	font-size: 34px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+// faq блок
+.faq {
+	&__section {
+		margin: 36px 0;
+	}
+	&__block {
+		padding: 21px 10px 10px 10px;
+		background: #fff;
+		position: relative;
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 10px;
+	}
+	&__border {
+		border-bottom: 1px dotted #b1aead;
+	}
+	&__question {
+		color: #000;
+		display: inline-block;
+		margin: 0 30px 10px 40px;
+		&.active,
+		&:hover {
+			.faq__border {
+				border-bottom: 1px dotted transparent;
+			}
+			text-decoration: none;
+		}
+		&:before {
+			content: '';
+			@include position(absolute, 26px null null 23px);
+			background: url(../img/gray-menu.png) 0 0 no-repeat;
+			@include transition(all 0.4s ease-in-out);
+			width: 11px;
+			height: 10px;
+		}
+		&:after {
+			content: '';
+			@include position(absolute, 26px 23px null null);
+			background: url(../img/red-arrow.png) 0 0 no-repeat;
+			@include transition(all 0.4s ease-in-out);
+			width: 11px;
+			height: 4px;
+		}
+		&.active {
+			border-bottom: 1px dotted transparent;
+			&:after {
+				background: url(../img/gray-arrow.png) 0 0 no-repeat;
+			}
+			&:before {
+				background: url(../img/red-menu.png) 0 0 no-repeat;
+			}
+		}
+	}
+	&__answer {
+		background: #e8e3dc;
+		margin-top: 10px;
+		display: none;
+		padding: 16px 30px 40px 30px;
+		&-title {
+			color: #3d3835;
+			border-bottom: 1px solid #d0ccc6;
+			margin: 0 0 19px;
+			font-size: 15px;
+			padding-bottom: 12px;
+		}
+		&-text {
+			color: #7f7a76;
+			margin: 0;
+		}
+	}
+}
+
+/* end CONTENT */

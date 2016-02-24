@@ -50,5 +50,9 @@ $(function(){
 		}
 	});
 
+	$('[toggle-trigger]').click(function(){
+		$(this).toggleClass('active');
+		$(this).parents('[toggle-parent]').find('[toggle-target]').slideToggle(400);
+	});
 
 });
