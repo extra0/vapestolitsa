@@ -17,6 +17,9 @@ $(function(){
 		auto: true
 	});
 
+	// маска на телефон
+	$('.mask').mask('+7 (999) 999-99-99');
+
 	// меняем стиль инпута поиска
 	$('.search-form__input').keyup(function(){
 		if ($(this).val().length >= 3) {
@@ -50,6 +53,7 @@ $(function(){
 		}
 	});
 
+	// универсальный триггер слайдинга
 	$('[toggle-trigger]').click(function(){
 		$(this).toggleClass('active');
 		$(this).parents('[toggle-parent]').find('[toggle-target]').slideToggle(400);

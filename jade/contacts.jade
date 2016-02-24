@@ -1,0 +1,55 @@
+extends _layout
+block content
+	// блок с видео
+	.video__wrapper
+		.video__block
+			video.video__player(loop autoplay muted)
+				source(src="video/video.mp4" type="video/mp4")
+				source(src="video/video.webm" type="video/webm")
+				source(src="video/video.ogg" type="video/ogg")
+	// конец блока с видео
+	.container-fluid
+		.content
+			.content-top
+				// хлебные крошки
+				.breadcrumbs
+					ul.breadcrumbs__list
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#!") Главная страница
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#!") Контакты
+				// конец хлебные крошки
+				h1.title Контакты
+			.contacts
+				// блок контактов слева
+				.contacts__info
+					img.contacts__img(src="img/c-phone.png", alt="")
+					p.contacts__phone 8 (495) 544 57 00
+					p.contacts__text Принимаем звонки с 9:00 по 22:00
+					img.contacts__img(src="img/c-email.png", alt="")
+					a.contacts__email(href="mailto:#{email}") #{email}
+				// конец блок контактов слева
+				// контакт форма
+				.contacts__form
+					form(action="")
+						.form-flex
+							.form-control
+								span.form-icon.form-icon-user
+								label.form-label Имя
+								input.form-input.contacts__input(type="text" required)
+							.form-control
+								span.form-icon.form-icon-email
+								label.form-label E-mail
+								input.form-input.contacts__input(type="email" required)
+							.form-control
+								span.form-icon.form-icon-phone
+								label.form-label Телефон
+								input.form-input.contacts__input.mask(type="text" required placeholder="+7 ")
+						br
+						.form-control
+							label.form-label Ваш вопрос
+							textarea.form-input.contacts__textarea(rows="4")
+						br
+						.form-control
+							button.form-btn.contacts__btn(type="submit") Отправить вопрос
+				// конец контакт форма

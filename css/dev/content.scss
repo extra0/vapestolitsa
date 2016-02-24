@@ -62,10 +62,6 @@
 			}
 		}
 	}
-	&__form-control {
-		position: relative;
-		margin-bottom: 15px;
-	}
 	&__input {
 		border: 1px solid #d1c7b8;
 		padding: 0 10px 0 53px;
@@ -85,21 +81,6 @@
 			border-bottom: 1px solid transparent;
 		}
 	}
-	&__icon {
-		width: 13px;
-		height: 13px;
-		@include position(absolute, null null 14px 25px);
-		&-shield {
-			bottom: 13px;
-			background: url(../img/ico-shield.png) 0 0 no-repeat;
-		}
-		&-email {
-			background: url(../img/ico-email.png) 0 0 no-repeat;
-		}
-		&-user {
-			background: url(../img/ico-user.png) 0 0 no-repeat;
-		}
-	}
 	&__btn {
 		display: block;
 		text-align: center;
@@ -112,12 +93,6 @@
 			max-width: 260px;
 			height: 40px;
 		}
-	}
-	&__label {
-		font-size: 12px;
-		color: #898685;
-		margin: 0 0 11px 11px;
-		display: block;
 	}
 	&__half-block {
 		width: 48%;
@@ -576,7 +551,7 @@
 		border-bottom: 1px solid;
 		color: #ecdfab;
 		font-size: 13px;
-		line-height: 13px;
+		line-height: 12px;
 		opacity: 0.7;
 		&:focus,
 		&:active,
@@ -664,6 +639,63 @@
 			color: #7f7a76;
 			margin: 0;
 		}
+	}
+}
+// страница контактов
+.contacts {
+	padding: 40px 0 100px;
+	@include display(flex);
+	&__info {
+		padding: 8px 60px 100px 0;
+		@include flex-basis(10.5%);
+		@include flex-grow(1);
+		margin-right: 5%;
+		border-right: 1px solid #d0ccc6;
+	}
+	&__img {
+		display: block;
+		margin-bottom: 17px;
+	}
+	&__phone {
+		color: #3d3735;
+		font-size: 32px;
+		font-weight: bold;
+		margin: 0 0 4px 10px;
+	}
+	&__text {
+		color: #3d3735;
+		margin: 0 0 34px 10px;
+	}
+	&__email {
+		color: #ecaf41;
+		font-size: 32px;
+		font-weight: bold;
+		border-bottom: 1px solid;
+		display: inline-block;
+		line-height: 34px;
+		&:hover {
+			text-decoration: none;
+			border-bottom: 1px solid transparent;
+		}
+	}
+	&__form {
+		padding-top: 8px;
+		margin-right: 3%;
+		padding-bottom: 100px;
+		@include flex-basis(25%);
+		@include flex-grow(2);
+	}
+	&__input {
+		@extend .modal__input;
+	}
+	&__btn {
+		font-weight: 600;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 36px;
+	}
+	&__textarea {
+		box-shadow: 0 0 4px #d59f4f;
 	}
 }
 
