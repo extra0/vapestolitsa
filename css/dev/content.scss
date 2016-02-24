@@ -513,5 +513,32 @@
 		overflow: hidden;
 	}
 }
+// страница благодарности
+.thanks {
+	&__block {
+		width: 610px;
+		margin: 40px auto;
+		background: #fff;
+		border-radius: 20px;
+		padding: 14px 20px 29px 20px;
+		text-align: center;
+		border: 1px solid #ccc7c1;
+	}
+	&__img {
+		display: block;
+		margin: 0 auto 17px auto;
+	}
+	&__title {
+		margin: 0 0 14px;
+		font-size: 30px;
+		font-weight: bold;
+	}
+	&__text {
+		color: #3d3835;
+		margin: 0 0 5px;
+		font-size: 15px;
+		line-height: 20px;
+	}
 
+}
 /*end CONTENT*/

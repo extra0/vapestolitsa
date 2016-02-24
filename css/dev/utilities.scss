@@ -59,6 +59,14 @@ a {
 a:focus {text-decoration: none; color: inherit;}
 button, input, textarea {outline: none;}
 
+a:not([class]) {
+    color: $orange;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 // Helpers Classes
 .pull-right {float: right;}
 .pull-left  {float: left;}

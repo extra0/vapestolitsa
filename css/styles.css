@@ -144,6 +144,14 @@ button, input, textarea {
   outline: none;
 }
 
+a:not([class]) {
+  color: #e8d06d;
+  text-decoration: underline;
+}
+a:not([class]):hover {
+  text-decoration: none;
+}
+
 .pull-right {
   float: right;
 }
@@ -1864,6 +1872,31 @@ button, input, textarea {
   line-height: 21px;
   max-height: 85px;
   overflow: hidden;
+}
+
+.thanks__block {
+  width: 610px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 14px 20px 29px 20px;
+  text-align: center;
+  border: 1px solid #ccc7c1;
+}
+.thanks__img {
+  display: block;
+  margin: 0 auto 17px auto;
+}
+.thanks__title {
+  margin: 0 0 14px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.thanks__text {
+  color: #3d3835;
+  margin: 0 0 5px;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 /*end CONTENT*/
