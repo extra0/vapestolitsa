@@ -59,4 +59,9 @@ $(function(){
 		$(this).parents('[toggle-parent]').find('[toggle-target]').slideToggle(400);
 	});
 
+	// ф-я разбивки на разряды
+	function numberWithCommas(x) { return x.toString().replace(/(\d{1,3}(?=(\d{3})+(?:\.\d|\b)))/g, "\$1 ");}
+	
+	$('[replaced-number]').each(function(){	$(this).html(numberWithCommas($(this).html()));	});
+
 });

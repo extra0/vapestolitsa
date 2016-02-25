@@ -20,7 +20,7 @@ block content
 							a.breadcrumbs__link(href="#!") Профиль
 				// конец хлебные крошки
 				h1.title Профиль
-			.profile
+			.profile__section
 				// форма профиля
 				.profile__form
 					form(action="")
@@ -55,9 +55,29 @@ block content
 				.profile__history
 					.profile__title-wrapper
 						p.profile__title история заказов
-					.order__block
-					.order__block
-					.order__block
+					- for (var i = 0; i < 4; ++i) {
+						.order__block
+							.order__block-cell
+								p.order__block-title ID
+								p.order__block-data 958689
+							.order__block-cell
+								p.order__block-title Цена
+								p.order__block-data(replaced-number) 1800
+									span.rubl a
+							.order__block-cell
+								p.order__block-title Дата
+								p.order__block-data 12.02.2016
+							.order__block-cell
+								p.order__block-title Статус
+								- if (i == 1) {
+									p.order__block-status.order__block-status-awaiting В очереди
+								- } else if (i == 2) {
+									p.order__block-status.order__block-status-canceled Отменен
+								- } else if (i == 3) {
+									p.order__block-status.order__block-status-completed Завершен
+								- } else {
+									p.order__block-status Неизвестен
+								- }
+					- }
 					a.order__link(href="#!") Все заказы
-
 				// конец истории заказов

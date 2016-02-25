@@ -703,9 +703,11 @@
 }
 // страница профиля
 .profile {
-	@include display(flex);
-	@include justify-content(space-between);
-	margin: 34px 0;
+	&__section {
+		@include display(flex);
+		@include justify-content(space-between);
+		margin: 34px 0 104px 0;
+	}
 	&__form {
 		@include flex-basis(42%);
 	}
@@ -733,7 +735,7 @@
 		position: relative;
 		display: inline-block;
 		padding: 0 20px 0 11px;
-		background: #e8e3dc;
+		background: #E5DFD8;
 		font-weight: 600;
 		z-index: 10;
 	}
@@ -747,22 +749,62 @@
 .order {
 	&__block {
 		background: rgba(255, 255, 255, 0.6);
-		border-radius: 40px;
+		border-radius: 36px;
 		position: relative;
 		border: 1px solid #d4cabc;
 		margin-left: 11px;
 		height: 73px;
 		margin-bottom: 10px;
+		@include display(flex);
 		&:before {
 			content: '';
 			@include position(absolute, 3px null null 0);
 			width: 100%;
 			height: 100%;
-			border-radius: 40px;
+			border-radius: 36px;
 			border-left: 1px solid #d4cabc;
 			border-bottom: 1px solid #d4cabc;
 			border-right: 1px solid #d4cabc;
 			z-index: -1;
+		}
+		&-cell {
+			padding: 0 10px 0 30px;
+			margin: 15px 0;
+			@include flex-basis(30%);
+			&:nth-child(1),
+			&:nth-child(2) {
+				@include flex-basis(20%);
+			}
+			&:nth-child(1) {
+				margin-left: 15px;
+			}
+			&:not(:last-child) {
+				border-right: 1px solid #e4e3e0;
+			}
+		}
+		&-title {
+			margin: 0 0 7px;
+			font-size: 12px;
+			color: #858280;
+		}
+		&-data {
+			font-weight: bold;
+			margin: 0;
+			font-size: 15px;
+			color: #3d3835;
+		}
+		&-status {
+			font-size: 15px;
+			margin: 0;
+			&-awaiting {
+				color: #c4ac48;
+			}
+			&-canceled {
+				color: #e20000;
+			}
+			&-completed {
+				color: green;
+			}
 		}
 	}
 	&__link {
@@ -771,8 +813,7 @@
 		display: inline-block;
 		font-size: 13px;
 		line-height: 13px;
-		margin-left: 50px;
-		margin-top: 15px;
+		margin: 15px 0 0 60px;
 		&:active,
 		&:focus,
 		&:hover {
