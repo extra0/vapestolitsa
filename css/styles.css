@@ -1645,6 +1645,9 @@ a:not([class]):hover {
 .goods-body__one-row-four-items .goods-body__item {
   width: 23%;
 }
+.goods-body__one-row-five-items .goods-body__item {
+  width: 18%;
+}
 .goods-body__item {
   background: #fff;
   border: 2px solid #fff;
@@ -2880,6 +2883,84 @@ a:not([class]):hover {
   z-index: -1;
 }
 
+.process {
+  background: url(../img/gray-moz.png);
+  padding: 36px 0 89px 0;
+}
+.process__title {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 0 61px;
+  font-weight: 900;
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #5b5b5b;
+}
+.process__img {
+  font-size: 20px;
+  display: inline-block;
+  margin-right: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  width: 33px;
+  height: 33px;
+  line-height: 33px;
+  font-weight: bold;
+  text-align: center;
+}
+.process__section {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+}
+.process__block {
+  -webkit-flex-basis: 18%;
+  -moz-flex-basis: 18%;
+  flex-basis: 18%;
+  -ms-flex-preferred-size: 18%;
+  text-align: center;
+  position: relative;
+}
+.process__block:not(:last-child):before {
+  content: '';
+  background: url(../img/process-arrow.png) 0 0 no-repeat;
+  position: absolute;
+  top: 30px;
+  right: -36%;
+  width: 28px;
+  height: 11px;
+  opacity: 0.4;
+}
+.process__block:hover .process__block-text {
+  color: #e8d06d;
+}
+.process__block-img {
+  display: block;
+  margin: 0 auto 31px auto;
+}
+.process__block-text {
+  margin: 0;
+  line-height: 22px;
+  color: #999288;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
 /* end CONTENT */
 /* FOOTER */
 .footer {
@@ -2982,6 +3063,12 @@ a:not([class]):hover {
     width: 31.3%;
   }
   .goods-body__last-four-none .goods-body__item:nth-child(4) {
+    display: none;
+  }
+  .goods-body__one-row-five-items .goods-body__item {
+    width: 23%;
+  }
+  .goods-body__last-five-none .goods-body__item:nth-child(5) {
     display: none;
   }
 }

@@ -37,6 +37,16 @@
 					display: none;
 				}
 			}
+			&__one-row-five-items {
+				.goods-body__item {
+					width: 23%;
+				}
+			}
+			&__last-five-none {
+				.goods-body__item:nth-child(5) {
+					display: none;
+				}
+			}
 		}
 	}
 }

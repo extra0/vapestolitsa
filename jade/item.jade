@@ -20,4 +20,43 @@ block content
 							a.breadcrumbs__link(href="#!") Жидкости
 				// конец хлебные крошки
 				h1.title FIVE PAWNS: BLACK FLAG RISEN - ORIGINAL
-			
+				p Артикул: 5678978954
+			// секция с 5-ю товарами
+			.goods__section.margin-bottom-40
+				.goods-header
+					h3.goods-header__title.new Возможно, вас так же заинтересуют:
+				.goods-body.goods-body__one-row-five-items.goods-body__last-five-none
+					- for (var i = 0; i < 5; ++i) {
+						.goods-body__item
+							.goods-body__wrapper
+								img.goods-body__img(src="img/content/g2.jpg", alt="")
+								.goods-body__price-block
+									span.goods-body__price(replaced-number) #{2900 * i / 2 + 25}
+									span.rubl a
+							.goods-body__description
+								p.goods-body__name TRUEBERRY SUGAR & KNIFE
+								p.goods-body__category Жидкость
+								a.btn.goods-body__cart-btn(href="#!") в корзину
+								a.btn.goods-body__detail-btn(href="#!") детали
+					-	}
+			// конец секции с 5-ю товарами
+	// блок как это работает
+	.process
+		.container-fluid
+			p.process__title 
+				span.process__img ?
+				| как это работает?
+			.process__section
+				.process__block
+					img.process__block-img(src="img/process_1.png", alt="Process")
+					p.process__block-text Выберите нужный вам продукт в нашем онлайн каталоге
+				.process__block
+					img.process__block-img(src="img/process_2.png", alt="Process")
+					p.process__block-text Оформите заказ и оплатите удобным для вас способом
+				.process__block
+					img.process__block-img(src="img/process_3.png", alt="Process")
+					p.process__block-text Наш оператор свяжется с вами и уточнит детали доставки товара.
+				.process__block
+					img.process__block-img(src="img/process_4.png", alt="Process")
+					p.process__block-text Вы получите товар на дом или на почтовый адрес.
+	// конец блока как это работает
