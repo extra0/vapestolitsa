@@ -1072,7 +1072,7 @@
 // корзина
 .basket {
 	&-table {
-		margin-right: 430px;
+		margin-right: 33%;
 		&__table {
 			position: relative;
 			width: 100%;
@@ -1258,7 +1258,7 @@
 		position: relative;
 	}
 	&-form {
-		width: 400px;
+		width: 30%;
 		background: #fff;
 		float: right;
 		padding: 15px;
@@ -1271,7 +1271,6 @@
 			padding: 17px 27px;
 		}
 		&__text {
-			display: inline-block;
 			vertical-align: top;
 			margin: 19px 15px 0 0;
 			font-weight: bold;

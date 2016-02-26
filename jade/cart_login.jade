@@ -24,7 +24,7 @@ block content
 				// блок с формой
 				.basket-form
 					.basket-form__inner
-						p.basket-form__text Итого к оплате
+						p.basket-form__text Итого к оплате:
 						p.basket-form__price(replaced-number item-total) 12529
 						span.rubl a
 						form.basket-form__form(action="#")
@@ -71,7 +71,7 @@ block content
 										p.basket-table__goods-name Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, sequi!
 										a.basket-table__goods-category(href="#!") Жидкости
 									td.basket-table__cell
-										p.basket-table__price(replaced-number item-cost="#{240 * i + 10}") #{240 * i + 10}
+										p.basket-table__price(replaced-number item-cost="#{480 * i + 10}") #{480 * i + 10}
 										span.rubl a
 									td.basket-table__cell
 										.basket-table__quantity-wrap
@@ -79,7 +79,7 @@ block content
 											input.basket-table__quantity(type="text" readonly value="1" min="1" item-max-val="#{i}" item-val)
 											button.basket-table__changer.plus(type="button" data-val="1" item-changer)
 									td.basket-table__cell
-										p.basket-table__price(replaced-number item-total-cost="#{240 * i + 10}") #{240 * i + 10}
+										p.basket-table__price(replaced-number item-total-cost="#{480 * i + 10}") #{480 * i + 10}
 										span.rubl a
 									td.basket-table__cell
 										span.basket-table__remove(item-delete)
