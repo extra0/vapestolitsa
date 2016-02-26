@@ -25,7 +25,7 @@ block content
 				.basket-form
 					.basket-form__inner
 						p.basket-form__text Итого к оплате
-						p.basket-form__price(replaced-number basket-total) 12529
+						p.basket-form__price(replaced-number item-total) 12529
 						span.rubl a
 						form.basket-form__form(action="#")
 							.form-control
@@ -49,34 +49,39 @@ block content
 				// конец блок с формой
 				// содержание заказа
 				.basket-table
-					.basket-table__row.basket-table__row-header
-						.basket-table__cell
-							p.basket-table__title товары
-						.basket-table__cell
-							p.basket-table__title цена
-						.basket-table__cell
-							p.basket-table__title количество
-						.basket-table__cell
-							p.basket-table__title сумма
-						.basket-table__cell
-							p.basket-table__title 
-					.basket-table__row
-						.basket-table__cell
-							a(href="#!")
-								img.basket-table__goods-img
-							p.basket-table__goods-name Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, sequi!
-							p.basket-table__goods-category Жидкости
-						.basket-table__cell
-							p.basket-table__price(replaced-number) 1860
-							span.rubl a
-						.basket-table__cell
-							.basket-table__quantity-wrap
-								button.basket-table__changer(type="button") -
-								input.basket-table__quantity(type="text" readonly value="1")
-								button.basket-table__changer(type="button") +
-						.basket-table__cell
-							p.basket-table__price(replaced-number) 1860
-							span.rubl a
-						.basket-table__cell
-							span.basket-table__remove
+					table.basket-table__table
+						thead
+							tr
+								th.basket-table__title 
+									span.basket-table__title-content товары
+								th.basket-table__title 
+									span.basket-table__title-content цена
+								th.basket-table__title 
+									span.basket-table__title-content количество
+								th.basket-table__title 
+									span.basket-table__title-content сумма
+								th.basket-table__title 
+									span.basket-table__title-content 
+						tbody
+							- for (i = 1; i<=3; ++i) {
+								tr(item-parent)
+									td.basket-table__cell
+										a.basket-table__goods-img-wrapper(href="#!")
+											img.basket-table__goods-img(src="img/content/g"+i+".jpg", alt="")
+										p.basket-table__goods-name Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, sequi!
+										a.basket-table__goods-category(href="#!") Жидкости
+									td.basket-table__cell
+										p.basket-table__price(replaced-number item-cost="#{240 * i + 10}") #{240 * i + 10}
+										span.rubl a
+									td.basket-table__cell
+										.basket-table__quantity-wrap
+											button.basket-table__changer.minus(type="button" data-val="-1" item-changer)
+											input.basket-table__quantity(type="text" readonly value="1" min="1" item-max-val="#{i}" item-val)
+											button.basket-table__changer.plus(type="button" data-val="1" item-changer)
+									td.basket-table__cell
+										p.basket-table__price(replaced-number item-total-cost="#{240 * i + 10}") #{240 * i + 10}
+										span.rubl a
+									td.basket-table__cell
+										span.basket-table__remove(item-delete)
+							- }
 				// конец содержания заказа

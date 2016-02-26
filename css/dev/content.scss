@@ -1072,48 +1072,65 @@
 // корзина
 .basket {
 	&-table {
-		margin-right: 420px;
-		position: relative;
-		&:before {
-			content: '';
-			background: #fff;
-			@include position(absolute, 0 null null -100%);
-			width: 400%;
-			height: 70px;
-			z-index: -1;
-			box-shadow: -4px 3px 38px rgba(0, 0, 0, 0.25);
+		margin-right: 430px;
+		&__table {
+			position: relative;
+			width: 100%;
+			thead {
+				background: #fff;
+				padding: 9px 0;
+				// display: block;
+			}
+			&:before {
+				content: '';
+				background: #fff;
+				@include position(absolute, 0 null null -100%);
+				width: 400%;
+				height: 70px;
+				z-index: -1;
+				box-shadow: -4px 3px 38px rgba(0, 0, 0, 0.25);
+			}
 		}
 		&__title {
-			font-size: 13px;
-			text-transform: uppercase;
-			font-weight: bold;
-		}
-		&__row {
-			@include display(flex);
-			&-header {
-				height: 70px; 
-				.basket-table__cell:not(:last-child) {
-					border-right: 1px solid #ddd;
-					margin: 15px 0;
+			&:first-child {
+				text-align: left;
+				padding: 0;
+				width: 58%;
+				.basket-table__title-content {
+					padding: 0;
 				}
+			}
+			&:not(:last-child) {
+				.basket-table__title-content {
+					border-right: 1px solid #d9d9d9;
+				}
+			}
+			&:last-child {
+				width: 70px;
+			}
+			&-content {
+				padding: 0 20px;
+				display: block;
+				font-size: 13px;
+				text-transform: uppercase;
+				height: 52px;
+				line-height: 52px;
+				margin: 9px 0;
 			}
 		}
 		&__cell {
+			padding: 20px;
 			text-align: center;
-			@include flex-basis(14%);
-			padding: 0 20px;
+			width: 14%;
+			border-bottom: 1px dashed #93908c;
 			&:first-child {
-				@include flex-basis(100%);
 				text-align: left;
-				padding: 0;
+				padding: 20px 0;
+				width: 58%;
 			}
 			&:last-child {
-				@include flex-basis(5%);
+				width: 100px;
 			}
-		}
-		&__price {
-			font-size: 15px;
-			margin: 0;
 		}
 		&__quantity-wrap {
 			position: relative;
@@ -1125,12 +1142,116 @@
 			border-radius: 20px;
 			height: 39px;
 			line-height: 39px;
+			font-weight: bold;
 			border: none;
 		}
-		&__changer {
-			@include position(absolute, 0 null null 0);
+		&__price {
 			font-size: 15px;
+			display: inline-block;
+			margin: 0;
 			font-weight: bold;
+		}
+		&__goods-img-wrapper {
+			width: 70px;
+			padding: 0 10px;
+			text-align: center;
+			float: left;
+		}
+		&__goods-img {
+			display: block;
+			margin: auto;
+		}
+		&__goods-name {
+			margin: 0 20px 10px 85px;
+			text-transform: uppercase;
+			font-size: 13px;
+		}
+		&__goods-category {
+			color: #aa4507;
+			font-size: 13px;
+			display: inline-block;
+			border-bottom: 1px solid #dcc8bd;
+			line-height: 12px;
+			margin-left: 17px;
+			&:hover {
+				text-decoration: none;
+				border-bottom: 1px solid transparent;
+			}
+		}
+		&__remove {
+			margin-top: 12px;
+			width: 13px;
+		    height: 13px;
+		    position: relative;
+		    cursor: pointer;
+		    display: block;
+		    &:after {
+		    	content: '';
+		    	position: absolute;
+		    	background: #f75350;
+		    	width: 100%;
+		    	height: 2px;
+		    	top: 0;
+		    	left: 0;
+		    	@include transform(rotate(-45deg));
+		    	@include transition(all 0.4s ease-in-out);
+		    }
+		    &:before {
+		    	content: '';
+	    	    position: absolute;
+	    	    background: #f75350;
+	    	    width: 100%;
+	    	    height: 2px;
+	    	    top: 0;
+	    	    left: 0;
+	    	    @include transform(rotate(45deg));
+	    	    @include transition(all 0.4s ease-in-out);
+		    }
+		    &:hover {
+		    	&:before {
+		    		@include transform(rotate(135deg));
+		    	}
+		    	&:after {
+		    		@include transform(rotate(-135deg));
+		    	}
+		    }
+		}
+		&__changer {
+			border: none; 
+			background: none;
+			&.minus {
+				width: 10px;
+				height: 10px;
+				@include position(absolute, 13px null null 14px);
+				&:before {
+					content: '';
+					@include position(absolute, 4px null null 0);
+					width: 10px;
+					height: 2px;
+					background: #000;
+				}
+			}
+			&.plus {
+				width: 10px;
+				height: 10px;
+				@include position(absolute, 18px 13px null null);
+				text-align: center;
+				&:before {
+					content: '';
+					@include position(absolute, 0 null null 0);
+					width: 10px;
+					height: 2px;
+					background: #000;
+				}
+				&:after {
+					content: '';
+					@include position(absolute, 0 null null 0);					
+					width: 10px;
+					height: 2px;
+					background: #000;
+					@include transform(rotate(90deg));
+				}
+			}
 		}
 	}
 	&-header {

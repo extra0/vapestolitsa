@@ -76,4 +76,51 @@ $(function(){
 		width: 195
 	});
 
+	// --------- КОРЗИНА
+
+	function cart() {
+		var sum = 0;
+
+		// просчитываем общую сумму
+		$('[item-total-cost]').each(function(){
+			sum += parseInt($(this).attr('item-total-cost'));
+		});
+
+		// заносим данные
+		$('[item-total]').html(sum);
+
+		// корректируем вывод по разрядам числа
+		$('[replaced-number]').each(function(){	$(this).html(numberWithCommas($(this).html()));	});
+	}
+
+	// удаляем позицию
+	$('[item-delete]').click(function(){
+		$(this).parents('[item-parent]').remove();
+		cart();
+	});
+
+	// меняем значение кнопками
+	$('[item-changer]').click(function(){
+		var itemParent = $(this).parents('[item-parent]'),
+		    input = itemParent.find('[item-val]'),
+			totalCost = itemParent.find('[item-total-cost]'),
+			itemCost = itemParent.find('[item-cost]');
+
+		input.val(parseInt(input.val()) + parseInt($(this).attr('data-val')));
+
+		if (input.val() < 1) { // не даем опустится ниже 0 значению в инпуте
+			input.val('1');
+		}
+		if (input.val() > input.attr('item-max-val')) { // проверяем на максимально допутисмое значение в инпуте
+			input.val(input.attr('item-max-val'));
+		}
+
+		totalCost.attr('item-total-cost', parseInt(input.val()) * parseInt(itemCost.attr('item-cost')));
+		totalCost.html(totalCost.attr('item-total-cost'));
+
+		cart();
+	});
+
+	cart();
+
 });
