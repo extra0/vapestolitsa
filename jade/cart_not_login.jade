@@ -27,25 +27,16 @@ block content
 						p.basket-form__text Итого к оплате:
 						p.basket-form__price(replaced-number item-total) 12529
 						span.rubl a
-						form.basket-form__form(action="#")
-							.form-control
-								span.form-icon.form-icon-city
-								label.form-label Город
-								input.form-input.modal__input(type="text" required)
-							.form-control
-								span.form-icon.form-icon-address
-								label.form-label Адрес
-								input.form-input.modal__input(type="text" required)
-							.form-control
-								span.form-icon.form-icon-phone
-								label.form-label Телефон
-								input.form-input.modal__input.mask(type="text" required)
-							.form-control
-								label.form-label Комментарий
-								textarea.form-input.basket-form__textarea(rows="3")
-							.form-control
-								button.form-btn.basket-form__btn(type="submit") Оформить заказ
-						p.basket-form__description Информация о заказе конфиденционально мы не передадим информацию третьим лицам.
+						br
+						.basket-form__line
+							p.basket-form__title Для отправки заказа
+						.basket-form__user.margin-bottom-10
+							a.basket-form__link.fancybox.enter(href="#enter")
+								span Войдите в свой личный<br>кабинет
+							.basket-form__line.text-center
+								p.basket-form__center-text или
+							a.basket-form__link.fancybox.registration(href="#registration")
+								span Зарегистрируйтесь на<br>сайте
 				// конец блок с формой
 				// содержание заказа
 				.basket-table
@@ -63,12 +54,12 @@ block content
 								th.basket-table__title 
 									span.basket-table__title-content 
 						tbody
-							- for (i = 1; i<=3; ++i) {
+							- for (i = 1; i<=2; ++i) {
 								tr(item-parent)
 									td.basket-table__cell
 										a.basket-table__goods-img-wrapper(href="#!")
 											img.basket-table__goods-img(src="img/content/g"+i+".jpg", alt="")
-										.basket-table__goods-description
+										.basket-table__goods-description		
 											p.basket-table__goods-name Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, sequi!
 											a.basket-table__goods-category(href="#!") Жидкости
 									td.basket-table__cell

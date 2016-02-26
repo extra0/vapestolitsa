@@ -463,7 +463,6 @@ button.ui-button::-moz-focus-inner {
 	cursor: pointer;
 	min-height: 0; /* support: IE7 */
 	/* support: IE10, see #8844 */
-	list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
 	font-size: 13px;
 	padding: 9px 22px;
 	-webkit-transition: all 0.4s ease-in-out;

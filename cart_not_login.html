@@ -223,29 +223,15 @@
             <div class="basket-form">
               <div class="basket-form__inner">
                 <p class="basket-form__text">Итого к оплате:</p>
-                <p replaced-number item-total class="basket-form__price">12529</p><span class="rubl">a</span>
-                <form action="#" class="basket-form__form">
-                  <div class="form-control"><span class="form-icon form-icon-city"></span>
-                    <label class="form-label">Город</label>
-                    <input type="text" required class="form-input modal__input">
-                  </div>
-                  <div class="form-control"><span class="form-icon form-icon-address"></span>
-                    <label class="form-label">Адрес</label>
-                    <input type="text" required class="form-input modal__input">
-                  </div>
-                  <div class="form-control"><span class="form-icon form-icon-phone"></span>
-                    <label class="form-label">Телефон</label>
-                    <input type="text" required class="form-input modal__input mask">
-                  </div>
-                  <div class="form-control">
-                    <label class="form-label">Комментарий</label>
-                    <textarea rows="3" class="form-input basket-form__textarea"></textarea>
-                  </div>
-                  <div class="form-control">
-                    <button type="submit" class="form-btn basket-form__btn">Оформить заказ</button>
-                  </div>
-                </form>
-                <p class="basket-form__description">Информация о заказе конфиденционально мы не передадим информацию третьим лицам.</p>
+                <p replaced-number item-total class="basket-form__price">12529</p><span class="rubl">a</span><br>
+                <div class="basket-form__line">
+                  <p class="basket-form__title">Для отправки заказа</p>
+                </div>
+                <div class="basket-form__user margin-bottom-10"><a href="#enter" class="basket-form__link fancybox enter"><span>Войдите в свой личный<br>кабинет</span></a>
+                  <div class="basket-form__line text-center">
+                    <p class="basket-form__center-text">или</p>
+                  </div><a href="#registration" class="basket-form__link fancybox registration"><span>Зарегистрируйтесь на<br>сайте</span></a>
+                </div>
               </div>
             </div>
             <!-- конец блок с формой-->
@@ -264,7 +250,7 @@
                 <tbody>
                   <tr item-parent>
                     <td class="basket-table__cell"><a href="#!" class="basket-table__goods-img-wrapper"><img src="img/content/g1.jpg" alt="" class="basket-table__goods-img"></a>
-                      <div class="basket-table__goods-description">
+                      <div class="basket-table__goods-description">		
                         <p class="basket-table__goods-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, sequi!</p><a href="#!" class="basket-table__goods-category">Жидкости</a>
                       </div>
                     </td>
@@ -285,7 +271,7 @@
                   </tr>
                   <tr item-parent>
                     <td class="basket-table__cell"><a href="#!" class="basket-table__goods-img-wrapper"><img src="img/content/g2.jpg" alt="" class="basket-table__goods-img"></a>
-                      <div class="basket-table__goods-description">
+                      <div class="basket-table__goods-description">		
                         <p class="basket-table__goods-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, sequi!</p><a href="#!" class="basket-table__goods-category">Жидкости</a>
                       </div>
                     </td>
@@ -301,27 +287,6 @@
                     </td>
                     <td class="basket-table__cell">
                       <p replaced-number item-total-cost="970" class="basket-table__price">970</p><span class="rubl">a</span>
-                    </td>
-                    <td class="basket-table__cell"><span item-delete class="basket-table__remove"></span></td>
-                  </tr>
-                  <tr item-parent>
-                    <td class="basket-table__cell"><a href="#!" class="basket-table__goods-img-wrapper"><img src="img/content/g3.jpg" alt="" class="basket-table__goods-img"></a>
-                      <div class="basket-table__goods-description">
-                        <p class="basket-table__goods-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, sequi!</p><a href="#!" class="basket-table__goods-category">Жидкости</a>
-                      </div>
-                    </td>
-                    <td class="basket-table__cell">
-                      <p replaced-number item-cost="1450" class="basket-table__price">1450</p><span class="rubl">a</span>
-                    </td>
-                    <td class="basket-table__cell">
-                      <div class="basket-table__quantity-wrap">
-                        <button type="button" data-val="-1" item-changer class="basket-table__changer minus"></button>
-                        <input type="text" readonly value="1" min="1" item-max-val="3" item-val class="basket-table__quantity">
-                        <button type="button" data-val="1" item-changer class="basket-table__changer plus"></button>
-                      </div>
-                    </td>
-                    <td class="basket-table__cell">
-                      <p replaced-number item-total-cost="1450" class="basket-table__price">1450</p><span class="rubl">a</span>
                     </td>
                     <td class="basket-table__cell"><span item-delete class="basket-table__remove"></span></td>
                   </tr>
