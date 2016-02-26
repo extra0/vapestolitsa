@@ -210,11 +210,12 @@
           <!-- фильтр-->
           <script>
             $(function(){
-            	// слайдер цены
+            	
             	var min = $('[range-min]'),
             		max = $('[range-max]');
-            
-            	var prSlider = $("#price-range").slider({
+            	
+            	// слайдер цены
+            	$("#price-range").slider({
             		range: true,
             		min: 1,
             		max: 10000,
@@ -227,7 +228,7 @@
             	});
             
             	// слайдер объема
-            	var volSlider = $("#volume-range").slider({
+            	$("#volume-range").slider({
             		range: true,
             		min: 100,
             		max: 400,
@@ -240,7 +241,7 @@
             	});
             	
             	// слайдер креп
-            	var strSlider = $("#strength-range").slider({
+            	$("#strength-range").slider({
             		range: true,
             		min: 10,
             		max: 100,
@@ -353,8 +354,196 @@
             <!-- конец хлебные крошки-->
             <h1 class="title title-category">Жидкости</h1>
           </div>
+          <div class="filter__sort">
+            <div class="filter__sort-block pull-right">
+              <p class="filter__text">Сортировка товаров:</p>
+              <select class="filter__sort-select">
+                <option value="По возрастанию цены">По возрастанию цены</option>
+                <option value="По Убыванию цены">По Убыванию цены</option>
+                <option value="От А до Я">От А до Я</option>
+              </select>
+            </div>
+            <p class="filter__text">По вашим критериям подобрано</p><a href="#!" class="filter__result-item-link">312 товаров</a>
+          </div>
+          <!-- секция с товарами -->
+          <div class="goods__section margin-bottom-40">
+            <div class="goods-body goods-body__one-row-four-items goods-body__last-four-none">
+              <div class="goods-body__item">
+                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                  <div class="goods-body__price-block"><span replaced-number class="goods-body__price">50</span><span class="rubl">a</span></div>
+                </div>
+                <div class="goods-body__description">
+                  <p class="goods-body__name">TRUEBERRY SUGAR & KNIFE</p>
+                  <p class="goods-body__category">Жидкость</p><a href="#!" class="btn goods-body__cart-btn">в корзину</a><a href="#!" class="btn goods-body__detail-btn">детали</a>
+                </div>
+              </div>
+              <div class="goods-body__item">
+                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                  <div class="goods-body__price-block"><span replaced-number class="goods-body__price">300</span><span class="rubl">a</span></div>
+                </div>
+                <div class="goods-body__description">
+                  <p class="goods-body__name">TRUEBERRY SUGAR & KNIFE</p>
+                  <p class="goods-body__category">Жидкость</p><a href="#!" class="btn goods-body__cart-btn">в корзину</a><a href="#!" class="btn goods-body__detail-btn">детали</a>
+                </div>
+              </div>
+              <div class="goods-body__item">
+                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                  <div class="goods-body__price-block"><span replaced-number class="goods-body__price">550</span><span class="rubl">a</span></div>
+                </div>
+                <div class="goods-body__description">
+                  <p class="goods-body__name">TRUEBERRY SUGAR & KNIFE</p>
+                  <p class="goods-body__category">Жидкость</p><a href="#!" class="btn goods-body__cart-btn">в корзину</a><a href="#!" class="btn goods-body__detail-btn">детали</a>
+                </div>
+              </div>
+              <div class="goods-body__item">
+                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                  <div class="goods-body__price-block"><span replaced-number class="goods-body__price">800</span><span class="rubl">a</span></div>
+                </div>
+                <div class="goods-body__description">
+                  <p class="goods-body__name">TRUEBERRY SUGAR & KNIFE</p>
+                  <p class="goods-body__category">Жидкость</p><a href="#!" class="btn goods-body__cart-btn">в корзину</a><a href="#!" class="btn goods-body__detail-btn">детали</a>
+                </div>
+              </div>
+              <div class="goods-body__item">
+                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                  <div class="goods-body__price-block"><span replaced-number class="goods-body__price">1050</span><span class="rubl">a</span></div>
+                </div>
+                <div class="goods-body__description">
+                  <p class="goods-body__name">TRUEBERRY SUGAR & KNIFE</p>
+                  <p class="goods-body__category">Жидкость</p><a href="#!" class="btn goods-body__cart-btn">в корзину</a><a href="#!" class="btn goods-body__detail-btn">детали</a>
+                </div>
+              </div>
+              <div class="goods-body__item">
+                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                  <div class="goods-body__price-block"><span replaced-number class="goods-body__price">1300</span><span class="rubl">a</span></div>
+                </div>
+                <div class="goods-body__description">
+                  <p class="goods-body__name">TRUEBERRY SUGAR & KNIFE</p>
+                  <p class="goods-body__category">Жидкость</p><a href="#!" class="btn goods-body__cart-btn">в корзину</a><a href="#!" class="btn goods-body__detail-btn">детали</a>
+                </div>
+              </div>
+              <div class="goods-body__item">
+                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                  <div class="goods-body__price-block"><span replaced-number class="goods-body__price">1550</span><span class="rubl">a</span></div>
+                </div>
+                <div class="goods-body__description">
+                  <p class="goods-body__name">TRUEBERRY SUGAR & KNIFE</p>
+                  <p class="goods-body__category">Жидкость</p><a href="#!" class="btn goods-body__cart-btn">в корзину</a><a href="#!" class="btn goods-body__detail-btn">детали</a>
+                </div>
+              </div>
+              <div class="goods-body__item">
+                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                  <div class="goods-body__price-block"><span replaced-number class="goods-body__price">1800</span><span class="rubl">a</span></div>
+                </div>
+                <div class="goods-body__description">
+                  <p class="goods-body__name">TRUEBERRY SUGAR & KNIFE</p>
+                  <p class="goods-body__category">Жидкость</p><a href="#!" class="btn goods-body__cart-btn">в корзину</a><a href="#!" class="btn goods-body__detail-btn">детали</a>
+                </div>
+              </div>
+              <div class="goods-body__item">
+                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                  <div class="goods-body__price-block"><span replaced-number class="goods-body__price">2050</span><span class="rubl">a</span></div>
+                </div>
+                <div class="goods-body__description">
+                  <p class="goods-body__name">TRUEBERRY SUGAR & KNIFE</p>
+                  <p class="goods-body__category">Жидкость</p><a href="#!" class="btn goods-body__cart-btn">в корзину</a><a href="#!" class="btn goods-body__detail-btn">детали</a>
+                </div>
+              </div>
+              <div class="goods-body__item">
+                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                  <div class="goods-body__price-block"><span replaced-number class="goods-body__price">2300</span><span class="rubl">a</span></div>
+                </div>
+                <div class="goods-body__description">
+                  <p class="goods-body__name">TRUEBERRY SUGAR & KNIFE</p>
+                  <p class="goods-body__category">Жидкость</p><a href="#!" class="btn goods-body__cart-btn">в корзину</a><a href="#!" class="btn goods-body__detail-btn">детали</a>
+                </div>
+              </div>
+              <div class="goods-body__item">
+                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                  <div class="goods-body__price-block"><span replaced-number class="goods-body__price">2550</span><span class="rubl">a</span></div>
+                </div>
+                <div class="goods-body__description">
+                  <p class="goods-body__name">TRUEBERRY SUGAR & KNIFE</p>
+                  <p class="goods-body__category">Жидкость</p><a href="#!" class="btn goods-body__cart-btn">в корзину</a><a href="#!" class="btn goods-body__detail-btn">детали</a>
+                </div>
+              </div>
+              <div class="goods-body__item">
+                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                  <div class="goods-body__price-block"><span replaced-number class="goods-body__price">2800</span><span class="rubl">a</span></div>
+                </div>
+                <div class="goods-body__description">
+                  <p class="goods-body__name">TRUEBERRY SUGAR & KNIFE</p>
+                  <p class="goods-body__category">Жидкость</p><a href="#!" class="btn goods-body__cart-btn">в корзину</a><a href="#!" class="btn goods-body__detail-btn">детали</a>
+                </div>
+              </div>
+              <div class="goods-body__item">
+                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                  <div class="goods-body__price-block"><span replaced-number class="goods-body__price">3050</span><span class="rubl">a</span></div>
+                </div>
+                <div class="goods-body__description">
+                  <p class="goods-body__name">TRUEBERRY SUGAR & KNIFE</p>
+                  <p class="goods-body__category">Жидкость</p><a href="#!" class="btn goods-body__cart-btn">в корзину</a><a href="#!" class="btn goods-body__detail-btn">детали</a>
+                </div>
+              </div>
+              <div class="goods-body__item">
+                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                  <div class="goods-body__price-block"><span replaced-number class="goods-body__price">3300</span><span class="rubl">a</span></div>
+                </div>
+                <div class="goods-body__description">
+                  <p class="goods-body__name">TRUEBERRY SUGAR & KNIFE</p>
+                  <p class="goods-body__category">Жидкость</p><a href="#!" class="btn goods-body__cart-btn">в корзину</a><a href="#!" class="btn goods-body__detail-btn">детали</a>
+                </div>
+              </div>
+              <div class="goods-body__item">
+                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                  <div class="goods-body__price-block"><span replaced-number class="goods-body__price">3550</span><span class="rubl">a</span></div>
+                </div>
+                <div class="goods-body__description">
+                  <p class="goods-body__name">TRUEBERRY SUGAR & KNIFE</p>
+                  <p class="goods-body__category">Жидкость</p><a href="#!" class="btn goods-body__cart-btn">в корзину</a><a href="#!" class="btn goods-body__detail-btn">детали</a>
+                </div>
+              </div>
+              <div class="goods-body__item">
+                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                  <div class="goods-body__price-block"><span replaced-number class="goods-body__price">3800</span><span class="rubl">a</span></div>
+                </div>
+                <div class="goods-body__description">
+                  <p class="goods-body__name">TRUEBERRY SUGAR & KNIFE</p>
+                  <p class="goods-body__category">Жидкость</p><a href="#!" class="btn goods-body__cart-btn">в корзину</a><a href="#!" class="btn goods-body__detail-btn">детали</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- конец секции с товарами-->
+          <!-- пагинация-->
+          <div class="pagination">
+            <ul class="pagination__list">
+              <li class="pagination__item"><span class="pagination__link active">1</span></li>
+              <li class="pagination__item"><a href="#!" class="pagination__link">2</a></li>
+              <li class="pagination__item"><a href="#!" class="pagination__link">3</a></li>
+              <li class="pagination__item"><span class="pagination__dots">...</span></li>
+              <li class="pagination__item"><a href="#!" class="pagination__link">5</a></li>
+              <li class="pagination__item"><a href="#!" class="pagination__link">6</a></li>
+              <li class="pagination__item"><a href="#!" class="pagination__link">7</a></li>
+            </ul>
+          </div>
+          <!-- конец пагинации-->
         </div>
       </div>
+      <!-- описание-->
+      <div class="about__section mozaik-bg">
+        <div class="container-fluid">
+          <div class="about__img-wrapper"><img src="img/descr_img.png" alt="descr" class="about__img pull-left"></div>
+          <div class="about-description__block">
+            <h1 class="about-description__title">МЫ РАССКАЖЕМ</h1>
+            <h2 class="about-description__subtitle">ЖИДКОСТИ ДЛЯ ВЕЙПА</h2>
+            <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.</p>
+            <p>При создании генератора мы использовали небезызвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.</p>
+            <p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых клиентов недоумение при попытках прочитать рыбу текст.</p>
+          </div>
+        </div>
+      </div>
+      <!-- описание-->
       <div class="buffer"></div>
     </div>
     <footer class="footer">

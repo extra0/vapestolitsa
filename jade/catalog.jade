@@ -13,11 +13,12 @@ block content
 			// фильтр
 			script.
 				$(function(){
-					// слайдер цены
+					
 					var min = $('[range-min]'),
 						max = $('[range-max]');
-
-					var prSlider = $("#price-range").slider({
+					
+					// слайдер цены
+					$("#price-range").slider({
 						range: true,
 						min: 1,
 						max: 10000,
@@ -30,7 +31,7 @@ block content
 					});
 
 					// слайдер объема
-					var volSlider = $("#volume-range").slider({
+					$("#volume-range").slider({
 						range: true,
 						min: 100,
 						max: 400,
@@ -43,7 +44,7 @@ block content
 					});
 					
 					// слайдер креп
-					var strSlider = $("#strength-range").slider({
+					$("#strength-range").slider({
 						range: true,
 						min: 10,
 						max: 100,
@@ -131,4 +132,57 @@ block content
 							a.breadcrumbs__link(href="#!") Жидкости
 				// конец хлебные крошки
 				h1.title.title-category Жидкости
-			
+			.filter__sort
+				.filter__sort-block.pull-right
+					p.filter__text Сортировка товаров:
+					select.filter__sort-select
+						option(value="По возрастанию цены") По возрастанию цены
+						option(value="По Убыванию цены") По Убыванию цены
+						option(value="От А до Я") От А до Я
+				p.filter__text По вашим критериям подобрано
+				a.filter__result-item-link(href="#!") 312 товаров
+			// секция с товарами 
+			.goods__section.margin-bottom-40
+				.goods-body.goods-body__one-row-four-items.goods-body__last-four-none
+					- for (var i = 0; i < 16; ++i) {
+						.goods-body__item
+							.goods-body__wrapper
+								img.goods-body__img(src="img/content/g3.jpg", alt="")
+								.goods-body__price-block
+									span.goods-body__price(replaced-number) #{500 * i / 2 + 50}
+									span.rubl a
+							.goods-body__description
+								p.goods-body__name TRUEBERRY SUGAR & KNIFE
+								p.goods-body__category Жидкость
+								a.btn.goods-body__cart-btn(href="#!") в корзину
+								a.btn.goods-body__detail-btn(href="#!") детали
+					-	}
+			// конец секции с товарами
+			// пагинация
+			.pagination
+				ul.pagination__list
+					- for (var i = 1; i < 8; ++i) {
+						- if (i == 1) {
+							li.pagination__item
+								span.pagination__link.active #{i}
+						- } else if (i == 4) {
+							li.pagination__item
+								span.pagination__dots ...
+						- } else {
+							li.pagination__item
+								a.pagination__link(href="#!") #{i}
+						- }
+					- }
+			// конец пагинации
+	// описание
+	.about__section.mozaik-bg
+		.container-fluid
+			.about__img-wrapper
+				img.about__img.pull-left(src="img/descr_img.png", alt="descr")
+			.about-description__block
+				h1.about-description__title МЫ РАССКАЖЕМ
+				h2.about-description__subtitle ЖИДКОСТИ ДЛЯ ВЕЙПА
+				p Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.
+				p При создании генератора мы использовали небезызвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.
+				p По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых клиентов недоумение при попытках прочитать рыбу текст.
+	// описание

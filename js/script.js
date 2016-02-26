@@ -71,4 +71,9 @@ $(function(){
 		}
 	});
 
+	// катоснмый селект
+	$('.filter__sort-select').selectmenu({
+		width: 193
+	});
+
 });
