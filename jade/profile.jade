@@ -56,6 +56,7 @@ block content
 					.profile__title-wrapper
 						p.profile__title история заказов
 					- for (var i = 0; i < 4; ++i) {
+						// блок одного заказа
 						.order__block
 							.order__block-cell
 								p.order__block-title ID
@@ -78,6 +79,7 @@ block content
 								- } else {
 									p.order__block-status Неизвестен
 								- }
+						// конец блока одного заказа
 					- }
 					a.order__link(href="#!") Все заказы
 				// конец истории заказов

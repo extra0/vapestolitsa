@@ -1,0 +1,134 @@
+extends _layout
+block content
+	// блок с видео
+	.video__wrapper
+		.video__block
+			video.video__player(loop autoplay muted)
+				source(src="video/video.mp4" type="video/mp4")
+				source(src="video/video.webm" type="video/webm")
+				source(src="video/video.ogg" type="video/ogg")
+	// конец блока с видео
+	.container-fluid
+		.sidebar.clearfix
+			// фильтр
+			script.
+				$(function(){
+					// слайдер цены
+					var min = $('[range-min]'),
+						max = $('[range-max]');
+
+					var prSlider = $("#price-range").slider({
+						range: true,
+						min: 1,
+						max: 10000,
+						step: 100,
+						values: [2000, 6000],
+						slide: function(event, ui) {
+							$(this).parents('[range-parent]').find(min).val(ui.values[ 0 ]);
+							$(this).parents('[range-parent]').find(max).val(ui.values[ 1 ]);
+						}
+					});
+
+					// слайдер объема
+					var volSlider = $("#volume-range").slider({
+						range: true,
+						min: 100,
+						max: 400,
+						step: 1,
+						values: [100, 400],
+						slide: function(event, ui) {
+							$(this).parents('[range-parent]').find(min).val(ui.values[ 0 ]);
+							$(this).parents('[range-parent]').find(max).val(ui.values[ 1 ]);
+						}
+					});
+					
+					// слайдер креп
+					var strSlider = $("#strength-range").slider({
+						range: true,
+						min: 10,
+						max: 100,
+						step: 1,
+						values: [10, 100],
+						slide: function(event, ui) {
+							$(this).parents('[range-parent]').find(min).val(ui.values[ 0 ]);
+							$(this).parents('[range-parent]').find(max).val(ui.values[ 1 ]);
+						}
+					});
+
+					min.on('keyup', function() {
+						$(this).parents('[range-parent]').find('[range]').slider("values", 0, $(this).val());
+					});
+
+					max.on('keyup', function() {
+						$(this).parents('[range-parent]').find('[range]').slider("values", 1, $(this).val());
+					});
+
+
+				});
+			.filter
+				.filter__block
+					// форма
+					form(action="#")
+						// слайдер и инпуты
+						p.filter__title.filter__title-price Цена
+						.filter__range-block(range-parent)
+							.filter__range#price-range(range)
+							input.form-input.filter__input(type="text" only-numbers value="2000" range-min)
+							span.rubl a
+							span.filter__line
+							input.form-input.filter__input(type="text" only-numbers value="6000" range-max)
+							span.rubl a
+						// конец слайдер и инпуты
+						// чекбоксы
+						p.filter__title.filter__title-brand Бренды
+						.filter__range-block
+							- for (i = 0; i < 10; i++) {
+								input.filter__checkbox(type="checkbox" id="checkbox_#{i}")
+								label.filter__label(for="checkbox_#{i}") Бренд #{i}
+							- }
+							a.filter__more-link(href="#!") Показать еще 117 брендов
+						// конец чекбоксы
+						p.filter__title.filter__title-taste Вкусы
+						.filter__range-block
+							- for (i = 0; i < 5; i++) {
+								input.filter__checkbox(type="checkbox" id="checkbox_1#{i}")
+								label.filter__label(for="checkbox_1#{i}") Вкус #{i}
+							- }
+						p.filter__title.filter__title-volume объем
+						.filter__range-block(range-parent)
+							.filter__range#volume-range(range)
+							input.form-input.filter__input(type="text" only-numbers range-min value="100")
+							span.filter__value мл
+							span.filter__line
+							input.form-input.filter__input(type="text" only-numbers range-max value="400")
+							span.filter__value мл
+						p.filter__title.filter__title-strength КРЕПОСТЬ
+						.filter__range-block(range-parent)
+							.filter__range#strength-range(range)
+							input.form-input.filter__input(type="text" only-numbers range-min value="10")
+							span.filter__value мг
+							span.filter__line
+							input.form-input.filter__input(type="text" only-numbers range-max value="100")
+							span.filter__value мг
+						button.form-btn.filter__btn(type="submit") Примeнить все фильтры
+			// конец фильтра
+			// форма подписки
+			.subscribe__block
+				p.subscribe__title подписка на акции
+				p.subscribe__text Получите специальные предложение и акций первыми!
+				form.subscribe__form(action="#")
+					input.form-input.subscribe__input(type="email" required placeholder="Введите e-mail")
+					button.form-btn.subscribe__btn(type="submit") Подписаться
+			// конец формы подписки
+		.content.sidebar-margin
+			.content-top
+				// хлебные крошки
+				.breadcrumbs
+					ul.breadcrumbs__list
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#!") Главная страница
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#!") Жидкости
+				// конец хлебные крошки
+				h1.title.title-category Жидкости
+			

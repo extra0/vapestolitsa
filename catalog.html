@@ -206,52 +206,152 @@
       </div>
       <!-- конец блока с видео-->
       <div class="container-fluid">
-        <div class="content">
+        <div class="sidebar clearfix">
+          <!-- фильтр-->
+          <script>
+            $(function(){
+            	// слайдер цены
+            	var min = $('[range-min]'),
+            		max = $('[range-max]');
+            
+            	var prSlider = $("#price-range").slider({
+            		range: true,
+            		min: 1,
+            		max: 10000,
+            		step: 100,
+            		values: [2000, 6000],
+            		slide: function(event, ui) {
+            			$(this).parents('[range-parent]').find(min).val(ui.values[ 0 ]);
+            			$(this).parents('[range-parent]').find(max).val(ui.values[ 1 ]);
+            		}
+            	});
+            
+            	// слайдер объема
+            	var volSlider = $("#volume-range").slider({
+            		range: true,
+            		min: 100,
+            		max: 400,
+            		step: 1,
+            		values: [100, 400],
+            		slide: function(event, ui) {
+            			$(this).parents('[range-parent]').find(min).val(ui.values[ 0 ]);
+            			$(this).parents('[range-parent]').find(max).val(ui.values[ 1 ]);
+            		}
+            	});
+            	
+            	// слайдер креп
+            	var strSlider = $("#strength-range").slider({
+            		range: true,
+            		min: 10,
+            		max: 100,
+            		step: 1,
+            		values: [10, 100],
+            		slide: function(event, ui) {
+            			$(this).parents('[range-parent]').find(min).val(ui.values[ 0 ]);
+            			$(this).parents('[range-parent]').find(max).val(ui.values[ 1 ]);
+            		}
+            	});
+            
+            	min.on('keyup', function() {
+            		$(this).parents('[range-parent]').find('[range]').slider("values", 0, $(this).val());
+            	});
+            
+            	max.on('keyup', function() {
+            		$(this).parents('[range-parent]').find('[range]').slider("values", 1, $(this).val());
+            	});
+            
+            
+            });
+          </script>
+          <div class="filter">
+            <div class="filter__block">
+              <!-- форма-->
+              <form action="#">
+                <!-- слайдер и инпуты-->
+                <p class="filter__title filter__title-price">Цена</p>
+                <div range-parent class="filter__range-block">
+                  <div id="price-range" range class="filter__range"></div>
+                  <input type="text" only-numbers value="2000" range-min class="form-input filter__input"><span class="rubl">a</span><span class="filter__line"></span>
+                  <input type="text" only-numbers value="6000" range-max class="form-input filter__input"><span class="rubl">a</span>
+                </div>
+                <!-- конец слайдер и инпуты-->
+                <!-- чекбоксы-->
+                <p class="filter__title filter__title-brand">Бренды</p>
+                <div class="filter__range-block">
+                  <input type="checkbox" id="checkbox_0" class="filter__checkbox">
+                  <label for="checkbox_0" class="filter__label">Бренд 0</label>
+                  <input type="checkbox" id="checkbox_1" class="filter__checkbox">
+                  <label for="checkbox_1" class="filter__label">Бренд 1</label>
+                  <input type="checkbox" id="checkbox_2" class="filter__checkbox">
+                  <label for="checkbox_2" class="filter__label">Бренд 2</label>
+                  <input type="checkbox" id="checkbox_3" class="filter__checkbox">
+                  <label for="checkbox_3" class="filter__label">Бренд 3</label>
+                  <input type="checkbox" id="checkbox_4" class="filter__checkbox">
+                  <label for="checkbox_4" class="filter__label">Бренд 4</label>
+                  <input type="checkbox" id="checkbox_5" class="filter__checkbox">
+                  <label for="checkbox_5" class="filter__label">Бренд 5</label>
+                  <input type="checkbox" id="checkbox_6" class="filter__checkbox">
+                  <label for="checkbox_6" class="filter__label">Бренд 6</label>
+                  <input type="checkbox" id="checkbox_7" class="filter__checkbox">
+                  <label for="checkbox_7" class="filter__label">Бренд 7</label>
+                  <input type="checkbox" id="checkbox_8" class="filter__checkbox">
+                  <label for="checkbox_8" class="filter__label">Бренд 8</label>
+                  <input type="checkbox" id="checkbox_9" class="filter__checkbox">
+                  <label for="checkbox_9" class="filter__label">Бренд 9</label><a href="#!" class="filter__more-link">Показать еще 117 брендов</a>
+                </div>
+                <!-- конец чекбоксы-->
+                <p class="filter__title filter__title-taste">Вкусы</p>
+                <div class="filter__range-block">
+                  <input type="checkbox" id="checkbox_10" class="filter__checkbox">
+                  <label for="checkbox_10" class="filter__label">Вкус 0</label>
+                  <input type="checkbox" id="checkbox_11" class="filter__checkbox">
+                  <label for="checkbox_11" class="filter__label">Вкус 1</label>
+                  <input type="checkbox" id="checkbox_12" class="filter__checkbox">
+                  <label for="checkbox_12" class="filter__label">Вкус 2</label>
+                  <input type="checkbox" id="checkbox_13" class="filter__checkbox">
+                  <label for="checkbox_13" class="filter__label">Вкус 3</label>
+                  <input type="checkbox" id="checkbox_14" class="filter__checkbox">
+                  <label for="checkbox_14" class="filter__label">Вкус 4</label>
+                </div>
+                <p class="filter__title filter__title-volume">объем</p>
+                <div range-parent class="filter__range-block">
+                  <div id="volume-range" range class="filter__range"></div>
+                  <input type="text" only-numbers range-min value="100" class="form-input filter__input"><span class="filter__value">мл</span><span class="filter__line"></span>
+                  <input type="text" only-numbers range-max value="400" class="form-input filter__input"><span class="filter__value">мл</span>
+                </div>
+                <p class="filter__title filter__title-strength">КРЕПОСТЬ</p>
+                <div range-parent class="filter__range-block">
+                  <div id="strength-range" range class="filter__range"></div>
+                  <input type="text" only-numbers range-min value="10" class="form-input filter__input"><span class="filter__value">мг</span><span class="filter__line"></span>
+                  <input type="text" only-numbers range-max value="100" class="form-input filter__input"><span class="filter__value">мг</span>
+                </div>
+                <button type="submit" class="form-btn filter__btn">Примeнить все фильтры</button>
+              </form>
+            </div>
+          </div>
+          <!-- конец фильтра-->
+          <!-- форма подписки-->
+          <div class="subscribe__block">
+            <p class="subscribe__title">подписка на акции</p>
+            <p class="subscribe__text">Получите специальные предложение и акций первыми!</p>
+            <form action="#" class="subscribe__form">
+              <input type="email" required placeholder="Введите e-mail" class="form-input subscribe__input">
+              <button type="submit" class="form-btn subscribe__btn">Подписаться</button>
+            </form>
+          </div>
+          <!-- конец формы подписки-->
+        </div>
+        <div class="content sidebar-margin">
           <div class="content-top">
             <!-- хлебные крошки-->
             <div class="breadcrumbs">
               <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item"><a href="#!" class="breadcrumbs__link">Главная страница</a></li>
-                <li class="breadcrumbs__item"><a href="#!" class="breadcrumbs__link">Контакты</a></li>
+                <li class="breadcrumbs__item"><a href="#!" class="breadcrumbs__link">Жидкости</a></li>
               </ul>
             </div>
             <!-- конец хлебные крошки-->
-            <h1 class="title">Контакты</h1>
-          </div>
-          <div class="contacts">
-            <!-- блок контактов слева-->
-            <div class="contacts__info"><img src="img/c-phone.png" alt="" class="contacts__img">
-              <p class="contacts__phone">8 (495) 544 57 00</p>
-              <p class="contacts__text">Принимаем звонки с 9:00 по 22:00</p><img src="img/c-email.png" alt="" class="contacts__img"><a href="mailto:info@vapstolitsa.ru" class="contacts__email">info@vapstolitsa.ru</a>
-            </div>
-            <!-- конец блок контактов слева-->
-            <!-- контакт форма-->
-            <div class="contacts__form">
-              <form action="">
-                <div class="form-flex three-column">
-                  <div class="form-control"><span class="form-icon form-icon-user"></span>
-                    <label class="form-label">Имя</label>
-                    <input type="text" required class="form-input contacts__input">
-                  </div>
-                  <div class="form-control"><span class="form-icon form-icon-email"></span>
-                    <label class="form-label">E-mail</label>
-                    <input type="email" required class="form-input contacts__input">
-                  </div>
-                  <div class="form-control"><span class="form-icon form-icon-phone"></span>
-                    <label class="form-label">Телефон</label>
-                    <input type="text" required placeholder="+7 " class="form-input contacts__input mask">
-                  </div>
-                </div><br>
-                <div class="form-control">
-                  <label class="form-label">Ваш вопрос</label>
-                  <textarea rows="4" class="form-input contacts__textarea"></textarea>
-                </div><br>
-                <div class="form-control">
-                  <button type="submit" class="form-btn contacts__btn">Отправить вопрос</button>
-                </div>
-              </form>
-            </div>
-            <!-- конец контакт форма-->
+            <h1 class="title title-category">Жидкости</h1>
           </div>
         </div>
       </div>

@@ -152,7 +152,7 @@
               <!-- корзина-->
               <div class="basket pull-right"><a href="#!">
                   <div class="basket__img-block"><span class="basket__quantity">15</span></div></a>
-                <div class="basket__line"><a href="#!" class="basket__link"><span class="basket__link-quantity">2</span> товара</a><span> на </span><span class="basket__price">23 500</span><span class="rubl">a</span></div>
+                <div class="basket__line"><a href="#!" class="basket__link"><span class="basket__link-quantity">2</span> товара</a><span> на </span><span replaced-number class="basket__price">23500</span><span class="rubl">a</span></div>
               </div>
               <!-- конец корзины-->
             </div>
@@ -259,6 +259,7 @@
               <div class="profile__title-wrapper">
                 <p class="profile__title">история заказов</p>
               </div>
+              <!-- блок одного заказа-->
               <div class="order__block">
                 <div class="order__block-cell">
                   <p class="order__block-title">ID</p>
@@ -277,6 +278,8 @@
                   <p class="order__block-status">Неизвестен</p>
                 </div>
               </div>
+              <!-- конец блока одного заказа-->
+              <!-- блок одного заказа-->
               <div class="order__block">
                 <div class="order__block-cell">
                   <p class="order__block-title">ID</p>
@@ -295,6 +298,8 @@
                   <p class="order__block-status order__block-status-awaiting">В очереди</p>
                 </div>
               </div>
+              <!-- конец блока одного заказа-->
+              <!-- блок одного заказа-->
               <div class="order__block">
                 <div class="order__block-cell">
                   <p class="order__block-title">ID</p>
@@ -313,6 +318,8 @@
                   <p class="order__block-status order__block-status-canceled">Отменен</p>
                 </div>
               </div>
+              <!-- конец блока одного заказа-->
+              <!-- блок одного заказа-->
               <div class="order__block">
                 <div class="order__block-cell">
                   <p class="order__block-title">ID</p>
@@ -330,7 +337,8 @@
                   <p class="order__block-title">Статус</p>
                   <p class="order__block-status order__block-status-completed">Завершен</p>
                 </div>
-              </div><a href="#!" class="order__link">Все заказы</a>
+              </div>
+              <!-- конец блока одного заказа--><a href="#!" class="order__link">Все заказы</a>
             </div>
             <!-- конец истории заказов-->
           </div>
@@ -377,6 +385,9 @@
     </footer>
     <!-- подключаемые скрипты-->
     <script src="js/plugins.js"></script>
+    <!-- подключить только на странице каталога-->
+    <script src="js/jquery-ui.js"></script>
+    <!-- ***-->
     <script src="js/script.js"></script>
     <!-- конец подключаемых скриптов-->
   </body>
