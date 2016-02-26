@@ -68,7 +68,7 @@ block content
 									td.basket-table__cell
 										.basket-table__quantity-wrap
 											button.basket-table__changer.minus(type="button" data-val="-1" item-changer)
-											input.basket-table__quantity(type="text" readonly value="1" min="1" item-max-val="#{i}" item-val)
+											input.basket-table__quantity(type="text" readonly value="1" item-max-val="#{i}" item-val)
 											button.basket-table__changer.plus(type="button" data-val="1" item-changer)
 									td.basket-table__cell
 										p.basket-table__price(replaced-number item-total-cost="#{480 * i + 10}") #{480 * i + 10}

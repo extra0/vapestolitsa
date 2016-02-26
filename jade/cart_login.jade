@@ -64,6 +64,7 @@ block content
 									span.basket-table__title-content 
 						tbody
 							- for (i = 1; i<=3; ++i) {
+								// содержимое одного заказа
 								tr(item-parent)
 									td.basket-table__cell
 										a.basket-table__goods-img-wrapper(href="#!")
@@ -77,12 +78,13 @@ block content
 									td.basket-table__cell
 										.basket-table__quantity-wrap
 											button.basket-table__changer.minus(type="button" data-val="-1" item-changer)
-											input.basket-table__quantity(type="text" readonly value="1" min="1" item-max-val="#{i}" item-val)
+											input.basket-table__quantity(type="text" readonly value="1" item-max-val="#{i}" item-val)
 											button.basket-table__changer.plus(type="button" data-val="1" item-changer)
 									td.basket-table__cell
 										p.basket-table__price(replaced-number item-total-cost="#{480 * i + 10}") #{480 * i + 10}
 										span.rubl a
 									td.basket-table__cell
 										span.basket-table__remove(item-delete)
+								// конец содержимого одного заказа
 							- }
 				// конец содержания заказа
