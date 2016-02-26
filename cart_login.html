@@ -212,46 +212,84 @@
             <div class="breadcrumbs">
               <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item"><a href="#!" class="breadcrumbs__link">Главная страница</a></li>
-                <li class="breadcrumbs__item"><a href="#!" class="breadcrumbs__link">Контакты</a></li>
+                <li class="breadcrumbs__item"><a href="#!" class="breadcrumbs__link">Корзина</a></li>
               </ul>
             </div>
             <!-- конец хлебные крошки-->
-            <h1 class="title">Контакты</h1>
+            <h1 class="title">Корзина</h1>
           </div>
-          <div class="contacts">
-            <!-- блок контактов слева-->
-            <div class="contacts__info"><img src="img/c-phone.png" alt="" class="contacts__img">
-              <p class="contacts__phone">8 (495) 544 57 00</p>
-              <p class="contacts__text">Принимаем звонки с 9:00 по 22:00</p><img src="img/c-email.png" alt="" class="contacts__img"><a href="mailto:info@vapstolitsa.ru" class="contacts__email">info@vapstolitsa.ru</a>
-            </div>
-            <!-- конец блок контактов слева-->
-            <!-- контакт форма-->
-            <div class="contacts__form">
-              <form action="">
-                <div class="form-flex three-column">
-                  <div class="form-control"><span class="form-icon form-icon-user"></span>
-                    <label class="form-label">Имя</label>
-                    <input type="text" required class="form-input contacts__input">
+          <div class="basket__section">
+            <!-- блок с формой-->
+            <div class="basket-form">
+              <div class="basket-form__inner">
+                <p class="basket-form__text">Итого к оплате</p>
+                <p replaced-number basket-total class="basket-form__price">12529</p><span class="rubl">a</span>
+                <form action="#" class="basket-form__form">
+                  <div class="form-control"><span class="form-icon form-icon-city"></span>
+                    <label class="form-label">Город</label>
+                    <input type="text" required class="form-input modal__input">
                   </div>
-                  <div class="form-control"><span class="form-icon form-icon-email"></span>
-                    <label class="form-label">E-mail</label>
-                    <input type="email" required class="form-input contacts__input">
+                  <div class="form-control"><span class="form-icon form-icon-address"></span>
+                    <label class="form-label">Адрес</label>
+                    <input type="text" required class="form-input modal__input">
                   </div>
                   <div class="form-control"><span class="form-icon form-icon-phone"></span>
                     <label class="form-label">Телефон</label>
-                    <input type="text" required placeholder="+7 " class="form-input contacts__input mask">
+                    <input type="text" required class="form-input modal__input mask">
                   </div>
-                </div><br>
-                <div class="form-control">
-                  <label class="form-label">Ваш вопрос</label>
-                  <textarea rows="10" class="form-input contacts__textarea"></textarea>
-                </div><br>
-                <div class="form-control">
-                  <button type="submit" class="form-btn contacts__btn">Отправить вопрос</button>
-                </div>
-              </form>
+                  <div class="form-control">
+                    <label class="form-label">Комментарий</label>
+                    <textarea rows="3" class="form-input basket-form__textarea"></textarea>
+                  </div>
+                  <div class="form-control">
+                    <button type="submit" class="form-btn basket-form__btn">Оформить заказ</button>
+                  </div>
+                </form>
+                <p class="basket-form__description">Информация о заказе конфиденционально мы не передадим информацию третьим лицам.</p>
+              </div>
             </div>
-            <!-- конец контакт форма-->
+            <!-- конец блок с формой-->
+            <!-- содержание заказа-->
+            <div class="basket-table">
+              <div class="basket-table__row basket-table__row-header">
+                <div class="basket-table__cell">
+                  <p class="basket-table__title">товары</p>
+                </div>
+                <div class="basket-table__cell">
+                  <p class="basket-table__title">цена</p>
+                </div>
+                <div class="basket-table__cell">
+                  <p class="basket-table__title">количество</p>
+                </div>
+                <div class="basket-table__cell">
+                  <p class="basket-table__title">сумма</p>
+                </div>
+                <div class="basket-table__cell">
+                  <p class="basket-table__title"> </p>
+                </div>
+              </div>
+              <div class="basket-table__row">
+                <div class="basket-table__cell"><a href="#!"><img class="basket-table__goods-img"></a>
+                  <p class="basket-table__goods-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, sequi!</p>
+                  <p class="basket-table__goods-category">Жидкости</p>
+                </div>
+                <div class="basket-table__cell">
+                  <p replaced-number class="basket-table__price">1860</p><span class="rubl">a</span>
+                </div>
+                <div class="basket-table__cell">
+                  <div class="basket-table__quantity-wrap">
+                    <button type="button" class="basket-table__changer">-</button>
+                    <input type="text" readonly value="1" class="basket-table__quantity">
+                    <button type="button" class="basket-table__changer">+</button>
+                  </div>
+                </div>
+                <div class="basket-table__cell">
+                  <p replaced-number class="basket-table__price">1860</p><span class="rubl">a</span>
+                </div>
+                <div class="basket-table__cell"><span class="basket-table__remove"></span></div>
+              </div>
+            </div>
+            <!-- конец содержания заказа-->
           </div>
         </div>
       </div>

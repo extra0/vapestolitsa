@@ -1,0 +1,82 @@
+extends _layout
+block content
+	// блок с видео
+	.video__wrapper
+		.video__block
+			video.video__player(loop autoplay muted)
+				source(src="video/video.mp4" type="video/mp4")
+				source(src="video/video.webm" type="video/webm")
+				source(src="video/video.ogg" type="video/ogg")
+	// конец блока с видео
+	.container-fluid
+		.content
+			.content-top
+				// хлебные крошки
+				.breadcrumbs
+					ul.breadcrumbs__list
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#!") Главная страница
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#!") Корзина
+				// конец хлебные крошки
+				h1.title Корзина
+			.basket__section
+				// блок с формой
+				.basket-form
+					.basket-form__inner
+						p.basket-form__text Итого к оплате
+						p.basket-form__price(replaced-number basket-total) 12529
+						span.rubl a
+						form.basket-form__form(action="#")
+							.form-control
+								span.form-icon.form-icon-city
+								label.form-label Город
+								input.form-input.modal__input(type="text" required)
+							.form-control
+								span.form-icon.form-icon-address
+								label.form-label Адрес
+								input.form-input.modal__input(type="text" required)
+							.form-control
+								span.form-icon.form-icon-phone
+								label.form-label Телефон
+								input.form-input.modal__input.mask(type="text" required)
+							.form-control
+								label.form-label Комментарий
+								textarea.form-input.basket-form__textarea(rows="3")
+							.form-control
+								button.form-btn.basket-form__btn(type="submit") Оформить заказ
+						p.basket-form__description Информация о заказе конфиденционально мы не передадим информацию третьим лицам.
+				// конец блок с формой
+				// содержание заказа
+				.basket-table
+					.basket-table__row.basket-table__row-header
+						.basket-table__cell
+							p.basket-table__title товары
+						.basket-table__cell
+							p.basket-table__title цена
+						.basket-table__cell
+							p.basket-table__title количество
+						.basket-table__cell
+							p.basket-table__title сумма
+						.basket-table__cell
+							p.basket-table__title 
+					.basket-table__row
+						.basket-table__cell
+							a(href="#!")
+								img.basket-table__goods-img
+							p.basket-table__goods-name Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, sequi!
+							p.basket-table__goods-category Жидкости
+						.basket-table__cell
+							p.basket-table__price(replaced-number) 1860
+							span.rubl a
+						.basket-table__cell
+							.basket-table__quantity-wrap
+								button.basket-table__changer(type="button") -
+								input.basket-table__quantity(type="text" readonly value="1")
+								button.basket-table__changer(type="button") +
+						.basket-table__cell
+							p.basket-table__price(replaced-number) 1860
+							span.rubl a
+						.basket-table__cell
+							span.basket-table__remove
+				// конец содержания заказа

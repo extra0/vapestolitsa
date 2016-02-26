@@ -706,6 +706,8 @@
 		padding: 0 36px;
 	}
 	&__textarea {
+		line-height: normal;
+		padding: 10px 10px 10px 29px;
 		&:focus {
 			box-shadow: 0 0 4px #d59f4f;	
 		}
@@ -1067,5 +1069,128 @@
 		margin: 15px;
 	}
 }
+// корзина
+.basket {
+	&-table {
+		margin-right: 420px;
+		position: relative;
+		&:before {
+			content: '';
+			background: #fff;
+			@include position(absolute, 0 null null -100%);
+			width: 400%;
+			height: 70px;
+			z-index: -1;
+			box-shadow: -4px 3px 38px rgba(0, 0, 0, 0.25);
+		}
+		&__title {
+			font-size: 13px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		&__row {
+			@include display(flex);
+			&-header {
+				height: 70px; 
+				.basket-table__cell:not(:last-child) {
+					border-right: 1px solid #ddd;
+					margin: 15px 0;
+				}
+			}
+		}
+		&__cell {
+			text-align: center;
+			@include flex-basis(14%);
+			padding: 0 20px;
+			&:first-child {
+				@include flex-basis(100%);
+				text-align: left;
+				padding: 0;
+			}
+			&:last-child {
+				@include flex-basis(5%);
+			}
+		}
+		&__price {
+			font-size: 15px;
+			margin: 0;
+		}
+		&__quantity-wrap {
+			position: relative;
+		}
+		&__quantity {
+			width: 100%;
+			text-align: center;
+			background: #f6f6f6;
+			border-radius: 20px;
+			height: 39px;
+			line-height: 39px;
+			border: none;
+		}
+		&__changer {
+			@include position(absolute, 0 null null 0);
+			font-size: 15px;
+			font-weight: bold;
+		}
+	}
+	&-header {
+		position: relative;
+	}
+	&-form {
+		width: 400px;
+		background: #fff;
+		float: right;
+		padding: 15px;
+		margin: -110px 0 40px 0;
+		box-shadow: -4px 3px 38px rgba(0,0,0, 0.25);
+		position: relative;
+		z-index: 10;
+		&__inner {
+			border: 3px dashed $orange;
+			padding: 17px 27px;
+		}
+		&__text {
+			display: inline-block;
+			vertical-align: top;
+			margin: 19px 15px 0 0;
+			font-weight: bold;
+		}
+		&__price {
+			font-size: 45px;
+			font-weight: 900;
+			margin: 0;
+			display: inline-block;
+			vertical-align: top;
+			& + .rubl {
+				font-size: 45px;
+			}
+		}
+		&__form {
+			border-top: 1px solid #d9d9d9;
+			margin-top: 15px;
+			padding-top: 15px;
+		}
+		&__textarea {
+			line-height: normal;
+			padding: 10px 10px 10px 29px;
+		}
+		&__btn {
+			width: 100%;
+			font-size: 19px;
+			height: 50px;
+			line-height: 50px;
+			font-weight: 900;
+			color: #403819;
+			background: #e8d06d;
+		}
+		&__description {
+			font-size: 12px;
+			color: #676462;
+			margin: 0 0 10px;
+			padding: 0 10px;
+		}
+	}
+}
+
 
 /* end CONTENT */
