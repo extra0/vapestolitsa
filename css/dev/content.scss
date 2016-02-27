@@ -258,7 +258,6 @@
 					left: 0;
 					opacity: 1;
 				}
-				.goods-body__price-block,
 				.goods-body__category,
 				.goods-body__name {
 					opacity: 0;
@@ -909,6 +908,14 @@
 		display: inline-block;
 		position: relative;
 		margin: 3px 7px;
+	}
+	&__checkbox-wrapper {
+		max-height: 340px;
+		overflow: hidden;
+		@include transition(max-height 0.4s ease-in-out);
+		&.active {
+			max-height: 2000px;
+		}
 	}
 	&__checkbox {
 		display: none;
@@ -1623,10 +1630,11 @@
 			position: relative;
 			&:before {
 				content: '';
-				background: #b8b4ae;
+				background: #fc4f4f;
 				@include position(absolute, 50% null null 0);
 				width: 100%;
-				height: 1px;
+				height: 2px;
+				@include transform(rotate(-11deg));
 			}
 			& + .rubl {
 				color: #7f7d79;

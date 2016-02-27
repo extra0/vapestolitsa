@@ -38,13 +38,15 @@ $(function(){
 	});
 
 	// сворачиваем меню пользователя по клику вне его области
-	// $(document).mouseup(function(e) {
-	// 	var container = $(".user__drop-down");
-	// 	if (container.has(e.target).length === 0) {
-	// 		$('.user__link-login').removeClass('active');
-	// 		container.removeClass('active');
-	// 	}
-	// });
+	$(document).mouseup(function(e) {
+		var container = $("[click-hide]");
+		if (container.has(e.target).length === 0) {
+			$('.user__link-login').removeClass('active');
+			$('.search-form__input').removeClass('smart-open');
+			$('.smart-result__block').hide();
+			container.removeClass('active');
+		}
+	});
 
 	// закрываем меню по ESC
 	$(document).keyup(function(d) {
@@ -74,6 +76,19 @@ $(function(){
 	// катоснмый селект
 	$('.filter__sort-select').selectmenu({
 		width: 195
+	});
+
+	// показываем скрытые пункты в фильтре
+	$('.filter__more-link').click(function(){
+		if ($(this).hasClass('active')) {
+			$(this).removeClass('active');
+			$(this).prev().removeClass('active');
+			$(this).find('.filter__word').html('Показать');
+		} else {
+			$(this).addClass('active');
+			$(this).prev().addClass('active');
+			$(this).find('.filter__word').html('Скрыть');
+		}
 	});
 
 	// --------- КОРЗИНА

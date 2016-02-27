@@ -4,9 +4,9 @@ block content
 	.video__wrapper.index-height
 		.video__block
 			video.video__player(loop autoplay muted)
-				source(src="video/video.mp4" type="video/mp4")
-				source(src="video/video.webm" type="video/webm")
-				source(src="video/video.ogg" type="video/ogg")
+				source(src="/video/video.mp4" type="video/mp4")
+				source(src="/video/video.webm" type="video/webm")
+				source(src="/video/video.ogg" type="video/ogg")
 	// конец блока с видео
 	.container-fluid
 		// sidebar
@@ -31,7 +31,7 @@ block content
 					// блок одного товара
 					.goods-body__item
 						.goods-body__wrapper
-							img.goods-body__img(src="img/content/g2.jpg", alt="")
+							img.goods-body__img(src="/img/content/g2.jpg", alt="")
 							.goods-body__price-block
 								span.goods-body__price(replaced-number) 45000
 								span.rubl a
@@ -44,7 +44,7 @@ block content
 					- for (var i = 0; i < 6; ++i) {
 						.goods-body__item
 							.goods-body__wrapper
-								img.goods-body__img(src="img/content/g1.jpg", alt="")
+								img.goods-body__img(src="/img/content/g1.jpg", alt="")
 								.goods-body__price-block
 									span.goods-body__price(replaced-number) #{1250 * i / 2 + 25}
 									span.rubl a
@@ -62,7 +62,8 @@ block content
 					- for (var i = 0; i < 4; ++i) {
 						.goods-body__item
 							.goods-body__wrapper
-								img.goods-body__img(src="img/content/g"+(i+1)+".jpg", alt="")
+								a(href="#!")
+									img.goods-body__img(src="/img/content/g"+(i+1)+".jpg", alt="")
 								.goods-body__price-block
 									span.goods-body__price(replaced-number) #{2900 * i / 2 + 25}
 									span.rubl a
@@ -79,7 +80,7 @@ block content
 	.about__section
 		.container-fluid
 			.about__img-wrapper
-				img.about__img(src="img/about.jpg", alt="")
+				img.about__img(src="/img/about.jpg", alt="")
 			.about-description__block
 				h1.about-description__title о компании
 				h2.about-description__subtitle ЧТО ТАКОЕ “VAPE STOLITSA” ?

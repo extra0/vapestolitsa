@@ -8,6 +8,9 @@
     <meta keywords="">
     <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
     <link href="css/normalize.css" rel="stylesheet" media="all">
+    <!-- подключить на странице каталога-->
+    <link href="css/jquery-ui-slider.css" rel="stylesheet" media="all">
+    <!-- ***********-->
     <link href="css/styles.css" rel="stylesheet" media="all">
     <script src="js/jquery.js"></script>
     <title></title>
@@ -82,7 +85,7 @@
         <div class="header-top-block">
           <div class="container-fluid">
             <!-- лого-->
-            <div class="header__logo-block"><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a></div>
+            <div class="header__logo-block"><a href="/" class="header__logo"><img src="/img/logo.png" alt="Site Logo"></a></div>
             <!-- конец лого-->
             <nav class="header__block-inner">
               <!-- меню хедера-->
@@ -115,7 +118,7 @@
           <div class="container-fluid">
             <div class="header__block-inner">
               <!-- форма поиска-->
-              <div class="search-form">
+              <div click-hide class="search-form">
                 <form action="#">
                   <input type="text" required placeholder="Введите название или артикул товара" class="form-input search-form__input">
                   <button type="submit" class="form-btn search-form__btn">Найти</button>
@@ -125,11 +128,11 @@
                   <!-- ответ когда нет результатов-->
                   <!-- конец-->
                   <!-- результат поиска-->
-                  <div class="smart-result__item"><a href="#!"><img src="img/content/g2.jpg" alt="" class="smart-result__img"></a>
+                  <div class="smart-result__item"><a href="#!"><img src="/img/content/g2.jpg" alt="" class="smart-result__img"></a>
                     <div class="smart-result__description"><a href="#!" class="smart-result__title">SOUR VAPE WICKED WATERMELON 30 МЛ </a><a href="#!" class="smart-result__category">Жидкости</a></div>
                   </div>
                   <!-- конец результата поиска-->
-                  <div class="smart-result__item"><a href="#!"><img src="img/content/g3.jpg" alt="" class="smart-result__img"></a>
+                  <div class="smart-result__item"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="smart-result__img"></a>
                     <div class="smart-result__description"><a href="#!" class="smart-result__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, placeat.</a><a href="#!" class="smart-result__category">Жидкости</a></div>
                   </div>
                 </div>
@@ -138,15 +141,15 @@
               <!-- конец формы поиска-->
               <!-- блок пользователя-->
               <div class="user__block">
-                <!-- если пользователь залогинен--><img src="img/content/link-ava.jpg" alt="" class="user__img"><a href="#!" class="user__link user__link-login">HelloKing</a>
+                <!-- если пользователь залогинен--><img src="/img/content/link-ava.jpg" alt="" class="user__img"><a href="#!" class="user__link user__link-login">HelloKing</a>
                 <!-- выпадающее меню пользователя-->
-                <div class="user__drop-down">
+                <div click-hide class="user__drop-down">
                   <div class="user__drop-down-item"><a href="#!" class="user__drop-down-link profile">Профиль</a></div>
                   <div class="user__drop-down-item"><a href="#!" class="user__drop-down-link exit">Выйти</a></div>
                 </div>
                 <!-- конец выпадающего меню пользователя-->
                 <!-- конец залогиненного блока пользователя-->
-                <!--a.user__link.user__link-enter.fancybox(href="#enter") Вход--><a href="#registration" class="user__link user__link-registration fancybox">Регистрация</a>
+                <!-- a.user__link.user__link-enter.fancybox(href="#enter") Вход--><a href="#registration" class="user__link user__link-registration fancybox">Регистрация</a>
               </div>
               <!-- конец блока пользователя-->
               <!-- корзина-->
@@ -165,24 +168,24 @@
             <div class="header__block-inner">
               <!-- блок с категориями-->
               <div class="category">
-                <!-- категория--><a href="#" class="category__link"><img src="img/c1.png" alt="Category img" class="category__img">
+                <!-- категория--><a href="#" class="category__link"><img src="/img/c1.png" alt="Category img" class="category__img">
                   <div class="category__description">
                     <p class="category__title">готовые наборы</p><br>
                     <p class="category__quantity">32<span> продукта</span></p>
                   </div></a>
-                <!-- конец категории--><a href="#" class="category__link"><img src="img/c2.png" alt="Category img" class="category__img">
+                <!-- конец категории--><a href="#" class="category__link"><img src="/img/c2.png" alt="Category img" class="category__img">
                   <div class="category__description">
                     <p class="category__title">жидкости</p><br>
                     <p class="category__quantity">3<span> продукта</span></p>
-                  </div></a><a href="#" class="category__link active"><img src="img/c3.png" alt="Category img" class="category__img">
+                  </div></a><a href="#" class="category__link active"><img src="/img/c3.png" alt="Category img" class="category__img">
                   <div class="category__description">
                     <p class="category__title">девайсы</p><br>
                     <p class="category__quantity">322<span> продукта</span></p>
-                  </div></a><a href="#" class="category__link"><img src="img/c4.png" alt="Category img" class="category__img">
+                  </div></a><a href="#" class="category__link"><img src="/img/c4.png" alt="Category img" class="category__img">
                   <div class="category__description">
                     <p class="category__title">атомайзеры</p><br>
                     <p class="category__quantity">32<span> продукта</span></p>
-                  </div></a><a href="#" class="category__link"><img src="img/c5.png" alt="Category img" class="category__img">
+                  </div></a><a href="#" class="category__link"><img src="/img/c5.png" alt="Category img" class="category__img">
                   <div class="category__description">
                     <p class="category__title">аксессуары</p><br>
                     <p class="category__quantity">32<span> продукта</span></p>
@@ -198,9 +201,9 @@
       <div class="video__wrapper">
         <div class="video__block">
           <video loop autoplay muted class="video__player">
-            <source src="video/video.mp4" type="video/mp4">
-            <source src="video/video.webm" type="video/webm">
-            <source src="video/video.ogg" type="video/ogg">
+            <source src="/video/video.mp4" type="video/mp4">
+            <source src="/video/video.webm" type="video/webm">
+            <source src="/video/video.ogg" type="video/ogg">
           </video>
         </div>
       </div>
@@ -219,7 +222,7 @@
             		range: true,
             		min: 1,
             		max: 10000,
-            		step: 100,
+            		step: 1,
             		values: [2000, 6000],
             		slide: function(event, ui) {
             			$(this).parents('[range-parent]').find(min).val(ui.values[ 0 ]);
@@ -279,26 +282,48 @@
                 <!-- чекбоксы-->
                 <p class="filter__title filter__title-brand">Бренды</p>
                 <div class="filter__range-block">
-                  <input type="checkbox" id="checkbox_0" class="filter__checkbox">
-                  <label for="checkbox_0" class="filter__label">Бренд 0</label>
-                  <input type="checkbox" id="checkbox_1" class="filter__checkbox">
-                  <label for="checkbox_1" class="filter__label">Бренд 1</label>
-                  <input type="checkbox" id="checkbox_2" class="filter__checkbox">
-                  <label for="checkbox_2" class="filter__label">Бренд 2</label>
-                  <input type="checkbox" id="checkbox_3" class="filter__checkbox">
-                  <label for="checkbox_3" class="filter__label">Бренд 3</label>
-                  <input type="checkbox" id="checkbox_4" class="filter__checkbox">
-                  <label for="checkbox_4" class="filter__label">Бренд 4</label>
-                  <input type="checkbox" id="checkbox_5" class="filter__checkbox">
-                  <label for="checkbox_5" class="filter__label">Бренд 5</label>
-                  <input type="checkbox" id="checkbox_6" class="filter__checkbox">
-                  <label for="checkbox_6" class="filter__label">Бренд 6</label>
-                  <input type="checkbox" id="checkbox_7" class="filter__checkbox">
-                  <label for="checkbox_7" class="filter__label">Бренд 7</label>
-                  <input type="checkbox" id="checkbox_8" class="filter__checkbox">
-                  <label for="checkbox_8" class="filter__label">Бренд 8</label>
-                  <input type="checkbox" id="checkbox_9" class="filter__checkbox">
-                  <label for="checkbox_9" class="filter__label">Бренд 9</label><a href="#!" class="filter__more-link">Показать еще 117 брендов</a>
+                  <div class="filter__checkbox-wrapper">
+                    <input type="checkbox" id="checkbox_0" class="filter__checkbox">
+                    <label for="checkbox_0" class="filter__label">Бренд 0</label>
+                    <input type="checkbox" id="checkbox_1" class="filter__checkbox">
+                    <label for="checkbox_1" class="filter__label">Бренд 1</label>
+                    <input type="checkbox" id="checkbox_2" class="filter__checkbox">
+                    <label for="checkbox_2" class="filter__label">Бренд 2</label>
+                    <input type="checkbox" id="checkbox_3" class="filter__checkbox">
+                    <label for="checkbox_3" class="filter__label">Бренд 3</label>
+                    <input type="checkbox" id="checkbox_4" class="filter__checkbox">
+                    <label for="checkbox_4" class="filter__label">Бренд 4</label>
+                    <input type="checkbox" id="checkbox_5" class="filter__checkbox">
+                    <label for="checkbox_5" class="filter__label">Бренд 5</label>
+                    <input type="checkbox" id="checkbox_6" class="filter__checkbox">
+                    <label for="checkbox_6" class="filter__label">Бренд 6</label>
+                    <input type="checkbox" id="checkbox_7" class="filter__checkbox">
+                    <label for="checkbox_7" class="filter__label">Бренд 7</label>
+                    <input type="checkbox" id="checkbox_8" class="filter__checkbox">
+                    <label for="checkbox_8" class="filter__label">Бренд 8</label>
+                    <input type="checkbox" id="checkbox_9" class="filter__checkbox">
+                    <label for="checkbox_9" class="filter__label">Бренд 9</label>
+                    <input type="checkbox" id="checkbox_10" class="filter__checkbox">
+                    <label for="checkbox_10" class="filter__label">Бренд 10</label>
+                    <input type="checkbox" id="checkbox_11" class="filter__checkbox">
+                    <label for="checkbox_11" class="filter__label">Бренд 11</label>
+                    <input type="checkbox" id="checkbox_12" class="filter__checkbox">
+                    <label for="checkbox_12" class="filter__label">Бренд 12</label>
+                    <input type="checkbox" id="checkbox_13" class="filter__checkbox">
+                    <label for="checkbox_13" class="filter__label">Бренд 13</label>
+                    <input type="checkbox" id="checkbox_14" class="filter__checkbox">
+                    <label for="checkbox_14" class="filter__label">Бренд 14</label>
+                    <input type="checkbox" id="checkbox_15" class="filter__checkbox">
+                    <label for="checkbox_15" class="filter__label">Бренд 15</label>
+                    <input type="checkbox" id="checkbox_16" class="filter__checkbox">
+                    <label for="checkbox_16" class="filter__label">Бренд 16</label>
+                    <input type="checkbox" id="checkbox_17" class="filter__checkbox">
+                    <label for="checkbox_17" class="filter__label">Бренд 17</label>
+                    <input type="checkbox" id="checkbox_18" class="filter__checkbox">
+                    <label for="checkbox_18" class="filter__label">Бренд 18</label>
+                    <input type="checkbox" id="checkbox_19" class="filter__checkbox">
+                    <label for="checkbox_19" class="filter__label">Бренд 19</label>
+                  </div><a href="#!" class="filter__more-link"><span class="filter__word">Показать</span> еще 117 брендов</a>
                 </div>
                 <!-- конец чекбоксы-->
                 <p class="filter__title filter__title-taste">Вкусы</p>
@@ -371,7 +396,7 @@
           <div class="goods__section margin-bottom-40">
             <div class="goods-body goods-body__one-row-four-items goods-body__last-four-none">
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">50</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -380,7 +405,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">300</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -389,7 +414,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">550</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -398,7 +423,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">800</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -407,7 +432,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">1050</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -416,7 +441,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">1300</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -425,7 +450,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">1550</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -434,7 +459,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">1800</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -443,7 +468,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">2050</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -452,7 +477,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">2300</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -461,7 +486,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">2550</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -470,7 +495,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">2800</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -479,7 +504,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">3050</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -488,7 +513,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">3300</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -497,7 +522,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">3550</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -506,7 +531,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">3800</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -535,7 +560,7 @@
       <!-- описание-->
       <div class="about__section mozaik-bg">
         <div class="container-fluid">
-          <div class="about__img-wrapper"><img src="img/descr_img.png" alt="descr" class="about__img"></div>
+          <div class="about__img-wrapper"><img src="/img/descr_img.png" alt="descr" class="about__img"></div>
           <div class="about-description__block">
             <h1 class="about-description__title">МЫ РАССКАЖЕМ</h1>
             <h2 class="about-description__subtitle">ЖИДКОСТИ ДЛЯ ВЕЙПА</h2>
@@ -575,7 +600,7 @@
         </div>
         <div class="footer-bottom clearfix">
           <!-- копирайт-->
-          <div class="pull-left"><img src="img/footer_logo.png" alt="" class="footer-bottom__img">
+          <div class="pull-left"><img src="/img/footer_logo.png" alt="" class="footer-bottom__img">
             <p class="footer-bottom__copyright">Все права защищенны<br>“VapeStolitsa” 2016</p>
           </div>
           <!-- конец копирайт-->

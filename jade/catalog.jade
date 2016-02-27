@@ -4,9 +4,9 @@ block content
 	.video__wrapper
 		.video__block
 			video.video__player(loop autoplay muted)
-				source(src="video/video.mp4" type="video/mp4")
-				source(src="video/video.webm" type="video/webm")
-				source(src="video/video.ogg" type="video/ogg")
+				source(src="/video/video.mp4" type="video/mp4")
+				source(src="/video/video.webm" type="video/webm")
+				source(src="/video/video.ogg" type="video/ogg")
 	// конец блока с видео
 	.container-fluid
 		.sidebar.clearfix
@@ -22,7 +22,7 @@ block content
 						range: true,
 						min: 1,
 						max: 10000,
-						step: 100,
+						step: 1,
 						values: [2000, 6000],
 						slide: function(event, ui) {
 							$(this).parents('[range-parent]').find(min).val(ui.values[ 0 ]);
@@ -83,11 +83,12 @@ block content
 						// чекбоксы
 						p.filter__title.filter__title-brand Бренды
 						.filter__range-block
-							- for (i = 0; i < 10; i++) {
-								input.filter__checkbox(type="checkbox" id="checkbox_#{i}")
-								label.filter__label(for="checkbox_#{i}") Бренд #{i}
-							- }
-							a.filter__more-link(href="#!") Показать еще 117 брендов
+							.filter__checkbox-wrapper
+								- for (i = 0; i < 20; i++) {
+									input.filter__checkbox(type="checkbox" id="checkbox_#{i}")
+									label.filter__label(for="checkbox_#{i}") Бренд #{i}
+								- }
+							a.filter__more-link(href="#!") <span class="filter__word">Показать</span> еще 117 брендов
 						// конец чекбоксы
 						p.filter__title.filter__title-taste Вкусы
 						.filter__range-block
@@ -149,7 +150,8 @@ block content
 					- for (var i = 0; i < 16; ++i) {
 						.goods-body__item
 							.goods-body__wrapper
-								img.goods-body__img(src="img/content/g3.jpg", alt="")
+								a(href="#!")
+									img.goods-body__img(src="/img/content/g3.jpg", alt="")
 								.goods-body__price-block
 									span.goods-body__price(replaced-number) #{500 * i / 2 + 50}
 									span.rubl a
@@ -180,7 +182,7 @@ block content
 	.about__section.mozaik-bg
 		.container-fluid
 			.about__img-wrapper
-				img.about__img(src="img/descr_img.png", alt="descr")
+				img.about__img(src="/img/descr_img.png", alt="descr")
 			.about-description__block
 				h1.about-description__title МЫ РАССКАЖЕМ
 				h2.about-description__subtitle ЖИДКОСТИ ДЛЯ ВЕЙПА

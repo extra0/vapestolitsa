@@ -4,9 +4,9 @@ block content
 	.video__wrapper
 		.video__block
 			video.video__player(loop autoplay muted)
-				source(src="video/video.mp4" type="video/mp4")
-				source(src="video/video.webm" type="video/webm")
-				source(src="video/video.ogg" type="video/ogg")
+				source(src="/video/video.mp4" type="video/mp4")
+				source(src="/video/video.webm" type="video/webm")
+				source(src="/video/video.ogg" type="video/ogg")
 	// конец блока с видео
 	.container-fluid
 		.content
@@ -68,7 +68,7 @@ block content
 								tr(item-parent)
 									td.basket-table__cell
 										a.basket-table__goods-img-wrapper(href="#!")
-											img.basket-table__goods-img(src="img/content/g"+i+".jpg", alt="")
+											img.basket-table__goods-img(src="/img/content/g"+i+".jpg", alt="")
 										.basket-table__goods-description
 											p.basket-table__goods-name Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, sequi!
 											a.basket-table__goods-category(href="#!") Жидкости

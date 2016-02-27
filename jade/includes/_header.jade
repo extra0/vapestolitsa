@@ -5,7 +5,7 @@ header.header
 			// лого
 			.header__logo-block
 				a.header__logo(href="/")
-					img(src="img/logo.png" alt="Site Logo")
+					img(src="/img/logo.png" alt="Site Logo")
 			// конец лого
 			nav.header__block-inner
 				// меню хедера
@@ -32,7 +32,7 @@ header.header
 		.container-fluid
 			.header__block-inner
 				// форма поиска
-				.search-form
+				.search-form(click-hide)
 					form(action="#")
 						input.form-input.search-form__input(type="text" required placeholder="Введите название или артикул товара")
 						button.form-btn.search-form__btn(type="submit") Найти
@@ -44,14 +44,14 @@ header.header
 						// результат поиска
 						.smart-result__item
 							a(href="#!")
-								img.smart-result__img(src="img/content/g2.jpg", alt="")
+								img.smart-result__img(src="/img/content/g2.jpg", alt="")
 							.smart-result__description
 								a.smart-result__title(href="#!") SOUR VAPE WICKED WATERMELON 30 МЛ 
 								a.smart-result__category(href="#!") Жидкости
 						// конец результата поиска
 						.smart-result__item
 							a(href="#!")
-								img.smart-result__img(src="img/content/g3.jpg", alt="")
+								img.smart-result__img(src="/img/content/g3.jpg", alt="")
 							.smart-result__description
 								a.smart-result__title(href="#!") Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, placeat.
 								a.smart-result__category(href="#!") Жидкости
@@ -60,17 +60,17 @@ header.header
 				// блок пользователя
 				.user__block
 					// если пользователь залогинен
-					img.user__img(src="img/content/link-ava.jpg", alt="")
+					img.user__img(src="/img/content/link-ava.jpg", alt="")
 					a.user__link.user__link-login(href="#!") HelloKing
 					// выпадающее меню пользователя
-					.user__drop-down
+					.user__drop-down(click-hide)
 						.user__drop-down-item
 							a.user__drop-down-link.profile(href="#!") Профиль
 						.user__drop-down-item
 							a.user__drop-down-link.exit(href="#!") Выйти
 					// конец выпадающего меню пользователя
 					// конец залогиненного блока пользователя
-					//a.user__link.user__link-enter.fancybox(href="#enter") Вход
+					// a.user__link.user__link-enter.fancybox(href="#enter") Вход
 					a.user__link.user__link-registration.fancybox(href="#registration") Регистрация
 				// конец блока пользователя
 				// корзина
@@ -93,7 +93,7 @@ header.header
 				.category
 					// категория
 					a.category__link(href="#")
-						img.category__img(src="img/c1.png", alt="Category img")
+						img.category__img(src="/img/c1.png", alt="Category img")
 						.category__description
 							p.category__title готовые наборы
 							br
@@ -102,7 +102,7 @@ header.header
 								span  продукта
 					// конец категории
 					a.category__link(href="#")
-						img.category__img(src="img/c2.png", alt="Category img")
+						img.category__img(src="/img/c2.png", alt="Category img")
 						.category__description
 							p.category__title жидкости
 							br
@@ -110,7 +110,7 @@ header.header
 								| 3
 								span  продукта
 					a.category__link.active(href="#")
-						img.category__img(src="img/c3.png", alt="Category img")
+						img.category__img(src="/img/c3.png", alt="Category img")
 						.category__description
 							p.category__title девайсы
 							br
@@ -118,7 +118,7 @@ header.header
 								| 322
 								span  продукта
 					a.category__link(href="#")
-						img.category__img(src="img/c4.png", alt="Category img")
+						img.category__img(src="/img/c4.png", alt="Category img")
 						.category__description
 							p.category__title атомайзеры
 							br
@@ -126,7 +126,7 @@ header.header
 								| 32
 								span  продукта
 					a.category__link(href="#")
-						img.category__img(src="img/c5.png", alt="Category img")
+						img.category__img(src="/img/c5.png", alt="Category img")
 						.category__description
 							p.category__title аксессуары
 							br

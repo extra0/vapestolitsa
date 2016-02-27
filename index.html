@@ -8,6 +8,9 @@
     <meta keywords="">
     <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
     <link href="css/normalize.css" rel="stylesheet" media="all">
+    <!-- подключить на странице каталога-->
+    <link href="css/jquery-ui-slider.css" rel="stylesheet" media="all">
+    <!-- ***********-->
     <link href="css/styles.css" rel="stylesheet" media="all">
     <script src="js/jquery.js"></script>
     <title></title>
@@ -82,7 +85,7 @@
         <div class="header-top-block">
           <div class="container-fluid">
             <!-- лого-->
-            <div class="header__logo-block"><a href="/" class="header__logo"><img src="img/logo.png" alt="Site Logo"></a></div>
+            <div class="header__logo-block"><a href="/" class="header__logo"><img src="/img/logo.png" alt="Site Logo"></a></div>
             <!-- конец лого-->
             <nav class="header__block-inner">
               <!-- меню хедера-->
@@ -115,7 +118,7 @@
           <div class="container-fluid">
             <div class="header__block-inner">
               <!-- форма поиска-->
-              <div class="search-form">
+              <div click-hide class="search-form">
                 <form action="#">
                   <input type="text" required placeholder="Введите название или артикул товара" class="form-input search-form__input">
                   <button type="submit" class="form-btn search-form__btn">Найти</button>
@@ -125,11 +128,11 @@
                   <!-- ответ когда нет результатов-->
                   <!-- конец-->
                   <!-- результат поиска-->
-                  <div class="smart-result__item"><a href="#!"><img src="img/content/g2.jpg" alt="" class="smart-result__img"></a>
+                  <div class="smart-result__item"><a href="#!"><img src="/img/content/g2.jpg" alt="" class="smart-result__img"></a>
                     <div class="smart-result__description"><a href="#!" class="smart-result__title">SOUR VAPE WICKED WATERMELON 30 МЛ </a><a href="#!" class="smart-result__category">Жидкости</a></div>
                   </div>
                   <!-- конец результата поиска-->
-                  <div class="smart-result__item"><a href="#!"><img src="img/content/g3.jpg" alt="" class="smart-result__img"></a>
+                  <div class="smart-result__item"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="smart-result__img"></a>
                     <div class="smart-result__description"><a href="#!" class="smart-result__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, placeat.</a><a href="#!" class="smart-result__category">Жидкости</a></div>
                   </div>
                 </div>
@@ -138,15 +141,15 @@
               <!-- конец формы поиска-->
               <!-- блок пользователя-->
               <div class="user__block">
-                <!-- если пользователь залогинен--><img src="img/content/link-ava.jpg" alt="" class="user__img"><a href="#!" class="user__link user__link-login">HelloKing</a>
+                <!-- если пользователь залогинен--><img src="/img/content/link-ava.jpg" alt="" class="user__img"><a href="#!" class="user__link user__link-login">HelloKing</a>
                 <!-- выпадающее меню пользователя-->
-                <div class="user__drop-down">
+                <div click-hide class="user__drop-down">
                   <div class="user__drop-down-item"><a href="#!" class="user__drop-down-link profile">Профиль</a></div>
                   <div class="user__drop-down-item"><a href="#!" class="user__drop-down-link exit">Выйти</a></div>
                 </div>
                 <!-- конец выпадающего меню пользователя-->
                 <!-- конец залогиненного блока пользователя-->
-                <!--a.user__link.user__link-enter.fancybox(href="#enter") Вход--><a href="#registration" class="user__link user__link-registration fancybox">Регистрация</a>
+                <!-- a.user__link.user__link-enter.fancybox(href="#enter") Вход--><a href="#registration" class="user__link user__link-registration fancybox">Регистрация</a>
               </div>
               <!-- конец блока пользователя-->
               <!-- корзина-->
@@ -165,24 +168,24 @@
             <div class="header__block-inner">
               <!-- блок с категориями-->
               <div class="category">
-                <!-- категория--><a href="#" class="category__link"><img src="img/c1.png" alt="Category img" class="category__img">
+                <!-- категория--><a href="#" class="category__link"><img src="/img/c1.png" alt="Category img" class="category__img">
                   <div class="category__description">
                     <p class="category__title">готовые наборы</p><br>
                     <p class="category__quantity">32<span> продукта</span></p>
                   </div></a>
-                <!-- конец категории--><a href="#" class="category__link"><img src="img/c2.png" alt="Category img" class="category__img">
+                <!-- конец категории--><a href="#" class="category__link"><img src="/img/c2.png" alt="Category img" class="category__img">
                   <div class="category__description">
                     <p class="category__title">жидкости</p><br>
                     <p class="category__quantity">3<span> продукта</span></p>
-                  </div></a><a href="#" class="category__link active"><img src="img/c3.png" alt="Category img" class="category__img">
+                  </div></a><a href="#" class="category__link active"><img src="/img/c3.png" alt="Category img" class="category__img">
                   <div class="category__description">
                     <p class="category__title">девайсы</p><br>
                     <p class="category__quantity">322<span> продукта</span></p>
-                  </div></a><a href="#" class="category__link"><img src="img/c4.png" alt="Category img" class="category__img">
+                  </div></a><a href="#" class="category__link"><img src="/img/c4.png" alt="Category img" class="category__img">
                   <div class="category__description">
                     <p class="category__title">атомайзеры</p><br>
                     <p class="category__quantity">32<span> продукта</span></p>
-                  </div></a><a href="#" class="category__link"><img src="img/c5.png" alt="Category img" class="category__img">
+                  </div></a><a href="#" class="category__link"><img src="/img/c5.png" alt="Category img" class="category__img">
                   <div class="category__description">
                     <p class="category__title">аксессуары</p><br>
                     <p class="category__quantity">32<span> продукта</span></p>
@@ -198,9 +201,9 @@
       <div class="video__wrapper index-height">
         <div class="video__block">
           <video loop autoplay muted class="video__player">
-            <source src="video/video.mp4" type="video/mp4">
-            <source src="video/video.webm" type="video/webm">
-            <source src="video/video.ogg" type="video/ogg">
+            <source src="/video/video.mp4" type="video/mp4">
+            <source src="/video/video.webm" type="video/webm">
+            <source src="/video/video.ogg" type="video/ogg">
           </video>
         </div>
       </div>
@@ -233,7 +236,7 @@
             <div class="goods-body goods-body__one-row-four-items">
               <!-- блок одного товара-->
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g2.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><img src="/img/content/g2.jpg" alt="" class="goods-body__img">
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">45000</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -243,7 +246,7 @@
               </div>
               <!-- конец блока одного товара-->
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g1.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><img src="/img/content/g1.jpg" alt="" class="goods-body__img">
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">25</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -252,7 +255,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g1.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><img src="/img/content/g1.jpg" alt="" class="goods-body__img">
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">650</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -261,7 +264,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g1.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><img src="/img/content/g1.jpg" alt="" class="goods-body__img">
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">1275</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -270,7 +273,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g1.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><img src="/img/content/g1.jpg" alt="" class="goods-body__img">
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">1900</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -279,7 +282,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g1.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><img src="/img/content/g1.jpg" alt="" class="goods-body__img">
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">2525</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -288,7 +291,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g1.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><img src="/img/content/g1.jpg" alt="" class="goods-body__img">
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">3150</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -304,7 +307,7 @@
             </div>
             <div class="goods-body goods-body__one-row-four-items goods-body__last-four-none">
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g1.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g1.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">25</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -313,7 +316,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g2.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g2.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">1475</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -322,7 +325,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g3.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">2925</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -331,7 +334,7 @@
                 </div>
               </div>
               <div class="goods-body__item">
-                <div class="goods-body__wrapper"><img src="img/content/g4.jpg" alt="" class="goods-body__img">
+                <div class="goods-body__wrapper"><a href="#!"><img src="/img/content/g4.jpg" alt="" class="goods-body__img"></a>
                   <div class="goods-body__price-block"><span replaced-number class="goods-body__price">4375</span><span class="rubl">a</span></div>
                 </div>
                 <div class="goods-body__description">
@@ -348,7 +351,7 @@
       <!-- слайдер -->
       <div class="slider__section">
         <ul class="slider__block">
-          <li style="background: url(/img/content/slide_1.jpg) center no-repeat;" class="slider__item">
+          <li style="background: url(../img/content/slide_1.jpg) center no-repeat;" class="slider__item">
             <div class="container-fluid">
               <div class="feedback__block">
                 <p class="feedback__title">отзывы наших клиентов</p>
@@ -357,7 +360,7 @@
               </div>
             </div>
           </li>
-          <li style="background: url(/img/content/slide_2.jpg) center no-repeat;" class="slider__item">
+          <li style="background: url(../img/content/slide_2.jpg) center no-repeat;" class="slider__item">
             <div class="container-fluid">
               <div class="feedback__block">
                 <p class="feedback__title">отзывы наших клиентов</p>
@@ -366,7 +369,7 @@
               </div>
             </div>
           </li>
-          <li style="background: url(/img/content/slide_1.jpg) center no-repeat;" class="slider__item">
+          <li style="background: url(../img/content/slide_1.jpg) center no-repeat;" class="slider__item">
             <div class="container-fluid">
               <div class="feedback__block">
                 <p class="feedback__title">отзывы наших клиентов</p>
@@ -381,7 +384,7 @@
       <!-- о компании-->
       <div class="about__section">
         <div class="container-fluid">
-          <div class="about__img-wrapper"><img src="img/about.jpg" alt="" class="about__img"></div>
+          <div class="about__img-wrapper"><img src="/img/about.jpg" alt="" class="about__img"></div>
           <div class="about-description__block">
             <h1 class="about-description__title">о компании</h1>
             <h2 class="about-description__subtitle">ЧТО ТАКОЕ “VAPE STOLITSA” ?</h2>
@@ -419,7 +422,7 @@
         </div>
         <div class="footer-bottom clearfix">
           <!-- копирайт-->
-          <div class="pull-left"><img src="img/footer_logo.png" alt="" class="footer-bottom__img">
+          <div class="pull-left"><img src="/img/footer_logo.png" alt="" class="footer-bottom__img">
             <p class="footer-bottom__copyright">Все права защищенны<br>“VapeStolitsa” 2016</p>
           </div>
           <!-- конец копирайт-->

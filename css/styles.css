@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url(normalize.css);
-@import url(jquery-ui-slider.css);
 /* FONTS */
 @font-face {
   font-family: "Proxima Nova";
@@ -1675,7 +1674,6 @@ a:not([class]):hover {
   left: 0;
   opacity: 1;
 }
-.goods-body__item:hover .goods-body__price-block,
 .goods-body__item:hover .goods-body__category,
 .goods-body__item:hover .goods-body__name {
   opacity: 0;
@@ -2367,6 +2365,16 @@ a:not([class]):hover {
   display: inline-block;
   position: relative;
   margin: 3px 7px;
+}
+.filter__checkbox-wrapper {
+  max-height: 340px;
+  overflow: hidden;
+  -webkit-transition: max-height 0.4s ease-in-out;
+  -moz-transition: max-height 0.4s ease-in-out;
+  transition: max-height 0.4s ease-in-out;
+}
+.filter__checkbox-wrapper.active {
+  max-height: 2000px;
 }
 .filter__checkbox {
   display: none;
@@ -3176,12 +3184,17 @@ a:not([class]):hover {
 }
 .item-info__old-price:before {
   content: '';
-  background: #b8b4ae;
+  background: #fc4f4f;
   position: absolute;
   top: 50%;
   left: 0;
   width: 100%;
-  height: 1px;
+  height: 2px;
+  -webkit-transform: rotate(-11deg);
+  -moz-transform: rotate(-11deg);
+  -ms-transform: rotate(-11deg);
+  -o-transform: rotate(-11deg);
+  transform: rotate(-11deg);
 }
 .item-info__old-price + .rubl {
   color: #7f7d79;

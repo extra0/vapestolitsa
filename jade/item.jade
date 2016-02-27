@@ -4,27 +4,27 @@ block content
 	.video__wrapper
 		.video__block
 			video.video__player(loop autoplay muted)
-				source(src="video/video.mp4" type="video/mp4")
-				source(src="video/video.webm" type="video/webm")
-				source(src="video/video.ogg" type="video/ogg")
+				source(src="/video/video.mp4" type="video/mp4")
+				source(src="/video/video.webm" type="video/webm")
+				source(src="/video/video.ogg" type="video/ogg")
 	// конец блока с видео
 	.container-fluid
 		.content
 			// блок с фото товара
 			.item-image__section
 				.item-image__main-block
-					a.fancybox(href="img/content/img.jpg" rel="gallery")
-						img.item-image__main-img(src="img/content/img.jpg", alt="")
+					a.fancybox(href="/img/content/img.jpg" rel="gallery")
+						img.item-image__main-img(src="/img/content/img.jpg", alt="")
 				.item-image__thumb-block
 					- for (i = 1; i < 5; ++i) {
 						.item-image__thumb-wrapper
-							a.fancybox(href="img/content/g"+i+".jpg" rel="gallery")
-								img.item-image__thumb-img(src="img/content/g"+i+".jpg", alt="")
+							a.fancybox(href="/img/content/g"+i+".jpg" rel="gallery")
+								img.item-image__thumb-img(src="/img/content/g"+i+".jpg", alt="")
 					- }
 					- for (i = 1; i < 5; ++i) {
 						.item-image__thumb-wrapper
-							a.fancybox(href="img/content/g"+i+".jpg" rel="gallery")
-								img.item-image__thumb-img(src="img/content/g"+i+".jpg", alt="")
+							a.fancybox(href="/img/content/g"+i+".jpg" rel="gallery")
+								img.item-image__thumb-img(src="/img/content/g"+i+".jpg", alt="")
 					- }
 			// конец блока с фото товара
 			.item-info
@@ -50,7 +50,7 @@ block content
 						p.item-info__old-price(replaced-number) 21000
 						span.rubl a
 					.item-info__price-block
-						img.item-info__img(src="img/sale.png", alt="")
+						img.item-info__img(src="/img/sale.png", alt="")
 						.item-info__current-price-block
 							p.item-info__price-title Стоимость со скидкой
 							p.item-info__current-price(replaced-number) 15800
@@ -101,7 +101,8 @@ block content
 					- for (var i = 0; i < 5; ++i) {
 						.goods-body__item
 							.goods-body__wrapper
-								img.goods-body__img(src="img/content/g2.jpg", alt="")
+								a(href="#!")
+									img.goods-body__img(src="/img/content/g2.jpg", alt="")
 								.goods-body__price-block
 									span.goods-body__price(replaced-number) #{2900 * i / 2 + 25}
 									span.rubl a
@@ -120,15 +121,15 @@ block content
 				| как это работает?
 			.process__section
 				.process__block
-					img.process__block-img(src="img/process_1.png", alt="Process")
+					img.process__block-img(src="/img/process_1.png", alt="Process")
 					p.process__block-text Выберите нужный вам продукт в нашем онлайн каталоге
 				.process__block
-					img.process__block-img(src="img/process_2.png", alt="Process")
+					img.process__block-img(src="/img/process_2.png", alt="Process")
 					p.process__block-text Оформите заказ и оплатите удобным для вас способом
 				.process__block
-					img.process__block-img(src="img/process_3.png", alt="Process")
+					img.process__block-img(src="/img/process_3.png", alt="Process")
 					p.process__block-text Наш оператор свяжется с вами и уточнит детали доставки товара.
 				.process__block
-					img.process__block-img(src="img/process_4.png", alt="Process")
+					img.process__block-img(src="/img/process_4.png", alt="Process")
 					p.process__block-text Вы получите товар на дом или на почтовый адрес.
 	// конец блока как это работает
