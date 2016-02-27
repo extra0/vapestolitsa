@@ -159,6 +159,14 @@ a:not([class]):hover {
   text-decoration: none;
 }
 
+table:not([class]) {
+  width: 100%;
+}
+table:not([class]) td, table:not([class]) th {
+  padding: 5px;
+  border: 1px solid;
+}
+
 .pull-right {
   float: right;
 }

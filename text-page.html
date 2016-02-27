@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1300">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta description="">
+    <meta keywords="">
+    <link rel="shortcut icon" type="images/vnd.microsoft.icon" href="favicon.ico">
+    <link href="css/normalize.css" rel="stylesheet" media="all">
+    <!-- подключить на странице каталога-->
+    <link href="css/jquery-ui-slider.css" rel="stylesheet" media="all">
+    <!-- ***********-->
+    <link href="css/styles.css" rel="stylesheet" media="all">
+    <script src="js/jquery.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <!-- окно входа на сайт-->
+    <div id="enter" class="modal"><span class="modal__close"></span>
+      <p class="modal__title">Вход на сайт</p>
+      <!-- форма входа-->
+      <form action="#">
+        <div class="form-control"><span class="form-icon form-icon-email"></span>
+          <input type="email" required placeholder="E-mail" class="form-input modal__input error">
+        </div>
+        <div class="form-control"><span class="form-icon form-icon-shield"></span>
+          <input type="password" placeholder="Пароль" class="form-input modal__input">
+        </div>
+        <div class="form-control">
+          <button type="submit" class="form-btn modal__btn">Войти</button>
+        </div>
+      </form>
+      <!-- конец форма входа--><a href="#restore" class="modal__link fancybox">Забыли пароль?</a>
+    </div>
+    <!-- конец входа на сайт-->
+    <!-- окно восстановления пароля-->
+    <div id="restore" class="modal"><span class="modal__close"></span>
+      <p class="modal__title">Востановление<br>пароля</p>
+      <!-- форма входа-->
+      <form action="#">
+        <div class="form-control"><span class="form-icon form-icon-email"></span>
+          <input type="email" required placeholder="E-mail" class="form-input modal__input">
+        </div>
+        <div class="form-control">
+          <button type="submit" class="form-btn modal__btn">Выслать письмо с инструкцией</button>
+        </div>
+      </form>
+      <!-- конец форма входа--><a href="#enter" class="modal__link fancybox">Я вспомнил пароль!</a>
+    </div>
+    <!-- конец окна восстановления пароля-->
+    <!-- окно регистрации-->
+    <div id="registration" class="modal"><span class="modal__close"></span>
+      <p class="modal__title modal__title-registration">Регистрация на сайте</p>
+      <form action="#">
+        <div class="modal__half-block">
+          <div class="form-control"><span class="form-icon form-icon-user"></span>
+            <label class="form-label">Имя</label>
+            <input type="email" required class="form-input modal__input">
+          </div>
+          <div class="form-control"><span class="form-icon form-icon-shield"></span>
+            <label class="form-label">Пароль</label>
+            <input type="password" required class="form-input modal__input">
+          </div>
+        </div>
+        <div class="modal__half-block pull-right">
+          <div class="form-control"><span class="form-icon form-icon-email"></span>
+            <label class="form-label">E-mail</label>
+            <input type="email" required class="form-input modal__input">
+          </div>
+          <div class="form-control"><span class="form-icon form-icon-shield"></span>
+            <label class="form-label">Подтвердите пароль</label>
+            <input type="password" required class="form-input modal__input">
+          </div>
+        </div>
+        <div class="form-control">
+          <button type="submit" class="form-btn modal__btn modal__btn-registration">Создать аккаунт</button>
+        </div>
+      </form>
+    </div>
+    <!-- конец окна регистрации-->
+    <div class="main-wrapper">
+      <header class="header">
+        <!-- header верхний блок-->
+        <div class="header-top-block">
+          <div class="container-fluid">
+            <!-- лого-->
+            <div class="header__logo-block"><a href="/" class="header__logo"><img src="/img/logo.png" alt="Site Logo"></a></div>
+            <!-- конец лого-->
+            <!-- email-->
+            <div class="header-top-block__email-block pull-right"><a href="mailto:info@vapstolitsa.ru" class="header-top-block__email">info@vapstolitsa.ru</a></div>
+            <!-- конец email-->
+            <!-- график работы-->
+            <p class="header-top-block__work-text pull-right">Принимаем звонки<br>с 9:00 по 22:00</p>
+            <!-- конец графика работы-->
+            <p class="header-top-block__phone">8 (495) 544 57 00</p>
+            <nav class="header__block-inner">
+              <!-- меню хедера-->
+              <ul class="menu__list menu-header">
+                <li class="menu__item"><a href="#!" class="menu__link">Как купить?</a>
+                </li>
+                <li class="menu__item"><a href="#!" class="menu__link">Оплата</a>
+                </li>
+                <li class="menu__item"><span class="menu__link active">Доставка</span>
+                </li>
+                <li class="menu__item"><a href="#!" class="menu__link">Вопросы-ответы</a>
+                </li>
+                <li class="menu__item"><a href="#!" class="menu__link">Контакты</a>
+                </li>
+              </ul>
+              <!-- конец меню хедера-->
+            </nav>
+          </div>
+        </div>
+        <!-- конец header верхний блок-->
+        <!-- средний блок header-->
+        <div class="header-middle-block">
+          <div class="container-fluid">
+            <div class="header__block-inner">
+              <!-- форма поиска-->
+              <div click-hide class="search-form">
+                <form action="#">
+                  <input type="text" required placeholder="Введите название или артикул товара" class="form-input search-form__input">
+                  <button type="submit" class="form-btn search-form__btn">Найти</button>
+                </form>
+                <!-- умный поиск (срабатывает при наборе в поиске от 3х символов)-->
+                <div class="smart-result__block">
+                  <!-- ответ когда нет результатов-->
+                  <!-- конец-->
+                  <!-- результат поиска-->
+                  <div class="smart-result__item"><a href="#!"><img src="/img/content/g2.jpg" alt="" class="smart-result__img"></a>
+                    <div class="smart-result__description"><a href="#!" class="smart-result__title">SOUR VAPE WICKED WATERMELON 30 МЛ </a><a href="#!" class="smart-result__category">Жидкости</a></div>
+                  </div>
+                  <!-- конец результата поиска-->
+                  <div class="smart-result__item"><a href="#!"><img src="/img/content/g3.jpg" alt="" class="smart-result__img"></a>
+                    <div class="smart-result__description"><a href="#!" class="smart-result__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, placeat.</a><a href="#!" class="smart-result__category">Жидкости</a></div>
+                  </div>
+                </div>
+                <!-- конец умный поиск-->
+              </div>
+              <!-- конец формы поиска-->
+              <!-- блок пользователя-->
+              <div class="user__block">
+                <!-- если пользователь залогинен--><img src="/img/content/link-ava.jpg" alt="" class="user__img"><a href="#!" class="user__link user__link-login">HelloKing</a>
+                <!-- выпадающее меню пользователя-->
+                <div click-hide class="user__drop-down">
+                  <div class="user__drop-down-item"><a href="#!" class="user__drop-down-link profile">Профиль</a></div>
+                  <div class="user__drop-down-item"><a href="#!" class="user__drop-down-link exit">Выйти</a></div>
+                </div>
+                <!-- конец выпадающего меню пользователя-->
+                <!-- конец залогиненного блока пользователя-->
+                <!-- a.user__link.user__link-enter.fancybox(href="#enter") Вход--><a href="#registration" class="user__link user__link-registration fancybox">Регистрация</a>
+              </div>
+              <!-- конец блока пользователя-->
+              <!-- корзина-->
+              <div class="basket pull-right"><a href="#!">
+                  <div class="basket__img-block"><span class="basket__quantity">15</span></div></a>
+                <div class="basket__line"><a href="#!" class="basket__link"><span class="basket__link-quantity">2</span> товара</a><span> на </span><span replaced-number class="basket__price">23500</span><span class="rubl">a</span></div>
+              </div>
+              <!-- конец корзины-->
+            </div>
+          </div>
+        </div>
+        <!-- конец среднего блока-->
+        <!-- нижний блок header-->
+        <div class="header-bottom-block">
+          <div class="container-fluid">
+            <div class="header__block-inner">
+              <!-- блок с категориями-->
+              <div class="category">
+                <!-- категория--><a href="#" class="category__link"><img src="/img/c1.png" alt="Category img" class="category__img">
+                  <div class="category__description">
+                    <p class="category__title">готовые наборы</p><br>
+                    <p class="category__quantity">32<span> продукта</span></p>
+                  </div></a>
+                <!-- конец категории--><a href="#" class="category__link"><img src="/img/c2.png" alt="Category img" class="category__img">
+                  <div class="category__description">
+                    <p class="category__title">жидкости</p><br>
+                    <p class="category__quantity">3<span> продукта</span></p>
+                  </div></a><a href="#" class="category__link active"><img src="/img/c3.png" alt="Category img" class="category__img">
+                  <div class="category__description">
+                    <p class="category__title">девайсы</p><br>
+                    <p class="category__quantity">322<span> продукта</span></p>
+                  </div></a><a href="#" class="category__link"><img src="/img/c4.png" alt="Category img" class="category__img">
+                  <div class="category__description">
+                    <p class="category__title">атомайзеры</p><br>
+                    <p class="category__quantity">32<span> продукта</span></p>
+                  </div></a><a href="#" class="category__link"><img src="/img/c5.png" alt="Category img" class="category__img">
+                  <div class="category__description">
+                    <p class="category__title">аксессуары</p><br>
+                    <p class="category__quantity">32<span> продукта</span></p>
+                  </div></a>
+              </div>
+              <!-- конец блока с категориями-->
+            </div>
+          </div>
+        </div>
+        <!--конец нижнего блока header-->
+      </header>
+      <!-- блок с видео-->
+      <div class="video__wrapper">
+        <div class="video__block">
+          <video loop autoplay muted class="video__player">
+            <source src="/video/video.mp4" type="video/mp4">
+            <source src="/video/video.webm" type="video/webm">
+            <source src="/video/video.ogg" type="video/ogg">
+          </video>
+        </div>
+      </div>
+      <!-- конец блока с видео-->
+      <div class="container-fluid">
+        <div class="content">
+          <div class="content-top">
+            <!-- хлебные крошки-->
+            <div class="breadcrumbs">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a href="#!" class="breadcrumbs__link">Главная страница</a></li>
+                <li class="breadcrumbs__item"><a href="#!" class="breadcrumbs__link">Текстовая страница</a></li>
+              </ul>
+            </div>
+            <!-- конец хлебные крошки-->
+            <h1 class="title">Текстовая страница</h1>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, quidem aliquid. Atque, nisi assumenda. Accusantium vel accusamus, facere! Voluptatibus, iste?</p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, eveniet!</span><a href="#">lorem</a>
+          <ul>
+            <li>000001</li>
+            <li>000002</li>
+            <li>000003</li>
+            <li>000004</li>
+          </ul>
+          <ol>
+            <li>000001</li>
+            <li>000002</li>
+            <li>000003</li>
+            <li>000004</li>
+            <li>000005</li>
+            <li>000006</li>
+          </ol>
+          <table>
+            <tr>
+              <th>001</th>
+              <th>002</th>
+              <th>003</th>
+              <th>004</th>
+            </tr>
+            <tr>
+              <td>001</td>
+              <td>002</td>
+              <td>003</td>
+              <td>004</td>
+            </tr>
+            <tr>
+              <td>001</td>
+              <td>002</td>
+              <td>003</td>
+              <td>004</td>
+            </tr>
+          </table>
+          <h1>Lorem</h1>
+          <h2>Lorem</h2>
+          <h3>Lorem</h3>
+          <h4>Lorem</h4>
+          <h5>Lorem</h5>
+        </div>
+      </div>
+      <div class="buffer"></div>
+    </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="footer-top clearfix">
+          <!-- меню футера-->
+          <ul class="menu__list menu-footer">
+            <li class="menu__item"><a href="#!" class="menu__link">Как купить?</a>
+            </li>
+            <li class="menu__item"><a href="#!" class="menu__link">Оплата</a>
+            </li>
+            <li class="menu__item"><span class="menu__link active">Доставка</span>
+            </li>
+            <li class="menu__item"><a href="#!" class="menu__link">Вопросы-ответы</a>
+            </li>
+            <li class="menu__item"><a href="#!" class="menu__link">Контакты</a>
+            </li>
+          </ul>
+          <!-- конец меню футера-->
+          <!-- email-->
+          <div class="footer-top__email-block pull-right"><a href="mailto:info@vapstolitsa.ru" class="footer-top__email">info@vapstolitsa.ru</a></div>
+          <!-- конец email-->
+          <!-- график работы-->
+          <p class="footer-top__work-text pull-right">Принимаем звонки<br>с 9:00 по 22:00</p>
+          <!-- конец графика работы-->
+          <p class="footer-top__phone">8 (495) 544 57 00</p>
+        </div>
+        <div class="footer-bottom clearfix">
+          <!-- копирайт-->
+          <div class="pull-left"><img src="/img/footer_logo.png" alt="" class="footer-bottom__img">
+            <p class="footer-bottom__copyright">Все права защищенны<br>“VapeStolitsa” 2016</p>
+          </div>
+          <!-- конец копирайт-->
+          <!-- разработчик-->
+          <div class="pull-right"><a href="http://www.studio-maximus.com/" class="footer__development"></a></div>
+          <!--конец разрботчик-->
+        </div>
+      </div>
+    </footer>
+    <!-- подключаемые скрипты-->
+    <script src="js/plugins.js"></script>
+    <!-- подключить только на странице каталога-->
+    <script src="js/jquery-ui.js"></script>
+    <!-- ***-->
+    <script src="js/script.js"></script>
+    <!-- конец подключаемых скриптов-->
+  </body>
+</html>

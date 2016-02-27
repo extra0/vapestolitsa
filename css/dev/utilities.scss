@@ -66,6 +66,13 @@ a:not([class]) {
         text-decoration: none;
     }
 }
+table:not([class]) {
+    width: 100%;
+    td, th {
+        padding: 5px;
+        border: 1px solid;
+    }
+}
 
 // Helpers Classes
 .pull-right {float: right;}

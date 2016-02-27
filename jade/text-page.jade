@@ -1,0 +1,59 @@
+extends _layout
+block content
+	// блок с видео
+	.video__wrapper
+		.video__block
+			video.video__player(loop autoplay muted)
+				source(src="/video/video.mp4" type="video/mp4")
+				source(src="/video/video.webm" type="video/webm")
+				source(src="/video/video.ogg" type="video/ogg")
+	// конец блока с видео
+	.container-fluid
+		.content
+			.content-top
+				// хлебные крошки
+				.breadcrumbs
+					ul.breadcrumbs__list
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#!") Главная страница
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#!") Текстовая страница
+				// конец хлебные крошки
+				h1.title Текстовая страница
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, quidem aliquid. Atque, nisi assumenda. Accusantium vel accusamus, facere! Voluptatibus, iste?
+			span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, eveniet!
+			a(href="#") lorem
+			ul
+				li 000001
+				li 000002
+				li 000003
+				li 000004
+			ol
+				li 000001
+				li 000002
+				li 000003
+				li 000004
+				li 000005
+				li 000006
+			table
+				tr
+					th 001
+					th 002
+					th 003
+					th 004
+				tr
+					td 001
+					td 002
+					td 003
+					td 004
+				tr
+					td 001
+					td 002
+					td 003
+					td 004
+			h1 Lorem
+			h2 Lorem
+			h3 Lorem
+			h4 Lorem
+			h5 Lorem
+			
