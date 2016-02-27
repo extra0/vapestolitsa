@@ -111,7 +111,7 @@ $(function(){
 		if (input.val() < 1) { // не даем опустится ниже 0 значению в инпуте
 			input.val('1');
 		}
-		if (input.val() > input.attr('item-max-val')) { // проверяем на максимально допутисмое значение в инпуте
+		if (input.val() > parseInt(input.attr('item-max-val'))) { // проверяем на максимально допутисмое значение в инпуте
 			input.val(input.attr('item-max-val'));
 		}
 

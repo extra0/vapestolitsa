@@ -237,14 +237,49 @@
               <p class="item__article">Артикул:<span class="item__article-value">5678978954</span></p>
               <!-- конец артикула-->
             </div>
-            <div class="item-info__price"></div>
+            <!-- блок цен-->
+            <div class="item-info__price">
+              <div class="item-info__price-block">
+                <p class="item-info__price-title">Обычная стоимость</p>
+                <p replaced-number class="item-info__old-price">21000</p><span class="rubl">a</span>
+              </div>
+              <div class="item-info__price-block"><img src="img/sale.png" alt="" class="item-info__img">
+                <div class="item-info__current-price-block">
+                  <p class="item-info__price-title">Стоимость со скидкой</p>
+                  <p replaced-number class="item-info__current-price">15800</p><span class="rubl">a</span>
+                </div>
+              </div>
+              <div item-parent class="item-info__price-block">
+                <form action="#">
+                  <input type="text" readonly value="1" item-max-val="25" item-val class="form-input item-info__quantity">
+                  <button type="button" data-val="-1" item-changer class="item-info__changer down"></button>
+                  <button type="button" data-val="1" item-changer class="item-info__changer up"></button>
+                  <button type="submit" class="btn item-info__btn">В корзину</button>
+                </form>
+              </div>
+              <div class="item-info__price-block text-right">
+                <p class="item-info__availability"><strong>В наличии:</strong> 25 шт</p>
+              </div>
+            </div>
+            <!-- конец блока цен-->
             <div class="item-info__features">
+              <!-- блок с описанием товара-->
               <div class="item-info__description"><a href="https://www.youtube.com/embed/gbi_vjlE3DE" class="item-info__video-link fancybox fancybox.iframe">видео-обзор</a>
                 <p class="item-info__block-title">описание</p>
+                <p class="item-info__text">Чтобы показать заказчику эскизы сайта, нужно где-то найти тексты и картинки. Как правило, ни того, ни другого в момент показа эскизов у дизайнера нету. Что же делает дизайнер? Он делает рыбу.</p>
+                <p class="item-info__text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius aliquam et animi eveniet aliquid molestiae nesciunt provident modi consectetur aspernatur, fugiat, esse architecto nobis reprehenderit tempora tempore necessitatibus impedit.</p>
               </div>
+              <!-- конец блока с описанеим товара-->
+              <!-- блок с характеристиками-->
               <div class="item-info__characteristics">
-                <p class="item-info__block-title">характеристики					</p>
+                <p class="item-info__block-title">характеристики</p>
+                <p class="item-info__characteristics-value"><strong>Крепость:</strong>0 мг, 3 мг, 6 мг, 12 мг</p>
+                <p class="item-info__characteristics-value"><strong>Бренд:</strong>Five Pawns</p>
+                <p class="item-info__characteristics-value"><strong>Вкус:</strong>Напитки</p>
+                <p class="item-info__characteristics-value"><strong>Объем:</strong>30 мл</p>
+                <p class="item-info__characteristics-value"><strong>VG/PG:</strong>50/50</p>
               </div>
+              <!-- конец блока с характеристиками-->
             </div>
           </div>
           <!-- секция с 5-ю товарами-->

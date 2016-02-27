@@ -43,13 +43,56 @@ block content
 						| Артикул:
 						span.item__article-value 5678978954
 					// конец артикула
+				// блок цен
 				.item-info__price
+					.item-info__price-block
+						p.item-info__price-title Обычная стоимость
+						p.item-info__old-price(replaced-number) 21000
+						span.rubl a
+					.item-info__price-block
+						img.item-info__img(src="img/sale.png", alt="")
+						.item-info__current-price-block
+							p.item-info__price-title Стоимость со скидкой
+							p.item-info__current-price(replaced-number) 15800
+							span.rubl a
+					.item-info__price-block(item-parent)
+						form(action="#")
+							input.form-input.item-info__quantity(type="text" readonly value="1" item-max-val="25" item-val)
+							button.item-info__changer.down(type="button" data-val="-1" item-changer)
+							button.item-info__changer.up(type="button" data-val="1" item-changer)
+							button.btn.item-info__btn(type="submit") В корзину
+					.item-info__price-block.text-right
+						p.item-info__availability
+							strong В наличии:
+							|  25 шт
+				// конец блока цен
 				.item-info__features
+					// блок с описанием товара
 					.item-info__description
 						a.item-info__video-link.fancybox(href="https://www.youtube.com/embed/gbi_vjlE3DE" class="fancybox.iframe") видео-обзор
 						p.item-info__block-title описание
+						p.item-info__text Чтобы показать заказчику эскизы сайта, нужно где-то найти тексты и картинки. Как правило, ни того, ни другого в момент показа эскизов у дизайнера нету. Что же делает дизайнер? Он делает рыбу.
+						p.item-info__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius aliquam et animi eveniet aliquid molestiae nesciunt provident modi consectetur aspernatur, fugiat, esse architecto nobis reprehenderit tempora tempore necessitatibus impedit.
+					// конец блока с описанеим товара
+					// блок с характеристиками
 					.item-info__characteristics
-						p.item-info__block-title характеристики					
+						p.item-info__block-title характеристики
+						p.item-info__characteristics-value
+							strong Крепость:
+							| 0 мг, 3 мг, 6 мг, 12 мг
+						p.item-info__characteristics-value
+							strong Бренд:
+							| Five Pawns
+						p.item-info__characteristics-value
+							strong Вкус:
+							| Напитки
+						p.item-info__characteristics-value
+							strong Объем:
+							| 30 мл
+						p.item-info__characteristics-value
+							strong VG/PG:
+							| 50/50
+					// конец блока с характеристиками
 			// секция с 5-ю товарами
 			.goods__section.margin-bottom-40.clearfix
 				.goods-header
