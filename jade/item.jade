@@ -10,19 +10,48 @@ block content
 	// конец блока с видео
 	.container-fluid
 		.content
-			.content-top
-				// хлебные крошки
-				.breadcrumbs
-					ul.breadcrumbs__list
-						li.breadcrumbs__item
-							a.breadcrumbs__link(href="#!") Главная страница
-						li.breadcrumbs__item
-							a.breadcrumbs__link(href="#!") Жидкости
-				// конец хлебные крошки
-				h1.title FIVE PAWNS: BLACK FLAG RISEN - ORIGINAL
-				p Артикул: 5678978954
+			// блок с фото товара
+			.item-image__section
+				.item-image__main-block
+					a.fancybox(href="img/content/img.jpg" rel="gallery")
+						img.item-image__main-img(src="img/content/img.jpg", alt="")
+				.item-image__thumb-block
+					- for (i = 1; i < 5; ++i) {
+						.item-image__thumb-wrapper
+							a(href="#!")
+								img.item-image__thumb-img(src="img/content/g"+i+".jpg", alt="")
+					- }
+					- for (i = 1; i < 5; ++i) {
+						.item-image__thumb-wrapper
+							a(href="#!")
+								img.item-image__thumb-img(src="img/content/g"+i+".jpg", alt="")
+					- }
+			// конец блока с фото товара
+			.item-info
+				.content-top
+					// хлебные крошки
+					.breadcrumbs
+						ul.breadcrumbs__list
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="#!") Главная страница
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="#!") Жидкости
+					// конец хлебные крошки
+					h1.title.item-info__title FIVE PAWNS: BLACK FLAG RISEN - ORIGINAL
+					// артикул
+					p.item__article
+						| Артикул:
+						span.item__article-value 5678978954
+					// конец артикула
+				.item-info__price
+				.item-info__features
+					.item-info__description
+						a.item-info__video-link.fancybox(href="https://www.youtube.com/embed/gbi_vjlE3DE" class="fancybox.iframe") видео-обзор
+						p.item-info__block-title описание
+					.item-info__characteristics
+						p.item-info__block-title характеристики					
 			// секция с 5-ю товарами
-			.goods__section.margin-bottom-40
+			.goods__section.margin-bottom-40.clearfix
 				.goods-header
 					h3.goods-header__title.new Возможно, вас так же заинтересуют:
 				.goods-body.goods-body__one-row-five-items.goods-body__last-five-none
