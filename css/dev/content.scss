@@ -1575,11 +1575,23 @@
 			border-bottom: 1px solid #c0bcb6;
 			@include display(flex);
 			@include justify-content(space-between);
+			position: relative;
+			&:before {
+				content: '';
+				@include position(absolute, null null 0 0);
+				z-index: -1;
+				border-radius: 25%;
+				box-shadow: 0px 0px 10px #ddd;
+			}
 			&-block {
 				display: inline-block;
 				vertical-align: top;
 				position: relative;
 				padding: 0 3%;
+				form {
+					position: relative;
+					display: inline-block;
+				}
 				&:not(:last-child) {
 					&:before {
 						content: '';
@@ -1620,11 +1632,13 @@
 			}
 		}
 		&__img {
-			float: left;
+			// float: left;
 			margin:9px 20px 0 -6px;
 		}
 		&__current-price-block {
-			float: left;
+			// float: left;
+			display: inline-block;
+			vertical-align: top;
 		}
 		&__current-price {
 			color: #57a858;
@@ -1683,11 +1697,11 @@
 			margin: 0;
 			&.up {
 				@include triangle(12px, #999 transparent, up);
-				@include position(absolute, 14px null null 76px);
+				@include position(absolute, 14px null null 48px);
 			}
 			&.down {
 				@include triangle(12px, #999 transparent, down);
-				@include position(absolute, 30px null null 76px);
+				@include position(absolute, 30px null null 48px);
 			}
 		}
 		&__availability {
