@@ -854,38 +854,9 @@
 		&:not(:first-child) {
 			border-top: 1px solid #d9d9d9;
 		}
-		&:before {
-			content: '';
-			background: url(../img/filter-sprite.png) 0 0 no-repeat;
-			@include position(absolute, 12px null null 11px);
-			width: 24px;
-			height: 24px;
-		}
-		&-price {
-			&:before {
-				background-position: -48px -54px;	
-			}
-		}
-		&-brand {
-			&:before {
-				background-position: -96px -10px;
-			}
-		}
-		&-taste {
-			&:before {
-				background-position: -10px -10px;
-			}
-		}
-		&-volume {
-			&:before {
-				background-position: -52px -10px;
-			}
-		}
-		&-strength {
-			&:before {
-				background-position: -10px -54px;
-			}
-		}
+	}
+	&__img {
+		@include position(absolute, 12px null null 11px);
 	}
 	&__range {
 		margin: 36px 0 21px;
@@ -1705,10 +1676,12 @@
 			border: none;
 			margin: 0;
 			&.up {
+				padding-top: 12px;
 				@include triangle(12px, #999 transparent, up);
-				@include position(absolute, 14px null null 48px);
+				@include position(absolute, 2px null null 48px);
 			}
 			&.down {
+				padding-bottom: 12px;
 				@include triangle(12px, #999 transparent, down);
 				@include position(absolute, 30px null null 48px);
 			}

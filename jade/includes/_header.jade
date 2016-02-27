@@ -7,6 +7,14 @@ header.header
 				a.header__logo(href="/")
 					img(src="/img/logo.png" alt="Site Logo")
 			// конец лого
+			// email
+			.header-top-block__email-block.pull-right
+				a.header-top-block__email(href="mailto:#{email}") #{email}
+			// конец email
+			// график работы
+			p.header-top-block__work-text.pull-right Принимаем звонки<br>с 9:00 по 22:00
+			// конец графика работы
+			p.header-top-block__phone #{phone}
 			nav.header__block-inner
 				// меню хедера
 				ul.menu__list.menu-header
@@ -18,14 +26,6 @@ header.header
 								a.menu__link(href="#!") #{item}
 							- }
 				// конец меню хедера
-				// email
-				.header-top-block__email-block.pull-right
-					a.header-top-block__email(href="mailto:#{email}") #{email}
-				// конец email
-				// график работы
-				p.header-top-block__work-text.pull-right Принимаем звонки<br>с 9:00 по 22:00
-				// конец графика работы
-				p.header-top-block__phone #{phone}
 	// конец header верхний блок
 	// средний блок header
 	.header-middle-block

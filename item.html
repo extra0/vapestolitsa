@@ -87,6 +87,13 @@
             <!-- лого-->
             <div class="header__logo-block"><a href="/" class="header__logo"><img src="/img/logo.png" alt="Site Logo"></a></div>
             <!-- конец лого-->
+            <!-- email-->
+            <div class="header-top-block__email-block pull-right"><a href="mailto:info@vapstolitsa.ru" class="header-top-block__email">info@vapstolitsa.ru</a></div>
+            <!-- конец email-->
+            <!-- график работы-->
+            <p class="header-top-block__work-text pull-right">Принимаем звонки<br>с 9:00 по 22:00</p>
+            <!-- конец графика работы-->
+            <p class="header-top-block__phone">8 (495) 544 57 00</p>
             <nav class="header__block-inner">
               <!-- меню хедера-->
               <ul class="menu__list menu-header">
@@ -102,13 +109,6 @@
                 </li>
               </ul>
               <!-- конец меню хедера-->
-              <!-- email-->
-              <div class="header-top-block__email-block pull-right"><a href="mailto:info@vapstolitsa.ru" class="header-top-block__email">info@vapstolitsa.ru</a></div>
-              <!-- конец email-->
-              <!-- график работы-->
-              <p class="header-top-block__work-text pull-right">Принимаем звонки<br>с 9:00 по 22:00</p>
-              <!-- конец графика работы-->
-              <p class="header-top-block__phone">8 (495) 544 57 00</p>
             </nav>
           </div>
         </div>
@@ -254,7 +254,7 @@
               </div>
               <div item-parent class="item-info__price-block">
                 <form action="#">
-                  <input type="text" readonly value="1" item-max-val="25" item-val class="form-input item-info__quantity">
+                  <input type="text" value="1" item-max-val="25" item-val only-numbers class="form-input item-info__quantity">
                   <button type="button" data-val="-1" item-changer class="item-info__changer down"></button>
                   <button type="button" data-val="1" item-changer class="item-info__changer up"></button>
                   <button type="submit" class="btn item-info__btn">В корзину</button>

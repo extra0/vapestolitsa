@@ -2320,29 +2320,10 @@ a:not([class]):hover {
 .filter__title:not(:first-child) {
   border-top: 1px solid #d9d9d9;
 }
-.filter__title:before {
-  content: '';
-  background: url(../img/filter-sprite.png) 0 0 no-repeat;
+.filter__img {
   position: absolute;
   top: 12px;
   left: 11px;
-  width: 24px;
-  height: 24px;
-}
-.filter__title-price:before {
-  background-position: -48px -54px;
-}
-.filter__title-brand:before {
-  background-position: -96px -10px;
-}
-.filter__title-taste:before {
-  background-position: -10px -10px;
-}
-.filter__title-volume:before {
-  background-position: -52px -10px;
-}
-.filter__title-strength:before {
-  background-position: -10px -54px;
 }
 .filter__range {
   margin: 36px 0 21px;
@@ -3263,16 +3244,18 @@ a:not([class]):hover {
   margin: 0;
 }
 .item-info__changer.up {
+  padding-top: 12px;
   height: 0;
   width: 0;
   border-bottom: 6px solid #999;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   position: absolute;
-  top: 14px;
+  top: 2px;
   left: 48px;
 }
 .item-info__changer.down {
+  padding-bottom: 12px;
   height: 0;
   width: 0;
   border-left: 6px solid transparent;

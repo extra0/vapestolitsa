@@ -71,7 +71,9 @@ block content
 					// форма
 					form(action="#")
 						// слайдер и инпуты
-						p.filter__title.filter__title-price Цена
+						p.filter__title 
+							img.filter__img(src="/img/f1.png", alt="")
+							| Цена
 						.filter__range-block(range-parent)
 							.filter__range#price-range(range)
 							input.form-input.filter__input(type="text" only-numbers value="2000" range-min)
@@ -81,7 +83,9 @@ block content
 							span.rubl a
 						// конец слайдер и инпуты
 						// чекбоксы
-						p.filter__title.filter__title-brand Бренды
+						p.filter__title
+							img.filter__img(src="/img/f2.png", alt="")
+							| Бренды
 						.filter__range-block
 							.filter__checkbox-wrapper
 								- for (i = 0; i < 20; i++) {
@@ -90,13 +94,17 @@ block content
 								- }
 							a.filter__more-link(href="#!") <span class="filter__word">Показать</span> еще 117 брендов
 						// конец чекбоксы
-						p.filter__title.filter__title-taste Вкусы
+						p.filter__title 
+							img.filter__img(src="/img/f3.png", alt="")
+							| Вкусы
 						.filter__range-block
 							- for (i = 0; i < 5; i++) {
 								input.filter__checkbox(type="checkbox" id="checkbox_1#{i}")
 								label.filter__label(for="checkbox_1#{i}") Вкус #{i}
 							- }
-						p.filter__title.filter__title-volume объем
+						p.filter__title 
+							img.filter__img(src="/img/f4.png", alt="")
+							| объем
 						.filter__range-block(range-parent)
 							.filter__range#volume-range(range)
 							input.form-input.filter__input(type="text" only-numbers range-min value="100")
@@ -104,7 +112,9 @@ block content
 							span.filter__line
 							input.form-input.filter__input(type="text" only-numbers range-max value="400")
 							span.filter__value мл
-						p.filter__title.filter__title-strength КРЕПОСТЬ
+						p.filter__title 
+							img.filter__img(src="/img/f5.png", alt="")
+							| КРЕПОСТЬ
 						.filter__range-block(range-parent)
 							.filter__range#strength-range(range)
 							input.form-input.filter__input(type="text" only-numbers range-min value="10")

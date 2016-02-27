@@ -37,7 +37,7 @@ $(function(){
 		$(this).toggleClass('active');
 	});
 
-	// сворачиваем меню пользователя по клику вне его области
+	// сворачиваем  блоки по клику вне области
 	$(document).mouseup(function(e) {
 		var container = $("[click-hide]");
 		if (container.has(e.target).length === 0) {
@@ -137,5 +137,26 @@ $(function(){
 	});
 
 	cart();
+
+	//  обработка изменения значения в инпуте в товаре
+	$('[item-val]').keyup(function(){
+		if ($(this).val() == 0) {
+			$(this).val('1');
+		}
+		if ($(this).val() > parseInt($(this).attr('item-max-val'))) {
+			$(this).val($(this).attr('item-max-val'));
+		}
+	});
+
+	// логическая обработка фокуса на инпуте
+	// $('[item-val]').focus(function(){ $(this).val(''); });
+
+	// // логическая обработка снятия фокуса
+	// $('[item-val]').blur(function(){
+	// 	if ($(this).val() == '') {
+	// 		$(this).val('1');
+	// 	}
+	// });
+
 
 });
