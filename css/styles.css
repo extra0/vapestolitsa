@@ -3129,12 +3129,13 @@ a:not([class]):hover {
 }
 .item-info__price:before {
   content: '';
+  background: url(../img/shadow.png) 0 0 repeat-x;
   position: absolute;
-  bottom: 0;
+  bottom: -19px;
   left: 0;
-  z-index: -1;
-  border-radius: 25%;
-  box-shadow: 0px 0px 10px #ddd;
+  height: 19px;
+  width: 100%;
+  opacity: 0.5;
 }
 .item-info__price-block {
   display: inline-block;
