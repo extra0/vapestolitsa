@@ -88,3 +88,14 @@
 		display: none;
 	}
 }
+// fix header menu
+@media (max-width: 1305px) {
+	.header__block-nav {
+		max-width: 	45%;
+	}
+}
+@media (max-width: 1140px) {
+	.header__block-nav {
+		max-width: 	37%;
+	}
+}

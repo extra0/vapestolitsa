@@ -15,17 +15,18 @@ header.header
 			p.header-top-block__work-text.pull-right Принимаем звонки<br>с 9:00 по 22:00
 			// конец графика работы
 			p.header-top-block__phone #{phone}
-			nav.header__block-inner
-				// меню хедера
-				ul.menu__list.menu-header
-					each item, index in menu
-						li.menu__item
-							- if (index == 2) {
-								span.menu__link.active #{item}
-							- } else {
-								a.menu__link(href="#!") #{item}
-							- }
-				// конец меню хедера
+			.header__block-inner
+				nav
+					// меню хедера
+					ul.menu__list.menu-header
+						each item, index in menu
+							li.menu__item
+								- if (index == 2) {
+									span.menu__link.active #{item}
+								- } else {
+									a.menu__link(href="#!") #{item}
+								- }
+					// конец меню хедера
 	// конец header верхний блок
 	// средний блок header
 	.header-middle-block

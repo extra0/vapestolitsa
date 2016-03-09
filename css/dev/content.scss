@@ -851,6 +851,9 @@
 		padding: 14px 0 16px 52px; 
 		border-bottom: 1px solid #d9d9d9;
 		position: relative;
+		&-no-border {
+			border-top: none!important;
+		}
 		&:not(:first-child) {
 			border-top: 1px solid #d9d9d9;
 		}
@@ -1443,13 +1446,15 @@
 			width: 32%;
 			// width: 420px;
 			float: left;
+			margin-bottom: 100px;
 		}
 		&__main-block {
-			border: 11px solid #d3ccc2;
 			margin-bottom: 12px;
 		}
 		&__main-img {
-			margin-bottom: -3px;
+			border: 11px solid #d3ccc2;
+			display: block;
+			margin: auto;
 		}
 		&__thumb {
 			&-block {
@@ -1464,7 +1469,6 @@
 				max-width: 76px;
 				max-height: 76px;
 				overflow: hidden;
-				background: #fff;
 			}
 			&-img {
 				display: block;
@@ -1473,6 +1477,7 @@
 		}
 	}
 	&-info {
+		margin-bottom: 100px;
 		// margin-left: 470px;
 		margin-left: 35%;
 		&__title {

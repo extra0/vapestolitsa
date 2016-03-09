@@ -35,7 +35,7 @@
      */
     var priorityNav = {}; // Object for public APIs
     var breaks = []; // Object to store instances with breakpoints where the instances menu item"s didin"t fit.
-    var supports = !!document.querySelector && !!root.addEventListener; // Feature test
+    var supports = !!document.querySelector && !!root.addEventListener // Feature test
     var settings = {};
     var instance = 0;
     var count = 0;
@@ -48,16 +48,16 @@
      */
     var defaults = {
         initClass:                  "js-priorityNav", // Class that will be printed on html element to allow conditional css styling.
-        mainNavWrapper:             "nav", // mainnav wrapper selector (must be direct parent from mainNav)
-        mainNav:                    "ul", // mainnav selector. (must be inline-block)
-        navDropdownClassName:       "nav__dropdown", // class used for the dropdown.
-        navDropdownToggleClassName: "nav__dropdown-toggle", // class used for the dropdown toggle.
+        mainNavWrapper:             ".header__block-nav", // mainnav wrapper selector (must be direct parent from mainNav)
+        mainNav:                    ".menu-header", // mainnav selector. (must be inline-block)
+        navDropdown:                "nav__dropdown", // class used for the dropdown.
+        navDropdownToggle:          "nav__dropdown-toggle", // class used for the dropdown toggle.
         navDropdownLabel:           "еще", // Text that is used for the dropdown toggle.
-        navDropdownBreakpointLabel: "меню", //button label for navDropdownToggle when the breakPoint is reached.
+        navDropdownBreakpointLabel: "menu", //button label for navDropdownToggle when the breakPoint is reached.
         breakPoint:                 500, //amount of pixels when all menu items should be moved to dropdown to simulate a mobile menu
-        throttleDelay:              50, // this will throttle the calculating logic on resize because i'm a responsible dev.
-        offsetPixels:               100, // increase to decrease the time it takes to move an item.
-        count:                      true, // prints the amount of items are moved to the attribute data-count to style with css counter.
+        throttleDelay:              0, // this will throttle the calculating logic on resize because i'm a responsible dev.
+        offsetPixels:               30, // increase to decrease the time it takes to move an item.
+        count:                      false, // prints the amount of items are moved to the attribute data-count to style with css counter.
 
         //Callbacks
         moved: function () {
@@ -199,37 +199,25 @@
          */
         navDropdownToggle.innerHTML = settings.navDropdownLabel;
 
-        /**
-         * Set aria attributes for accessibility
-         */
-        navDropdownToggle.setAttribute("aria-controls", "menu");
-        navDropdownToggle.setAttribute("type", "button");
-        navDropdown.setAttribute("aria-hidden", "true");
-
 
         /**
          * Move elements to the right spot
          */
-        if(_this.querySelector(mainNav).parentNode !== _this){
-            console.warn("mainNav is not a direct child of mainNavWrapper, double check please");
-            return;
-        }
-
         _this.insertAfter(toggleWrapper, _this.querySelector(mainNav));
 
-        toggleWrapper.appendChild(navDropdownToggle);
         toggleWrapper.appendChild(navDropdown);
+        toggleWrapper.appendChild(navDropdownToggle);
 
         /**
          * Add classes so we can target elements
          */
-        navDropdown.classList.add(settings.navDropdownClassName);
+        navDropdown.classList.add(settings.navDropdown);
         navDropdown.classList.add("priority-nav__dropdown");
 
-        navDropdownToggle.classList.add(settings.navDropdownToggleClassName);
+        navDropdownToggle.classList.add(settings.navDropdownToggle);
         navDropdownToggle.classList.add("priority-nav__dropdown-toggle");
 
-        toggleWrapper.classList.add(settings.navDropdownClassName+"-wrapper");
+        toggleWrapper.classList.add(settings.navDropdown+"-wrapper");
         toggleWrapper.classList.add("priority-nav__wrapper");
 
         _this.classList.add("priority-nav");
@@ -294,7 +282,7 @@
      * Move item to array
      * @param item
      */
-    priorityNav.doesItFit = function (_this) {
+    priorityNav.doesItFit = function (_this, settings) {
 
         /**
          * Check if it is the first run
@@ -356,12 +344,9 @@
             /**
              * If there are no items in menu
              */
-            if (_this.querySelector(mainNav).children.length < 1) {
+            if (_this.querySelector(mainNav).children.length < 1){
                 //show navDropdownBreakpointLabel
-                _this.classList.add("is-empty");
                 updateLabel(_this, identifier, settings.navDropdownBreakpointLabel);
-            }else{
-                _this.classList.remove("is-empty");
             }
 
             /**
@@ -381,21 +366,10 @@
             _this.querySelector(navDropdownToggle).classList.add("priority-nav-is-hidden");
             _this.querySelector(navDropdownToggle).classList.remove("priority-nav-is-visible");
             _this.classList.remove("priority-nav-has-dropdown");
-
-            /**
-             * Set aria attributes for accessibility
-             */
-            _this.querySelector(".priority-nav__wrapper").setAttribute("aria-haspopup", "false");
-
         } else {
             _this.querySelector(navDropdownToggle).classList.add("priority-nav-is-visible");
             _this.querySelector(navDropdownToggle).classList.remove("priority-nav-is-hidden");
             _this.classList.add("priority-nav-has-dropdown");
-
-            /**
-             * Set aria attributes for accessibility
-             */
-            _this.querySelector(".priority-nav__wrapper").setAttribute("aria-haspopup", "true");
         }
     };
 
@@ -504,7 +478,6 @@
     };
 
 
-
     /**
      * Bind eventlisteners
      */
@@ -513,12 +486,12 @@
         // Check if an item needs to move
         if(window.attachEvent) {
             window.attachEvent("onresize", function() {
-                if(priorityNav.doesItFit)priorityNav.doesItFit(_this);
+                if(priorityNav.doesItFit)priorityNav.doesItFit(_this, settings);
             });
         }
         else if(window.addEventListener) {
             window.addEventListener("resize", function() {
-                if(priorityNav.doesItFit)priorityNav.doesItFit(_this);
+                if(priorityNav.doesItFit)priorityNav.doesItFit(_this, settings);
             }, true);
         }
 
@@ -527,23 +500,13 @@
             toggleClass(_this.querySelector(navDropdown), "show");
             toggleClass(this, "is-open");
             toggleClass(_this, "is-open");
-
-            /**
-             * Toggle aria hidden for accessibility
-             */
-            if(-1 !== _this.className.indexOf( "is-open" )){
-                _this.querySelector(navDropdown).setAttribute("aria-hidden", "false");
-            }else{
-                _this.querySelector(navDropdown).setAttribute("aria-hidden", "true");
-                _this.querySelector(navDropdown).blur();
-            }
         });
 
         /*
          * Remove when clicked outside dropdown
          */
         document.addEventListener("click", function (event) {
-            if (!getClosest(event.target, "."+settings.navDropdownClassName) && event.target !== _this.querySelector(navDropdownToggle)) {
+            if (!getClosest(event.target, settings.navDropdown) && event.target !== _this.querySelector(navDropdownToggle)) {
                 _this.querySelector(navDropdown).classList.remove("show");
                 _this.querySelector(navDropdownToggle).classList.remove("is-open");
                 _this.classList.remove("is-open");
@@ -556,8 +519,8 @@
         document.onkeydown = function (evt) {
             evt = evt || window.event;
             if (evt.keyCode === 27) {
-                document.querySelector(navDropdown).classList.remove("show");
-                document.querySelector(navDropdownToggle).classList.remove("is-open");
+                navDropdown.classList.remove("show");
+                navDropdownToggle.classList.remove("is-open");
                 mainNavWrapper.classList.remove("is-open");
             }
         };
@@ -604,18 +567,9 @@
      * @param n
      * @param r
      */
-    if (supports && typeof Node !== "undefined"){
+    if (supports && typeof Node !== 'undefined'){
         Node.prototype.insertAfter = function(n,r) {this.insertBefore(n,r.nextSibling);};
     }
-
-    var checkForSymbols = function(string){
-        var firstChar = string.charAt(0);
-        if (firstChar === "." || firstChar === "#") {
-            return false;
-        }else{
-            return true;
-        }
-    };
 
 
     /**
@@ -625,23 +579,18 @@
      */
     priorityNav.init = function (options) {
 
+
+        // Feature test.
+        if (!supports && typeof Node === 'undefined'){
+            console.warn("This browser doesn't support priorityNav");
+            return;
+        }
+
         /**
          * Merge user options with defaults
          * @type {Object}
          */
         settings = extend(defaults, options || {});
-
-        // Feature test.
-        if (!supports && typeof Node === "undefined"){
-            console.warn("This browser doesn't support priorityNav");
-            return;
-        }
-
-        // Options check
-        if (!checkForSymbols(settings.navDropdownClassName) || !checkForSymbols(settings.navDropdownToggleClassName)){
-            console.warn("No symbols allowed in navDropdownClassName & navDropdownToggleClassName. These are not selectors.");
-            return;
-        }
 
         /**
          * Store nodes
@@ -691,7 +640,7 @@
             /**
              * Store the dropdown element
              */
-            navDropdown = "."+settings.navDropdownClassName;
+            navDropdown = "."+settings.navDropdown;
             if (!_this.querySelector(navDropdown)) {
                 console.warn("couldn't find the specified navDropdown element");
                 return;
@@ -700,7 +649,7 @@
             /**
              * Store the dropdown toggle element
              */
-            navDropdownToggle = "."+settings.navDropdownToggleClassName;
+            navDropdownToggle = "."+settings.navDropdownToggle;
             if (!_this.querySelector(navDropdownToggle)) {
                 console.warn("couldn't find the specified navDropdownToggle element");
                 return;
@@ -714,7 +663,7 @@
             /**
              * Start first check
              */
-            priorityNav.doesItFit(_this);
+            priorityNav.doesItFit(_this, settings);
 
         });
 

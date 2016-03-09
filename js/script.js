@@ -73,11 +73,6 @@ $(function(){
 		}
 	});
 
-	// катоснмый селект
-	$('.filter__sort-select').selectmenu({
-		width: 195
-	});
-
 	// показываем скрытые пункты в фильтре
 	$('.filter__more-link').click(function(){
 		if ($(this).hasClass('active')) {
@@ -157,6 +152,30 @@ $(function(){
 	// 		$(this).val('1');
 	// 	}
 	// });
+	// var i = 1,
+	// 	k = 1;
+	// $(window).resize(function(){
+		
+	// 	while ($('.title-category').height() > 52) {
+	// 		$('.title-category').css('font-size', 53-i+'px');
+	// 		++i;
+	// 	}
 
+	// 	if ($('.title-category').height() < 52) {
+	// 		console.log($('.title-category').height());
+	// 		while ($('.title-category').height() < 52) {
+	// 			$('.title-category').css('font-size', k+'px');
+	// 			++k;
+	// 		}
+	// 	}
+		
+
+
+	// });
+
+	// while ($('.title-category').height() > 52) {
+	// 	$('.title-category').css('font-size', 53-i+'px');
+	// 	++i;
+	// }
 
 });
