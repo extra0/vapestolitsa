@@ -331,6 +331,14 @@
 				background: $orange;
 				color: #FFF;
 			}
+			&.in-cart {
+				border: 3px solid transparent;
+				color: #000;
+				&:hover {
+					color: #000;
+					background: none;
+				}
+			}
 		}
 		&__detail-btn {
 			opacity: 0;
@@ -367,7 +375,7 @@
 		}
 		.bx-wrapper .bx-pager,
 		.bx-wrapper .bx-controls-auto {
-			bottom: 83px;
+			bottom: 30px;
 		}
 		.bx-wrapper {
 			margin: 0 auto;
