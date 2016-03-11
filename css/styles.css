@@ -1766,6 +1766,7 @@ table:not([class]) td, table:not([class]) th {
 .goods-body__cart-btn.in-cart {
   border: 3px solid transparent;
   color: #000;
+  margin-left: -13px;
 }
 .goods-body__cart-btn.in-cart:hover {
   color: #000;
@@ -2556,6 +2557,12 @@ table:not([class]) td, table:not([class]) th {
   margin: 15px;
 }
 
+.basket__section {
+  margin-bottom: 100px;
+}
+.basket__line {
+  margin-right: -15px;
+}
 .basket-table {
   margin-right: 33%;
 }
@@ -3037,14 +3044,6 @@ table:not([class]) td, table:not([class]) th {
   margin-bottom: 100px;
   margin-left: 35%;
 }
-.item-info__title {
-  display: inline-block;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-wrap: normal;
-}
 .item-info__block-title {
   text-transform: uppercase;
   font-size: 15px;
@@ -3296,6 +3295,12 @@ table:not([class]) td, table:not([class]) th {
 .item-info__availability * {
   font-weight: bold;
   color: #3d3835;
+}
+.item-info__item-cart-text {
+  display: inline-block;
+  margin: 17px 0 0 0px;
+  font-size: 16px;
+  color: #57a858;
 }
 
 /* end CONTENT */

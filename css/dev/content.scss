@@ -334,6 +334,7 @@
 			&.in-cart {
 				border: 3px solid transparent;
 				color: #000;
+				margin-left: -13px;
 				&:hover {
 					color: #000;
 					background: none;
@@ -1064,15 +1065,22 @@
 }
 // корзина
 .basket {
+	&__section {
+		margin-bottom: 100px; 
+	}
+	&__line {
+		margin-right: -15px;
+	}
 	&-table {
 		margin-right: 33%;
+
 		&__table {
 			position: relative;
 			width: 100%;
 			thead {
 				background: #fff;
 				padding: 9px 0;
-				// display: block;
+				// display: block; 
 			}
 			&:before {
 				content: '';
@@ -1084,6 +1092,7 @@
 				box-shadow: -4px 3px 38px rgba(0, 0, 0, 0.25);
 			}
 		}
+		
 		&__title {
 			&:first-child {
 				text-align: left;
@@ -1488,9 +1497,9 @@
 		margin-bottom: 100px;
 		// margin-left: 470px;
 		margin-left: 35%;
-		&__title {
-			@include ellipsis(100%);
-		}
+		// &__title {
+		// 	@include ellipsis(100%);
+		// }
 		&__block-title {
 			text-transform: uppercase;
 			font-size: 15px;
@@ -1706,6 +1715,12 @@
 				font-weight: bold;
 				color: #3d3835;
 			}
+		}
+		&__item-cart-text {
+			display: inline-block;
+			margin: 17px 0 0 0px;
+			font-size: 16px;
+			color: #57a858;
 		}
 	}
 }
